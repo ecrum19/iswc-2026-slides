@@ -1,0 +1,30 @@
+{
+  "name": "iswc-2026-slides",
+  "private": true,
+  "version": "1.0.0",
+  "files": [
+    "assets/**",
+    "styles/**",
+    "index.html"
+  ],
+  "description": "Slides for International Semantic Web Conference 2026 - Bari, IT on Does SPARQL Federation Work in Practice?",
+  "author": "Elias Crum",
+  "license": "CC-BY-4.0",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "serve": "shower serve",
+    "bundle": "shower bundle --output prepared",
+    "pdf": "shower pdf",
+    "archive": "shower archive",
+    "pages": "shower pages"
+  },
+  "dependencies": {
+    "@shower/core": "^3.6.0",
+    "@shower/material": "^3.2.0"
+  },
+  "devDependencies": {
+    "@shower/cli": "^1.1.1"
+  }
+}

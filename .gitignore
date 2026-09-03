@@ -1,0 +1,8 @@
+node_modules/
+prepared/
+bundled/
+.DS_Store
+.idea/
+.vscode/
+*.log
+coverage/
