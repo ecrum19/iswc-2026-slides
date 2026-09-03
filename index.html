@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head prefix="foaf: http://xmlns.com/foaf/0.1/">
+    <title>Does SPARQL Federation Work in Practice?</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f6f2" />
+
+    <link rel="stylesheet" href="shower/themes/material/styles/index.css" />
+    <link rel="stylesheet" href="styles/edc-custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="foaf:maker" href="https://github.com/ecrum19" />
+
+    <style>
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
+    </style>
+  </head>
+
+  <body class="shower list" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# foaf: http://xmlns.com/foaf/0.1/ owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# org: http://www.w3.org/ns/org# schema: http://schema.org/ cite: http://purl.org/spar/cito/" typeof="schema:PresentationDigitalDocument">
+    <header class="caption">
+      <div class="title">
+        <p class="kicker">Presentation</p>
+        <h1 property="schema:name">Does SPARQL Federation Work in Practice?</h1>
+        <p class="caption-subtitle">
+          <a href="https://ecrum19.github.io/eliascrum/" rel="schema:author">Elias Crum</a>
+          <span aria-hidden="true"> · </span>
+          <a href="https://iswc2026.semanticweb.org/">International Semantic Web Conference 2026 - Bari, IT</a>
+          <span aria-hidden="true"> · </span>
+          <time rel="schema:datePublished" datetime="2026-10-25">2026-10-25</time>
+        </p>
+      </div>
+    </header>
+
+    <!-- Replace the sample slide copy below when creating a new deck. -->
+    <section id="title" class="slide title" inlist="" rel="schema:hasPart" resource="#title">
+      <p class="eyebrow">
+        <a class="title-slide__venue-link" href="https://iswc2026.semanticweb.org/" target="_blank" rel="noopener noreferrer">International Semantic Web Conference 2026 - Bari, IT</a>
+      </p>
+
+      <div class="title-layout">
+        <div class="title-copy">
+          <h2 property="schema:name">Does SPARQL Federation Work in Practice?</h2>
+          <div class="title-details">
+            <p class="byline">
+              <a href="https://ecrum19.github.io/eliascrum/" target="_blank" rel="noopener noreferrer">Elias Crum</a>
+            </p>
+            <p class="date"><time datetime="2026-10-25">2026-10-25</time></p>
+          </div>
+        </div>
+
+        <aside class="title-logos" aria-label="Research partners and funders">
+          <a class="title-logo title-logo--fwo" href="https://www.fwo.be/en/" target="_blank" rel="noopener noreferrer" aria-label="Research Foundation - Flanders (FWO)">
+            <img src="assets/logos/fwo.png" alt="Research Foundation - Flanders (FWO)" />
+          </a>
+          <a class="title-logo title-logo--ugent" href="https://www.ugent.be/en" target="_blank" rel="noopener noreferrer" aria-label="Ghent University">
+            <img src="assets/logos/ugent.png" alt="Ghent University" />
+          </a>
+          <a class="title-logo title-logo--vito" href="https://vito.be/en" target="_blank" rel="noopener noreferrer" aria-label="VITO">
+            <img src="assets/logos/vito.png" alt="VITO" />
+          </a>
+          <a class="title-logo title-logo--idlab" href="https://idlab.ugent.be/" target="_blank" rel="noopener noreferrer" aria-label="IDLab">
+            <img src="assets/logos/idlab.png" alt="IDLab - Internet and Data Lab" />
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="intro" class="slide slide--dark" inlist="" rel="schema:hasPart" resource="#intro">
+      <p class="eyebrow">01 / Context</p>
+      <h2 property="schema:name">Start with the question.</h2>
+      <p class="lead">A focused question gives the rest of the story somewhere to go.</p>
+    </section>
+
+    <section id="agenda" class="slide index" inlist="" rel="schema:hasPart" resource="#agenda">
+      <p class="eyebrow">Roadmap</p>
+      <ol class="agenda">
+        <li><a href="#context">Context</a></li>
+        <li><a href="#idea">The idea</a></li>
+        <li><a href="#takeaways">Takeaways</a></li>
+        <li><a href="#acknowledgments">Acknowledgments</a></li>
+        <li><a href="#references">References</a></li>
+        <li><a href="#supplemental">Supplemental slides</a></li>
+      </ol>
+    </section>
+
+    <section id="context" class="slide" inlist="" rel="schema:hasPart" resource="#context">
+      <p class="eyebrow">02 / Context</p>
+      <h2 property="schema:name">Make the tension visible.</h2>
+      <div class="split">
+        <div>
+          <p class="lead">What changed, what is difficult, and why does it matter now?</p>
+        </div>
+        <div class="note">
+          <span class="note__label">Framing</span>
+          <p>Use one concrete observation, example, or constraint to ground the audience.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="idea" class="slide" inlist="" rel="schema:hasPart" resource="#idea">
+      <p class="eyebrow">03 / The idea</p>
+      <h2 property="schema:name">One clear idea beats a crowded slide.</h2>
+      <div class="cards">
+        <article class="card">
+          <span class="card__number">01</span>
+          <h3>Signal</h3>
+          <p>What should the audience notice first?</p>
+        </article>
+        <article class="card">
+          <span class="card__number">02</span>
+          <h3>Structure</h3>
+          <p>What is the simplest useful explanation?</p>
+        </article>
+        <article class="card">
+          <span class="card__number">03</span>
+          <h3>Story</h3>
+          <p>What should the audience remember later?</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="takeaways" class="slide slide--accent" inlist="" rel="schema:hasPart" resource="#takeaways">
+      <p class="eyebrow">04 / Takeaways</p>
+      <h2 property="schema:name">Leave room for the last thought.</h2>
+      <ul class="clean-list">
+        <li>Keep the central message easy to repeat.</li>
+        <li>Use evidence to sharpen the story, not to bury it.</li>
+        <li>End with the next useful question.</li>
+      </ul>
+    </section>
+
+    <section id="acknowledgments" class="slide slide--accent" inlist="" rel="schema:hasPart" resource="#acknowledgments">
+      <p class="eyebrow">05 / Acknowledgments</p>
+      <h2 property="schema:name">With thanks.</h2>
+      <div class="acknowledgments">
+        <p><strong>Research support</strong><br />Add funders, projects, or institutional support here.</p>
+        <p><strong>Contributors</strong><br />Add collaborators, mentors, reviewers, and everyone who helped shape the work.</p>
+      </div>
+    </section>
+
+    <section id="references" class="slide" inlist="" rel="schema:hasPart" resource="#references">
+      <p class="eyebrow">06 / References</p>
+      <h2 property="schema:name">Keep the evidence easy to revisit.</h2>
+      <ol class="references">
+        <li><cite>Author, A.</cite> (Year). Title of the referenced work. <span class="reference__meta">Publisher, journal, or DOI</span></li>
+        <li><cite>Author, B.</cite> (Year). Title of the referenced work. <span class="reference__meta">Publisher, journal, or DOI</span></li>
+        <li><cite>Organization.</cite> (Year). Title of the referenced resource. <span class="reference__meta">URL or report identifier</span></li>
+      </ol>
+    </section>
+
+    <section id="supplemental" class="slide slide--dark" inlist="" rel="schema:hasPart" resource="#supplemental">
+      <p class="eyebrow">07 / Supplemental slides</p>
+      <h2 property="schema:name">Keep useful detail close at hand.</h2>
+      <div class="supplemental-grid">
+        <article class="supplemental-card">
+          <span class="note__label">Method</span>
+          <p>Add derivations, extra experiments, or implementation detail here.</p>
+        </article>
+        <article class="supplemental-card">
+          <span class="note__label">Discussion</span>
+          <p>Use these slides when a question needs more depth than the main story.</p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <nav class="footer__links" aria-label="Presentation resources">
+        <a href="https://github.com/ecrum19/slides-generator.sh">Generator source</a>
+        <a href="https://github.com/ecrum19/iswc-2026-slides">Deck source</a>
+        <a href="https://github.com/ecrum19">GitHub profile</a>
+        <a href="https://ecrum19.github.io/eliascrum/">Personal site</a>
+        <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" property="schema:license">Creative Commons Attribution 4.0</a>
+      </nav>
+    </footer>
+
+    <script src="shower/index.js"></script>
+  </body>
+</html>
