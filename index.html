@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head prefix="foaf: http://xmlns.com/foaf/0.1/">
-    <title>Does SPARQL Federation Work in Practice?</title>
+    <title>Does SPARQL federation work in the real world?</title>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,32 +25,33 @@
   <body class="shower list" prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# foaf: http://xmlns.com/foaf/0.1/ owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# org: http://www.w3.org/ns/org# schema: http://schema.org/ cite: http://purl.org/spar/cito/" typeof="schema:PresentationDigitalDocument">
     <header class="caption">
       <div class="title">
-        <p class="kicker">Presentation</p>
-        <h1 property="schema:name">Does SPARQL Federation Work in Practice?</h1>
+        <p class="kicker">ISWC 2026 · In-Use Paper Presentation</p>
+        <h1 property="schema:name">Does SPARQL federation work in the real world?</h1>
         <p class="caption-subtitle">
-          <a href="https://ecrum19.github.io/eliascrum/" rel="schema:author">Elias Crum</a>
+          <a href="https://ecrum19.github.io/eliascrum/" rel="schema:author">Elias Crum et al.</a>
           <span aria-hidden="true"> · </span>
-          <a href="https://iswc2026.semanticweb.org/">International Semantic Web Conference 2026 - Bari, IT</a>
+          <a href="https://iswc2026.semanticweb.org/">International Semantic Web Conference 2026 · Bari, Italy</a>
           <span aria-hidden="true"> · </span>
-          <time rel="schema:datePublished" datetime="2026-10-25">2026-10-25</time>
+          <time rel="schema:datePublished" datetime="2026-10-25">25 October 2026</time>
         </p>
       </div>
     </header>
 
-    <!-- Replace the sample slide copy below when creating a new deck. -->
     <section id="title" class="slide title" inlist="" rel="schema:hasPart" resource="#title">
       <p class="eyebrow">
-        <a class="title-slide__venue-link" href="https://iswc2026.semanticweb.org/" target="_blank" rel="noopener noreferrer">International Semantic Web Conference 2026 - Bari, IT</a>
+        <a class="title-slide__venue-link" href="https://iswc2026.semanticweb.org/" target="_blank" rel="noopener noreferrer">International Semantic Web Conference 2026 · Bari, Italy</a>
       </p>
 
       <div class="title-layout">
         <div class="title-copy">
-          <h2 property="schema:name">Does SPARQL Federation Work in Practice?</h2>
+          <h2 property="schema:name">Does SPARQL federation work in the real world?</h2>
+          <p class="title-subtitle">A longitudinal case study over large biological SPARQL endpoints</p>
           <div class="title-details">
-            <p class="byline">
-              <a href="https://ecrum19.github.io/eliascrum/" target="_blank" rel="noopener noreferrer">Elias Crum</a>
-            </p>
-            <p class="date"><time datetime="2026-10-25">2026-10-25</time></p>
+            <p class="byline"><span class="author"><a href="https://orcid.org/0009-0005-3991-754X" target="_blank" rel="noopener noreferrer" title="ORCID 0009-0005-3991-754X">Elias Crum</a><sup>1</sup></span> · <span class="author"><a href="https://orcid.org/0000-0003-3467-9755" target="_blank" rel="noopener noreferrer" title="ORCID 0000-0003-3467-9755">Bryan-Elliott Tam</a><sup>1</sup></span> · <span class="author"><a href="https://orcid.org/0009-0004-0721-2169" target="_blank" rel="noopener noreferrer" title="ORCID 0009-0004-0721-2169">Jonni Hanski</a><sup>1</sup></span> · <span class="author"><a href="https://orcid.org/0000-0003-3213-4495" target="_blank" rel="noopener noreferrer" title="ORCID 0000-0003-3213-4495">Ana-Claudia Sima</a><sup>2</sup></span> · <span class="author"><a href="https://orcid.org/0000-0002-3175-5372" target="_blank" rel="noopener noreferrer" title="ORCID 0000-0002-3175-5372">Tarcisio Mendes de Farias</a><sup>2</sup></span> · <span class="author"><a href="https://orcid.org/0000-0002-7449-1266" target="_blank" rel="noopener noreferrer" title="ORCID 0000-0002-7449-1266">Jerven Bolleman</a><sup>3</sup></span> · <span class="author"><a href="https://orcid.org/0000-0001-5118-256X" target="_blank" rel="noopener noreferrer" title="ORCID 0000-0001-5118-256X">Ruben Taelman</a><sup>1</sup></span></p>
+            <p class="affiliation"><sup>1</sup> <a href="https://idlab.ugent.be/" target="_blank" rel="noopener noreferrer">IDLab</a>, <a href="https://www.ugent.be/en" target="_blank" rel="noopener noreferrer">Ghent University</a> – <a href="https://www.imec-int.com/en" target="_blank" rel="noopener noreferrer">imec</a>, Belgium</p>
+            <p class="affiliation"><sup>2</sup> <a href="https://www.sib.swiss/" target="_blank" rel="noopener noreferrer">SIB Swiss Institute of Bioinformatics</a>, Lausanne, Switzerland</p>
+            <p class="affiliation"><sup>3</sup> <a href="https://www.expasy.org/resources/uniprotkb-swiss-prot" target="_blank" rel="noopener noreferrer">Swiss-Prot group</a>, <a href="https://www.sib.swiss/" target="_blank" rel="noopener noreferrer">SIB Swiss Institute of Bioinformatics</a>, Geneva, Switzerland</p>
+            <p class="date"><time datetime="2026-10-25">25 October 2026</time></p>
           </div>
         </div>
 
@@ -62,123 +63,1229 @@
             <img src="assets/logos/ugent.png" alt="Ghent University" />
           </a>
           <a class="title-logo title-logo--vito" href="https://vito.be/en" target="_blank" rel="noopener noreferrer" aria-label="VITO">
-            <img src="assets/logos/vito.png" alt="VITO" />
+            <img src="assets/logos/vito.png" alt="VITO logo">
           </a>
-          <a class="title-logo title-logo--idlab" href="https://idlab.ugent.be/" target="_blank" rel="noopener noreferrer" aria-label="IDLab">
+          <a class="title-logo title-logo--idlab" href="https://idlab.ugent.be/" target="_blank" rel="noopener noreferrer" aria-label="IDLab - Internet and Data Lab">
             <img src="assets/logos/idlab.png" alt="IDLab - Internet and Data Lab" />
+          </a>
+          <a class="title-logo title-logo--sib" href="https://www.sib.swiss/" target="_blank" rel="noopener noreferrer" aria-label="SIB Swiss Institute of Bioinformatics">
+            <img src="assets/logos/sib.svg" alt="SIB Swiss Institute of Bioinformatics" />
+          </a>
+          <a class="title-logo title-logo--swissprot" href="https://www.expasy.org/resources/uniprotkb-swiss-prot" target="_blank" rel="noopener noreferrer" aria-label="UniProtKB/Swiss-Prot">
+            <img src="assets/logos/swissprot.png" alt="UniProtKB/Swiss-Prot" />
           </a>
         </aside>
       </div>
     </section>
 
-    <section id="intro" class="slide slide--dark" inlist="" rel="schema:hasPart" resource="#intro">
-      <p class="eyebrow">01 / Context</p>
-      <h2 property="schema:name">Start with the question.</h2>
-      <p class="lead">A focused question gives the rest of the story somewhere to go.</p>
+    <!-- Shared icons and arrowheads, referenced by <use> in every slide. -->
+    <svg class="icon-defs" aria-hidden="true" focusable="false">
+      <defs>
+        <marker id="arrow-ink" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#25333b" /></marker>
+        <marker id="arrow-accent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4f8e8a" /></marker>
+        <marker id="arrow-manual" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1f78a5" /></marker>
+        <marker id="arrow-algo" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#d48a0c" /></marker>
+        <marker id="arrow-light" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4f8e8a" /></marker>
+        <marker id="arrow-danger" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#b3477b" /></marker>
+      </defs>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-user" viewBox="0 0 48 48"><circle cx="24" cy="15" r="8" /><path d="M8 42c0-9 7-15 16-15s16 6 16 15" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-users" viewBox="0 0 48 48"><circle cx="17" cy="16" r="6" /><circle cx="33" cy="16" r="6" /><path d="M5 38c0-7 5-12 12-12s12 5 12 12M24 30c2-2.5 5-4 9-4 7 0 11 5 11 12" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-db" viewBox="0 0 48 48"><ellipse cx="24" cy="10" rx="15" ry="5" /><path d="M9 10v28c0 2.8 6.7 5 15 5s15-2.2 15-5V10" /><path d="M9 19.5c0 2.8 6.7 5 15 5s15-2.2 15-5M9 29c0 2.8 6.7 5 15 5s15-2.2 15-5" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-gear" viewBox="0 0 48 48"><circle cx="24" cy="24" r="12" /><circle cx="24" cy="24" r="4.5" /><path stroke-width="5" stroke-linecap="butt" d="M24 4v7M24 37v7M4 24h7M37 24h7M9.9 9.9l4.9 4.9M33.2 33.2l4.9 4.9M9.9 38.1l4.9-4.9M33.2 14.8l4.9-4.9" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-doc" viewBox="0 0 48 48"><path d="M11 4h18l9 9v31H11z" /><path d="M29 4v9h9" /><path d="M17 22h15M17 29h15M17 36h9" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-table" viewBox="0 0 48 48"><rect x="6" y="9" width="36" height="30" rx="3" /><path d="M6 19h36M6 29h36M18 9v30" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-flask" viewBox="0 0 48 48"><path d="M18 5h12M20 5v13L9 38a3.5 3.5 0 0 0 3 5h24a3.5 3.5 0 0 0 3-5L28 18V5" /><path d="M13.5 30h21" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-globe" viewBox="0 0 48 48"><circle cx="24" cy="24" r="18" /><ellipse cx="24" cy="24" rx="8" ry="18" /><path d="M6 24h36M9 15h30M9 33h30" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-clock" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" /><path d="M24 14v10l7 5" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-block" viewBox="0 0 48 48"><circle cx="24" cy="24" r="17" /><path d="M12 36L36 12" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-move" viewBox="0 0 48 48"><path d="M21 8H9v32h30V28" /><path d="M27 8h13v13M40 8L22 26" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-power" viewBox="0 0 48 48"><path d="M24 6v17" /><path d="M14 12.5a15 15 0 1 0 20 0" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-check" viewBox="0 0 48 48"><path stroke-width="5" d="M11 25l8 8 18-19" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-pen" viewBox="0 0 48 48"><path d="M31 7l10 10-23 23H8V30z" /><path d="M26 12l10 10" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-search" viewBox="0 0 48 48"><circle cx="20" cy="20" r="12" /><path d="M29 29l12 12" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-calendar" viewBox="0 0 48 48"><rect x="6" y="10" width="36" height="32" rx="3" /><path d="M6 19h36M15 5v9M33 5v9" /><path d="M14 27h4M22 27h4M30 27h4M14 34h4M22 34h4" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-server" viewBox="0 0 48 48"><rect x="7" y="7" width="34" height="14" rx="2.5" /><rect x="7" y="27" width="34" height="14" rx="2.5" /><path stroke-width="4" d="M14 14h.01M14 34h.01" /><path d="M22 14h12M22 34h12" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-shield" viewBox="0 0 48 48"><path d="M24 5l15 6v11c0 10-6.5 17-15 21-8.5-4-15-11-15-21V11z" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-chart" viewBox="0 0 48 48"><path d="M7 7v34h34" /><path d="M14 31l8-9 7 6 11-14" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-down" viewBox="0 0 48 48"><path d="M7 7v34h34" /><path d="M13 14l9 9 6-5 12 13" /><path d="M32 31h8v-8" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-fork" viewBox="0 0 48 48"><path d="M24 43V27M24 27L11 12M24 27l13-15" /><path d="M8 19V9h10M40 19V9H30" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" id="i-bolt" viewBox="0 0 48 48"><path d="M27 4L11 27h12l-3 17 17-24H25z" /></symbol>
+        <symbol fill="currentColor" stroke="none" id="i-pine" viewBox="0 0 24 40"><path d="M12 0l10 16h-5l7 14H0l7-14H2z" /><rect x="10" y="30" width="4" height="9" /></symbol>
+        <symbol fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" id="i-protein" viewBox="0 0 48 48"><path d="M9 36 L17 28 L12 18 L22 10 L33 13 L31 24 L39 33" /><circle cx="9" cy="36" r="3.6" fill="currentColor" stroke="none" /><circle cx="17" cy="28" r="3.6" fill="currentColor" stroke="none" /><circle cx="12" cy="18" r="3.6" fill="currentColor" stroke="none" /><circle cx="22" cy="10" r="3.6" fill="currentColor" stroke="none" /><circle cx="33" cy="13" r="3.6" fill="currentColor" stroke="none" /><circle cx="31" cy="24" r="3.6" fill="currentColor" stroke="none" /><circle cx="39" cy="33" r="3.6" fill="currentColor" stroke="none" /></symbol>
+    </svg>
+
+    <!-- 01 · The promise ---------------------------------------------------- -->
+    <section id="promise" class="slide story" inlist="" rel="schema:hasPart" resource="#promise">
+      <p class="eyebrow">01 · The promise</p>
+      <h2 property="schema:name">One question, many databases, no copying.</h2>
+      <p class="ex-badge"><svg aria-hidden="true"><use href="#i-protein" /></svg>Running example · liver transporters</p>
+      <figure class="visual">
+        <svg viewBox="0 0 880 330" role="img" aria-label="A researcher asks which human transport proteins are expressed in the liver; a federation engine splits the question, sends the protein part to UniProt and the liver-expression part to Bgee, and returns one combined answer.">
+          <g class="behind">
+            <path class="flow flow--accent draw" pathLength="1" d="M352 212C300 300 170 300 128 216" />
+          </g>
+          <g>
+            <rect class="bubble" x="0" y="2" width="248" height="102" rx="14" />
+            <path class="bubble" d="M70 103l12 18 14-18" />
+            <rect x="69" y="100" width="28" height="5" fill="#fff" />
+            <text x="18" y="35" class="t-label" style="font-size: 20px">“Which human transport</text>
+            <text x="18" y="61" class="t-label" style="font-size: 20px">proteins are expressed</text>
+            <text x="18" y="87" class="t-label" style="font-size: 20px">in the liver?”<tspan class="fn" dy="-8">1</tspan></text>
+            <circle cx="92" cy="172" r="46" class="disc--accent" />
+            <use href="#i-user" x="62" y="142" width="60" height="60" class="ic-ink" />
+            <text x="92" y="244" class="t-title t-center">You</text>
+          </g>
+          <g class="next">
+            <path class="flow draw" pathLength="1" d="M146 172H328" />
+            <text x="237" y="162" class="t-small t-center">your question</text>
+            <circle cx="390" cy="172" r="54" class="disc--white" />
+            <use href="#i-gear" x="352" y="134" width="76" height="76" class="ic-accent" />
+            <g class="halo">
+              <text x="390" y="252" class="t-title t-center">Federation engine<tspan class="fn" dy="-8">2</tspan></text>
+              <text x="390" y="272" class="t-small t-center">splits it and sends each part out</text>
+            </g>
+            <path class="flow flow--thin draw" pathLength="1" d="M447 156L590 78" />
+            <path class="flow flow--thin draw" pathLength="1" d="M447 172H590" />
+            <path class="flow flow--thin draw" pathLength="1" d="M447 188L590 266" />
+            <use href="#i-db" x="600" y="40" width="58" height="58" class="ic-manual" />
+            <use href="#i-db" x="600" y="143" width="58" height="58" class="ic-manual" />
+            <use href="#i-db" x="600" y="243" width="58" height="58" class="ic-muted" />
+            <text x="672" y="66" class="t-label t-strong">UniProt</text>
+            <text x="672" y="85" class="t-small">proteins &amp; what they do</text>
+            <text x="672" y="168" class="t-label t-strong">Bgee</text>
+            <text x="672" y="187" class="t-small">where genes are active</text>
+            <text x="672" y="268" class="t-label t-strong">+ other data sources</text>
+            <text x="672" y="287" class="t-small">each run by a different team</text>
+          </g>
+          <g class="next reveal-behind">
+            <circle cx="232" cy="281" r="24" class="disc--white" />
+            <use href="#i-table" x="214" y="263" width="36" height="36" class="ic-accent" />
+            <text x="232" y="325" class="t-label t-strong t-center t-accent">one combined answer</text>
+          </g>
+        </svg>
+      </figure>
+      <p class="takehome next"><span class="takehome__label">Key message</span><span>Federation lets you query data where it lives. No central copy needed.</span></p>
+      <p class="footnote">
+        <span><sup>1</sup> Running example, paraphrased from <em class="qname">query 109</em> of our 67: “human transporter proteins expressed in the liver”, combining UniProt (UniProt Consortium, NAR 2023) and Bgee (Bastian et al., NAR 2021).</span>
+        <span><sup>2</sup> W3C, <cite>SPARQL 1.1 Federated Query</cite>, Recommendation (2013).</span>
+      </p>
     </section>
 
-    <section id="agenda" class="slide index" inlist="" rel="schema:hasPart" resource="#agenda">
-      <p class="eyebrow">Roadmap</p>
-      <ol class="agenda">
-        <li><a href="#context">Context</a></li>
-        <li><a href="#idea">The idea</a></li>
-        <li><a href="#takeaways">Takeaways</a></li>
-        <li><a href="#acknowledgments">Acknowledgments</a></li>
-        <li><a href="#references">References</a></li>
-        <li><a href="#supplemental">Supplemental slides</a></li>
+    <!-- 02 · The gap -------------------------------------------------------- -->
+    <section id="gap" class="slide story" inlist="" rel="schema:hasPart" resource="#gap">
+      <p class="eyebrow">02 · The gap</p>
+      <h2 property="schema:name">Federation works in the lab. Does it work in the wild?</h2>
+      <figure class="visual">
+        <svg viewBox="0 0 880 330" role="img" aria-label="Left: benchmarks test federation in the lab, under controlled, stable and reproducible conditions. Right: in the wild, mountains and pine trees under a storm cloud, public SPARQL endpoints from the study (UniProt, Rhea, Bgee, OMA and Wikidata) scattered across the meadow and mountainsides, and a signpost reading here be dragons: uncontrolled, ever-changing and untested.">
+          <g>
+            <rect class="panel" x="0" y="0" width="392" height="296" rx="16" />
+            <use href="#i-flask" x="20" y="16" width="42" height="42" class="ic-accent" />
+            <text x="72" y="40" class="t-title">In the lab</text>
+            <text x="72" y="58" class="t-small">benchmarks<tspan class="fn" dy="-6">1</tspan></text>
+            <path d="M70 222A126 112 0 0 1 322 222" fill="none" stroke="#4f8e8a" stroke-width="2" stroke-dasharray="5 5" />
+            <path d="M56 222H336" class="axis" />
+            <use href="#i-db" x="100" y="150" width="52" height="52" class="ic-ink" />
+            <use href="#i-db" x="170" y="150" width="52" height="52" class="ic-ink" />
+            <use href="#i-db" x="240" y="150" width="52" height="52" class="ic-ink" />
+            <circle cx="146" cy="152" r="11" fill="#4f8e8a" /><use href="#i-check" x="137" y="143" width="18" height="18" class="ic-white" />
+            <circle cx="216" cy="152" r="11" fill="#4f8e8a" /><use href="#i-check" x="207" y="143" width="18" height="18" class="ic-white" />
+            <circle cx="286" cy="152" r="11" fill="#4f8e8a" /><use href="#i-check" x="277" y="143" width="18" height="18" class="ic-white" />
+            <rect class="pill" x="42" y="244" width="96" height="32" rx="16" /><text x="90" y="265" class="t-small t-center">controlled</text>
+            <rect class="pill" x="150" y="244" width="76" height="32" rx="16" /><text x="188" y="265" class="t-small t-center">stable</text>
+            <rect class="pill" x="238" y="244" width="112" height="32" rx="16" /><text x="294" y="265" class="t-small t-center">reproducible</text>
+          </g>
+          <g class="next">
+            <rect class="panel" x="488" y="0" width="392" height="296" rx="16" />
+            <use href="#i-pine" x="514" y="14" width="26" height="44" class="ic-pine" />
+            <text x="560" y="40" class="t-title">In the wild</text>
+            <text x="560" y="58" class="t-small">everyday use, untested</text>
+            <clipPath id="wild-clip"><rect x="504" y="72" width="360" height="160" rx="12" /></clipPath>
+            <g clip-path="url(#wild-clip)">
+              <rect x="504" y="72" width="360" height="160" class="wild-sky" />
+              <circle cx="530" cy="94" r="12" class="wild-sun" />
+              <path d="M558 100q5-6 10 0q5-6 10 0M586 110q4-5 8 0q4-5 8 0" class="wild-bird" />
+              <g class="wild-storm">
+                <circle cx="792" cy="92" r="11" class="wild-cloud" />
+                <circle cx="808" cy="85" r="14" class="wild-cloud" />
+                <circle cx="825" cy="92" r="11" class="wild-cloud" />
+                <rect x="792" y="92" width="33" height="11" class="wild-cloud" />
+                <path d="M810 103l-8 14h7l-5 13 15-19h-7l5-8z" class="wild-bolt" />
+              </g>
+              <path d="M700 232L778 148L856 232z" class="wild-peak wild-peak--far" />
+              <path d="M778 148l-14 18 8-3 6 5 6-5 8 3z" class="wild-snow" />
+              <path d="M596 232L684 122L772 232z" class="wild-peak" />
+              <path d="M684 122l-17 22 9-4 8 7 8-7 9 4z" class="wild-snow" />
+              <path d="M504 232V204Q600 188 690 202T864 196V232z" class="wild-ground" />
+              <use href="#i-pine" x="508" y="188" width="24" height="40" class="ic-pine" />
+              <use href="#i-pine" x="528" y="198" width="19" height="32" class="ic-pine" />
+              <use href="#i-pine" x="838" y="186" width="24" height="40" class="ic-pine" />
+              <rect x="666" y="218" width="4" height="14" class="wild-post" />
+              <rect x="596" y="192" width="144" height="28" rx="5" class="wild-sign" />
+              <text x="668" y="210" class="t-center wild-sign-text">HERE BE DRAGONS</text>
+              <path d="M534 226l2-8 2 8M539 226l1.5-5 1.5 5M590 226l2-8 2 8M595 226l1.5-6 1.5 6" class="wild-grass" />
+              <path d="M540.0 185V221A25.0 5 0 0 0 590.0 221V185z" class="wild-db" />
+              <path d="M540.0 194A25.0 5 0 0 0 590.0 194" class="wild-db-ring" />
+              <ellipse cx="565" cy="185" rx="25.0" ry="5" class="wild-db-top" />
+              <text x="565" y="212" class="t-center wild-sticker-text">Rhea</text>
+              <path d="M599 185l2-8 2 8M604 185l1.5-5 1.5 5M655 185l2-8 2 8M660 185l1.5-6 1.5 6" class="wild-grass" />
+              <path d="M605.0 144V180A25.0 5 0 0 0 655.0 180V144z" class="wild-db" />
+              <path d="M605.0 153A25.0 5 0 0 0 655.0 153" class="wild-db-ring" />
+              <ellipse cx="630" cy="144" rx="25.0" ry="5" class="wild-db-top" />
+              <image href="assets/logos/endpoints/uniprot.svg" x="610.0" y="159" width="40" height="15" preserveAspectRatio="xMidYMid meet" />
+              <path d="M693 171l2-8 2 8M698 171l1.5-5 1.5 5M749 171l2-8 2 8M754 171l1.5-6 1.5 6" class="wild-grass" />
+              <path d="M699.0 130V166A25.0 5 0 0 0 749.0 166V130z" class="wild-db" />
+              <path d="M699.0 139A25.0 5 0 0 0 749.0 139" class="wild-db-ring" />
+              <ellipse cx="724" cy="130" rx="25.0" ry="5" class="wild-db-top" />
+              <image href="assets/logos/endpoints/bgee.png" x="703.0" y="145" width="42" height="15" preserveAspectRatio="xMidYMid meet" />
+              <path d="M779 181l2-8 2 8M784 181l1.5-5 1.5 5M835 181l2-8 2 8M840 181l1.5-6 1.5 6" class="wild-grass" />
+              <path d="M785.0 140V176A25.0 5 0 0 0 835.0 176V140z" class="wild-db" />
+              <path d="M785.0 149A25.0 5 0 0 0 835.0 149" class="wild-db-ring" />
+              <ellipse cx="810" cy="140" rx="25.0" ry="5" class="wild-db-top" />
+              <image href="assets/logos/endpoints/oma.svg" x="790" y="155" width="15" height="15" /><text x="807" y="167" class="wild-sticker-text" style="fill: #336699">OMA</text>
+              <path d="M747 228l2-8 2 8M752 228l1.5-5 1.5 5M803 228l2-8 2 8M808 228l1.5-6 1.5 6" class="wild-grass" />
+              <path d="M753.0 187V223A25.0 5 0 0 0 803.0 223V187z" class="wild-db" />
+              <path d="M753.0 196A25.0 5 0 0 0 803.0 196" class="wild-db-ring" />
+              <ellipse cx="778" cy="187" rx="25.0" ry="5" class="wild-db-top" />
+              <image href="assets/logos/endpoints/wikidata.svg" x="763.0" y="202" width="30" height="15" preserveAspectRatio="xMidYMid meet" />
+            </g>
+            <rect class="pill pill--wild" x="522" y="244" width="100" height="32" rx="16" /><text x="572" y="265" class="t-small t-center">uncontrolled</text>
+            <rect class="pill pill--wild" x="634" y="244" width="110" height="32" rx="16" /><text x="689" y="265" class="t-small t-center">ever-changing</text>
+            <rect class="pill pill--wild" x="756" y="244" width="90" height="32" rx="16" /><text x="801" y="265" class="t-small t-center">untested</text>
+          </g>
+          <g class="next">
+            <circle cx="440" cy="148" r="30" fill="#4f8e8a" />
+            <text x="440" y="162" class="t-big t-center t-white" style="font-size: 38px">?</text>
+          </g>
+        </svg>
+      </figure>
+      <p class="takehome next"><span class="takehome__label">Key message</span><span>Benchmarks test controlled conditions; we tested federation in everyday use.</span></p>
+      <p class="footnote">
+        <span><sup>1</sup> Benchmarks: FedBench (Schmidt et al., ISWC 2011) · LargeRDFBench (Saleem et al., J. Web Semant. 2018) · FedShop (Dang et al., ISWC 2023).</span>
+        <span><sup aria-hidden="true" class="fn-spacer">1</sup> Controlled evaluations: federation systems (Saleem et al., Semantic Web J. 2016) · Wikidata querying (Hernández et al., ISWC 2016).</span>
+      </p>
+    </section>
+
+    <!-- 03 · Two ways to federate ------------------------------------------ -->
+    <section id="approaches" class="slide story" inlist="" rel="schema:hasPart" resource="#approaches">
+      <p class="eyebrow">03 · Two ways to federate</p>
+      <h2 property="schema:name">Who decides where each part of the question goes?</h2>
+      <p class="ex-badge"><svg aria-hidden="true"><use href="#i-protein" /></svg>Running example · liver transporters</p>
+      <figure class="visual">
+        <svg viewBox="0 0 880 330" role="img" aria-label="Manual federation: the user sends the query to UniProt and marks the liver-expression part with SERVICE so it goes to Bgee. Algorithmic federation works in three steps: 1, the engine asks every source about every part of the query, for example asking Bgee whether it has transport reactions; 2, it plans which source answers each part, transporters from UniProt and liver expression from Bgee; 3, it fetches the parts and joins them itself on your machine.">
+          <g>
+            <rect class="panel--manual" x="0" y="0" width="880" height="150" rx="14" />
+            <use href="#i-pen" x="20" y="22" width="40" height="40" class="ic-manual" />
+            <text x="72" y="44" class="t-title t-manual">Manual</text>
+            <text x="72" y="63" class="t-small"><tspan class="t-code">SERVICE</tspan> clause<tspan class="fn" dy="-6">1</tspan></text>
+            <use href="#i-doc" x="200" y="30" width="62" height="62" class="ic-ink" />
+            <text x="231" y="112" class="t-small t-center">your query</text>
+            <path class="flow flow--thin flow--manual" d="M266 52L314 36" />
+            <path class="flow flow--thin flow--manual" d="M266 72L314 92" />
+            <rect class="panel" x="320" y="18" width="228" height="38" rx="8" />
+            <text x="334" y="42" class="t-code">{ …human transporters… }</text>
+            <rect class="panel" x="320" y="74" width="228" height="38" rx="8" />
+            <text x="334" y="98" class="t-code">SERVICE &lt;Bgee&gt; { …liver… }</text>
+            <path class="flow flow--manual" d="M556 37H690" />
+            <path class="flow flow--manual" d="M556 93H690" />
+            <use href="#i-db" x="698" y="14" width="46" height="46" class="ic-manual" />
+            <use href="#i-db" x="698" y="70" width="46" height="46" class="ic-manual" />
+            <text x="754" y="42" class="t-label t-strong">UniProt</text>
+            <text x="754" y="98" class="t-label t-strong">Bgee</text>
+            <text x="320" y="138" class="t-small t-italic">The query author specifies which endpoint answers each part of the query.</text>
+          </g>
+          <g class="next">
+            <rect class="panel--algo" x="0" y="168" width="880" height="160" rx="14" />
+            <use href="#i-gear" x="20" y="190" width="40" height="40" class="ic-algo" />
+            <text x="72" y="212" class="t-title t-algo">Algorithmic</text>
+            <text x="72" y="231" class="t-small">source selection<tspan class="fn" dy="-6">2</tspan></text>
+            <use href="#i-doc" x="194" y="206" width="50" height="50" class="ic-ink" />
+            <text x="219" y="276" class="t-small t-center">your query</text>
+            <path class="flow flow--algo flow--thin" d="M248 238H284" />
+            <!-- Stage 1: probe every source -->
+            <circle cx="282" cy="192" r="10" class="dot-algo" />
+            <text x="282" y="197" class="t-small t-strong t-center t-white">1</text>
+            <text x="298" y="197" class="t-label t-strong t-algo">Ask every source</text>
+            <circle cx="312" cy="240" r="22" class="disc--white" />
+            <use href="#i-search" x="298" y="226" width="28" height="28" class="ic-algo" />
+            <path class="flow--probe" d="M334 234L398 222" />
+            <path class="flow--probe" d="M334 246L398 268" />
+            <text x="366" y="222" class="t-small t-strong t-algo">?</text>
+            <text x="366" y="250" class="t-small t-strong t-algo">?</text>
+            <use href="#i-db" x="400" y="208" width="28" height="28" class="ic-algo" />
+            <use href="#i-db" x="400" y="254" width="28" height="28" class="ic-algo" />
+            <text x="432" y="227" class="t-small">UniProt</text>
+            <text x="432" y="273" class="t-small">Bgee</text>
+            <text x="282" y="300" class="t-small t-italic">e.g. “Does Bgee hold transport reactions?”</text>
+            <text x="282" y="316" class="t-small">each probe is an additional request</text>
+          </g>
+          <g class="next">
+            <path d="M494 184V318" class="grid" stroke-dasharray="4 4" />
+            <!-- Stage 2: plan which source answers which part -->
+            <circle cx="516" cy="192" r="10" class="dot-algo" />
+            <text x="516" y="197" class="t-small t-strong t-center t-white">2</text>
+            <text x="532" y="197" class="t-label t-strong t-algo">Make a plan</text>
+            <rect class="panel" x="508" y="212" width="170" height="28" rx="7" />
+            <text x="518" y="231" class="t-small"><tspan class="t-strong">transporters</tspan> → UniProt</text>
+            <rect class="panel" x="508" y="250" width="170" height="28" rx="7" />
+            <text x="518" y="269" class="t-small"><tspan class="t-strong">in the liver</tspan> → Bgee</text>
+            <text x="508" y="300" class="t-small">decides which source</text>
+            <text x="508" y="316" class="t-small">answers each part</text>
+          </g>
+          <g class="next">
+            <path d="M694 184V318" class="grid" stroke-dasharray="4 4" />
+            <!-- Stage 3: fetch the parts and join them locally -->
+            <circle cx="716" cy="192" r="10" class="dot-algo" />
+            <text x="716" y="197" class="t-small t-strong t-center t-white">3</text>
+            <text x="732" y="197" class="t-label t-strong t-algo">Fetch &amp; combine</text>
+            <use href="#i-db" x="710" y="210" width="28" height="28" class="ic-algo" />
+            <use href="#i-db" x="710" y="252" width="28" height="28" class="ic-algo" />
+            <path class="flow flow--algo flow--thin draw" pathLength="1" d="M742 226L800 240" />
+            <path class="flow flow--algo flow--thin draw" pathLength="1" d="M742 266L800 252" />
+            <circle cx="826" cy="246" r="24" class="disc--white" />
+            <use href="#i-table" x="810" y="230" width="32" height="32" class="ic-algo" />
+            <text x="708" y="300" class="t-small">joins the partial results</text>
+            <text x="708" y="316" class="t-small">on the client</text>
+          </g>
+        </svg>
+      </figure>
+      <p class="takehome next"><span class="takehome__label">Key message</span><span>Algorithmic federation is more convenient, but far more request-intensive.</span></p>
+      <p class="footnote">
+        <span><sup>1</sup> W3C, <cite>SPARQL 1.1 Federated Query</cite>, Recommendation (2013).</span>
+        <span><sup>2</sup> Run with Comunica (Taelman et al., ISWC 2018) using ASK-, COUNT- and VoID-based source selection; see <a href="#supp-strategies">S8</a>.</span>
+      </p>
+    </section>
+
+    <!-- 04 · The queries --------------------------------------------------- -->
+    <section id="queries" class="slide story" inlist="" rel="schema:hasPart" resource="#queries">
+      <p class="eyebrow">04 · The queries</p>
+      <h2 property="schema:name">Real research questions, written by domain experts.</h2>
+      <p class="ex-badge"><svg aria-hidden="true"><use href="#i-protein" /></svg>Running example · liver transporters</p>
+      <figure class="visual">
+        <svg viewBox="0 0 880 330" role="img" aria-label="Where the 67 queries come from: domain experts using SIB's public endpoints wrote question and query pairs, published as endpoint examples. Example questions: which enzymes act on molecules similar to dopamine; which human cancer genes have counterparts in the rat brain; which protein patents have expired; which human transport proteins are expressed in the liver. More than half have a confirmed application or address an open question, about a quarter produced peer-reviewed results, and each spans 2 to 3 sources with about 15 triple patterns on average.">
+          <g>
+            <circle cx="38" cy="44" r="32" class="disc--accent" />
+            <use href="#i-users" x="16" y="22" width="44" height="44" class="ic-accent" />
+            <text x="82" y="40" class="t-title">Domain experts</text>
+            <text x="82" y="60" class="t-small">using SIB’s public endpoints</text>
+            <path class="flow flow--accent" d="M262 44H302" />
+            <circle cx="348" cy="44" r="32" class="disc--accent" />
+            <use href="#i-doc" x="326" y="22" width="44" height="44" class="ic-accent" />
+            <text x="392" y="40" class="t-title">Question + query pairs</text>
+            <text x="392" y="60" class="t-small">published as endpoint examples<tspan class="fn" dy="-6">1</tspan></text>
+            <path class="flow flow--accent" d="M612 44H652" />
+            <circle cx="698" cy="44" r="32" fill="#4f8e8a" />
+            <text x="698" y="56" class="t-big t-center t-white" style="font-size: 32px">67</text>
+            <text x="742" y="40" class="t-title">federated</text>
+            <text x="742" y="60" class="t-small">queries in our study</text>
+          </g>
+          <g class="next">
+            <text x="0" y="128" class="t-label t-strong">What they ask (paraphrased)</text>
+            <rect class="panel" x="0" y="144" width="560" height="40" rx="10" />
+            <text x="14" y="162" class="t-label">“Which enzymes act on molecules similar to dopamine?”</text>
+            <text x="14" y="178" class="t-small">UniProt · IDSM (ChEBI)</text>
+            <rect class="panel" x="0" y="190" width="560" height="40" rx="10" />
+            <text x="14" y="208" class="t-label">“Which human cancer genes have counterparts in the rat brain?”</text>
+            <text x="14" y="224" class="t-small">UniProt · OMA · Bgee</text>
+            <rect class="panel" x="0" y="236" width="560" height="40" rx="10" />
+            <text x="14" y="254" class="t-label">“Which protein patents have already expired?”</text>
+            <text x="14" y="270" class="t-small">UniProt · European Patent Office</text>
+            <rect class="panel--example" x="0" y="282" width="560" height="40" rx="10" />
+            <use href="#i-protein" x="12" y="291" width="22" height="22" class="ic-example" />
+            <text x="42" y="300" class="t-label t-example t-strong">“Which human transport proteins are expressed in the liver?”</text>
+            <text x="42" y="316" class="t-small">UniProt · Bgee · our running example</text>
+          </g>
+          <g class="next">
+            <text x="600" y="128" class="t-label t-strong">Why “real world”?</text>
+            <text x="600" y="176" class="t-big t-accent" style="font-size: 32px">&gt; ½</text>
+            <text x="680" y="162" class="t-label">have a confirmed application</text>
+            <text x="680" y="181" class="t-label">or address an open question</text>
+            <text x="600" y="238" class="t-big t-accent" style="font-size: 32px">≈ ¼</text>
+            <text x="680" y="224" class="t-label">produced results published</text>
+            <text x="680" y="243" class="t-label">in peer-reviewed papers</text>
+            <text x="600" y="300" class="t-big t-accent" style="font-size: 32px">2–3</text>
+            <text x="680" y="286" class="t-label">sources per query, with</text>
+            <text x="680" y="305" class="t-label">≈ 15 triple patterns on average</text>
+          </g>
+        </svg>
+      </figure>
+      <p class="takehome next"><span class="takehome__label">Key message</span><span>Every query answers a real biological question, written by a domain expert.</span></p>
+      <p class="footnote">
+        <span><sup>1</sup> Bolleman et al., “A large collection of bioinformatics question–query pairs over federated knowledge graphs”, GigaScience 2025.</span>
+        <span>Source: Crum et al., ISWC 2026 (Sec. 4.2); per-query complexity in <a href="#supp-complexity">S2</a>.</span>
+      </p>
+    </section>
+
+    <!-- 05 · What we did ---------------------------------------------------- -->
+    <section id="study" class="slide story" inlist="" rel="schema:hasPart" resource="#study">
+      <p class="eyebrow">05 · What we did</p>
+      <h2 property="schema:name">The same real-world queries, repeated over one year.</h2>
+      <figure class="visual">
+        <svg viewBox="0 0 880 330" role="img" aria-label="67 real queries times more than 20 public endpoints times 2 ways to federate times 4 time points, from Spring 2025 to Spring 2026.">
+          <g>
+            <rect class="panel" x="0" y="0" width="187" height="200" rx="16" />
+            <use href="#i-doc" x="64" y="16" width="58" height="58" class="ic-accent" />
+            <text x="93" y="126" class="t-big t-center">67</text>
+            <text x="93" y="153" class="t-label t-strong t-center">real queries</text>
+            <text x="93" y="174" class="t-small t-center">from users, mostly</text>
+            <text x="93" y="190" class="t-small t-center">complex biology</text>
+          </g>
+          <g class="next">
+            <text x="209" y="114" class="t-big t-center t-accent" style="font-size: 34px">×</text>
+            <rect class="panel" x="231" y="0" width="187" height="200" rx="16" />
+            <use href="#i-db" x="295" y="16" width="58" height="58" class="ic-accent" />
+            <text x="324" y="126" class="t-big t-center">20+</text>
+            <text x="324" y="153" class="t-label t-strong t-center">public endpoints</text>
+            <text x="324" y="174" class="t-small t-center">large, live and shared</text>
+            <text x="324" y="190" class="t-small t-center">(UniProt, Bgee, …)</text>
+          </g>
+          <g class="next">
+            <text x="440" y="114" class="t-big t-center t-accent" style="font-size: 34px">×</text>
+            <rect class="panel" x="462" y="0" width="187" height="200" rx="16" />
+            <use href="#i-fork" x="526" y="16" width="58" height="58" class="ic-accent" />
+            <text x="555" y="126" class="t-big t-center">2</text>
+            <text x="555" y="153" class="t-label t-strong t-center">ways to federate</text>
+            <text x="555" y="174" class="t-small t-center"><tspan class="t-manual">manual</tspan> vs.</text>
+            <text x="555" y="190" class="t-small t-center"><tspan class="t-algo">algorithmic</tspan></text>
+          </g>
+          <g class="next">
+            <text x="671" y="114" class="t-big t-center t-accent" style="font-size: 34px">×</text>
+            <rect class="panel" x="693" y="0" width="187" height="200" rx="16" />
+            <use href="#i-calendar" x="757" y="16" width="58" height="58" class="ic-accent" />
+            <text x="786" y="126" class="t-big t-center">4</text>
+            <text x="786" y="153" class="t-label t-strong t-center">time points</text>
+            <text x="786" y="174" class="t-small t-center">across one year</text>
+            <path class="flow flow--accent draw" pathLength="1" d="M30 250H858" />
+            <circle cx="110" cy="250" r="9" fill="#4f8e8a" />
+            <circle cx="330" cy="250" r="9" fill="#4f8e8a" />
+            <circle cx="550" cy="250" r="9" fill="#4f8e8a" />
+            <circle cx="770" cy="250" r="9" fill="#4f8e8a" />
+            <text x="110" y="280" class="t-label t-strong t-center">Spring 2025</text>
+            <text x="330" y="280" class="t-label t-strong t-center">Fall 2025</text>
+            <text x="550" y="280" class="t-label t-strong t-center">Winter 2026</text>
+            <text x="770" y="280" class="t-label t-strong t-center">Spring 2026</text>
+            <text x="440" y="318" class="t-small t-center">25 runs · ≈ 1,700 query executions · the same questions every time</text>
+          </g>
+        </svg>
+      </figure>
+      <p class="takehome next"><span class="takehome__label">Key message</span><span>Rather than a benchmark: the same real-world queries, repeated over one year.</span></p>
+      <p class="footnote">
+        <span>“Answered” = a non-empty result (<a href="#supp-success">S1</a>).</span>
+        <span>Queries &amp; their complexity: <a href="#supp-complexity">S2</a>.</span>
+        <span>All data: <a href="https://ecrum19.github.io/fed-survey-results/" target="_blank" rel="noopener noreferrer">ecrum19.github.io/fed-survey-results</a>.</span>
+      </p>
+    </section>
+
+    <!-- 06 · Finding 1 ------------------------------------------------------ -->
+    <section id="finding-1" class="slide story" inlist="" rel="schema:hasPart" resource="#finding-1">
+      <p class="eyebrow">06 · Finding 1</p>
+      <h2 property="schema:name">Algorithmic source selection rarely produced results.</h2>
+      <p class="ex-badge"><svg aria-hidden="true"><use href="#i-protein" /></svg>Running example · liver transporters</p>
+      <figure class="visual">
+        <svg viewBox="0 0 880 356" role="img" aria-label="Out of every 100 executions, manual federation returned a non-empty result set 47 times and an explicit error 46 times. Algorithmic federation returned a non-empty result set 3 times and an explicit error 95 times.">
+          <g>
+            <text x="143" y="22" class="t-title t-center t-manual">Manual</text>
+            <g class="waffle waffle--intro"><rect class="cell cell--manual" x="30" y="40" width="19" height="19" rx="3" style="--i:0" /><rect class="cell cell--manual" x="53" y="40" width="19" height="19" rx="3" style="--i:1" /><rect class="cell cell--manual" x="76" y="40" width="19" height="19" rx="3" style="--i:2" /><rect class="cell cell--manual" x="99" y="40" width="19" height="19" rx="3" style="--i:3" /><rect class="cell cell--manual" x="122" y="40" width="19" height="19" rx="3" style="--i:4" /><rect class="cell cell--manual" x="145" y="40" width="19" height="19" rx="3" style="--i:5" /><rect class="cell cell--manual" x="168" y="40" width="19" height="19" rx="3" style="--i:6" /><rect class="cell cell--manual" x="191" y="40" width="19" height="19" rx="3" style="--i:7" /><rect class="cell cell--manual" x="214" y="40" width="19" height="19" rx="3" style="--i:8" /><rect class="cell cell--manual" x="237" y="40" width="19" height="19" rx="3" style="--i:9" /><rect class="cell cell--manual" x="30" y="63" width="19" height="19" rx="3" style="--i:10" /><rect class="cell cell--manual" x="53" y="63" width="19" height="19" rx="3" style="--i:11" /><rect class="cell cell--manual" x="76" y="63" width="19" height="19" rx="3" style="--i:12" /><rect class="cell cell--manual" x="99" y="63" width="19" height="19" rx="3" style="--i:13" /><rect class="cell cell--manual" x="122" y="63" width="19" height="19" rx="3" style="--i:14" /><rect class="cell cell--manual" x="145" y="63" width="19" height="19" rx="3" style="--i:15" /><rect class="cell cell--manual" x="168" y="63" width="19" height="19" rx="3" style="--i:16" /><rect class="cell cell--manual" x="191" y="63" width="19" height="19" rx="3" style="--i:17" /><rect class="cell cell--manual" x="214" y="63" width="19" height="19" rx="3" style="--i:18" /><rect class="cell cell--manual" x="237" y="63" width="19" height="19" rx="3" style="--i:19" /><rect class="cell cell--manual" x="30" y="86" width="19" height="19" rx="3" style="--i:20" /><rect class="cell cell--manual" x="53" y="86" width="19" height="19" rx="3" style="--i:21" /><rect class="cell cell--manual" x="76" y="86" width="19" height="19" rx="3" style="--i:22" /><rect class="cell cell--manual" x="99" y="86" width="19" height="19" rx="3" style="--i:23" /><rect class="cell cell--manual" x="122" y="86" width="19" height="19" rx="3" style="--i:24" /><rect class="cell cell--manual" x="145" y="86" width="19" height="19" rx="3" style="--i:25" /><rect class="cell cell--manual" x="168" y="86" width="19" height="19" rx="3" style="--i:26" /><rect class="cell cell--manual" x="191" y="86" width="19" height="19" rx="3" style="--i:27" /><rect class="cell cell--manual" x="214" y="86" width="19" height="19" rx="3" style="--i:28" /><rect class="cell cell--manual" x="237" y="86" width="19" height="19" rx="3" style="--i:29" /><rect class="cell cell--manual" x="30" y="109" width="19" height="19" rx="3" style="--i:30" /><rect class="cell cell--manual" x="53" y="109" width="19" height="19" rx="3" style="--i:31" /><rect class="cell cell--manual" x="76" y="109" width="19" height="19" rx="3" style="--i:32" /><rect class="cell cell--manual" x="99" y="109" width="19" height="19" rx="3" style="--i:33" /><rect class="cell cell--manual" x="122" y="109" width="19" height="19" rx="3" style="--i:34" /><rect class="cell cell--manual" x="145" y="109" width="19" height="19" rx="3" style="--i:35" /><rect class="cell cell--manual" x="168" y="109" width="19" height="19" rx="3" style="--i:36" /><rect class="cell cell--manual" x="191" y="109" width="19" height="19" rx="3" style="--i:37" /><rect class="cell cell--manual" x="214" y="109" width="19" height="19" rx="3" style="--i:38" /><rect class="cell cell--manual" x="237" y="109" width="19" height="19" rx="3" style="--i:39" /><rect class="cell cell--manual" x="30" y="132" width="19" height="19" rx="3" style="--i:40" /><rect class="cell cell--manual" x="53" y="132" width="19" height="19" rx="3" style="--i:41" /><rect class="cell cell--manual" x="76" y="132" width="19" height="19" rx="3" style="--i:42" /><rect class="cell cell--manual" x="99" y="132" width="19" height="19" rx="3" style="--i:43" /><rect class="cell cell--manual" x="122" y="132" width="19" height="19" rx="3" style="--i:44" /><rect class="cell cell--manual" x="145" y="132" width="19" height="19" rx="3" style="--i:45" /><rect class="cell cell--manual" x="168" y="132" width="19" height="19" rx="3" style="--i:46" /><rect class="cell cell--empty" x="191" y="132" width="19" height="19" rx="3" style="--i:47" /><rect class="cell cell--empty" x="214" y="132" width="19" height="19" rx="3" style="--i:48" /><rect class="cell cell--empty" x="237" y="132" width="19" height="19" rx="3" style="--i:49" /><rect class="cell cell--empty" x="30" y="155" width="19" height="19" rx="3" style="--i:50" /><rect class="cell cell--empty" x="53" y="155" width="19" height="19" rx="3" style="--i:51" /><rect class="cell cell--empty" x="76" y="155" width="19" height="19" rx="3" style="--i:52" /><rect class="cell cell--empty" x="99" y="155" width="19" height="19" rx="3" style="--i:53" /><rect class="cell cell--error" x="122" y="155" width="19" height="19" rx="3" style="--i:54" /><rect class="cell cell--error" x="145" y="155" width="19" height="19" rx="3" style="--i:55" /><rect class="cell cell--error" x="168" y="155" width="19" height="19" rx="3" style="--i:56" /><rect class="cell cell--error" x="191" y="155" width="19" height="19" rx="3" style="--i:57" /><rect class="cell cell--error" x="214" y="155" width="19" height="19" rx="3" style="--i:58" /><rect class="cell cell--error" x="237" y="155" width="19" height="19" rx="3" style="--i:59" /><rect class="cell cell--error" x="30" y="178" width="19" height="19" rx="3" style="--i:60" /><rect class="cell cell--error" x="53" y="178" width="19" height="19" rx="3" style="--i:61" /><rect class="cell cell--error" x="76" y="178" width="19" height="19" rx="3" style="--i:62" /><rect class="cell cell--error" x="99" y="178" width="19" height="19" rx="3" style="--i:63" /><rect class="cell cell--error" x="122" y="178" width="19" height="19" rx="3" style="--i:64" /><rect class="cell cell--error" x="145" y="178" width="19" height="19" rx="3" style="--i:65" /><rect class="cell cell--error" x="168" y="178" width="19" height="19" rx="3" style="--i:66" /><rect class="cell cell--error" x="191" y="178" width="19" height="19" rx="3" style="--i:67" /><rect class="cell cell--error" x="214" y="178" width="19" height="19" rx="3" style="--i:68" /><rect class="cell cell--error" x="237" y="178" width="19" height="19" rx="3" style="--i:69" /><rect class="cell cell--error" x="30" y="201" width="19" height="19" rx="3" style="--i:70" /><rect class="cell cell--error" x="53" y="201" width="19" height="19" rx="3" style="--i:71" /><rect class="cell cell--error" x="76" y="201" width="19" height="19" rx="3" style="--i:72" /><rect class="cell cell--error" x="99" y="201" width="19" height="19" rx="3" style="--i:73" /><rect class="cell cell--error" x="122" y="201" width="19" height="19" rx="3" style="--i:74" /><rect class="cell cell--error" x="145" y="201" width="19" height="19" rx="3" style="--i:75" /><rect class="cell cell--error" x="168" y="201" width="19" height="19" rx="3" style="--i:76" /><rect class="cell cell--error" x="191" y="201" width="19" height="19" rx="3" style="--i:77" /><rect class="cell cell--error" x="214" y="201" width="19" height="19" rx="3" style="--i:78" /><rect class="cell cell--error" x="237" y="201" width="19" height="19" rx="3" style="--i:79" /><rect class="cell cell--error" x="30" y="224" width="19" height="19" rx="3" style="--i:80" /><rect class="cell cell--error" x="53" y="224" width="19" height="19" rx="3" style="--i:81" /><rect class="cell cell--error" x="76" y="224" width="19" height="19" rx="3" style="--i:82" /><rect class="cell cell--error" x="99" y="224" width="19" height="19" rx="3" style="--i:83" /><rect class="cell cell--error" x="122" y="224" width="19" height="19" rx="3" style="--i:84" /><rect class="cell cell--error" x="145" y="224" width="19" height="19" rx="3" style="--i:85" /><rect class="cell cell--error" x="168" y="224" width="19" height="19" rx="3" style="--i:86" /><rect class="cell cell--error" x="191" y="224" width="19" height="19" rx="3" style="--i:87" /><rect class="cell cell--error" x="214" y="224" width="19" height="19" rx="3" style="--i:88" /><rect class="cell cell--error" x="237" y="224" width="19" height="19" rx="3" style="--i:89" /><rect class="cell cell--error" x="30" y="247" width="19" height="19" rx="3" style="--i:90" /><rect class="cell cell--error" x="53" y="247" width="19" height="19" rx="3" style="--i:91" /><rect class="cell cell--error" x="76" y="247" width="19" height="19" rx="3" style="--i:92" /><rect class="cell cell--error" x="99" y="247" width="19" height="19" rx="3" style="--i:93" /><rect class="cell cell--error" x="122" y="247" width="19" height="19" rx="3" style="--i:94" /><rect class="cell cell--error" x="145" y="247" width="19" height="19" rx="3" style="--i:95" /><rect class="cell cell--error" x="168" y="247" width="19" height="19" rx="3" style="--i:96" /><rect class="cell cell--error" x="191" y="247" width="19" height="19" rx="3" style="--i:97" /><rect class="cell cell--error" x="214" y="247" width="19" height="19" rx="3" style="--i:98" /><rect class="cell cell--error" x="237" y="247" width="19" height="19" rx="3" style="--i:99" /></g>
+            <text x="143" y="292" class="t-mid t-center"><tspan class="t-manual">47</tspan> / 100 non-empty</text>
+            <rect x="30" y="311" width="16" height="16" rx="3" class="cell--manual" />
+            <rect x="49" y="311" width="16" height="16" rx="3" class="cell--algo" />
+            <text x="72" y="324" class="t-label">non-empty result set</text>
+            <rect x="242" y="311" width="16" height="16" rx="3" class="cell--empty" />
+            <text x="265" y="324" class="t-label">empty result set</text>
+            <rect x="398" y="311" width="16" height="16" rx="3" class="cell--error" />
+            <text x="421" y="324" class="t-label">explicit error</text>
+          </g>
+          <g class="next">
+            <text x="413" y="22" class="t-title t-center t-algo">Algorithmic</text>
+            <g class="waffle"><rect class="cell cell--algo" x="300" y="40" width="19" height="19" rx="3" style="--i:0" /><rect class="cell cell--algo" x="323" y="40" width="19" height="19" rx="3" style="--i:1" /><rect class="cell cell--algo" x="346" y="40" width="19" height="19" rx="3" style="--i:2" /><rect class="cell cell--empty" x="369" y="40" width="19" height="19" rx="3" style="--i:3" /><rect class="cell cell--empty" x="392" y="40" width="19" height="19" rx="3" style="--i:4" /><rect class="cell cell--error" x="415" y="40" width="19" height="19" rx="3" style="--i:5" /><rect class="cell cell--error" x="438" y="40" width="19" height="19" rx="3" style="--i:6" /><rect class="cell cell--error" x="461" y="40" width="19" height="19" rx="3" style="--i:7" /><rect class="cell cell--error" x="484" y="40" width="19" height="19" rx="3" style="--i:8" /><rect class="cell cell--error" x="507" y="40" width="19" height="19" rx="3" style="--i:9" /><rect class="cell cell--error" x="300" y="63" width="19" height="19" rx="3" style="--i:10" /><rect class="cell cell--error" x="323" y="63" width="19" height="19" rx="3" style="--i:11" /><rect class="cell cell--error" x="346" y="63" width="19" height="19" rx="3" style="--i:12" /><rect class="cell cell--error" x="369" y="63" width="19" height="19" rx="3" style="--i:13" /><rect class="cell cell--error" x="392" y="63" width="19" height="19" rx="3" style="--i:14" /><rect class="cell cell--error" x="415" y="63" width="19" height="19" rx="3" style="--i:15" /><rect class="cell cell--error" x="438" y="63" width="19" height="19" rx="3" style="--i:16" /><rect class="cell cell--error" x="461" y="63" width="19" height="19" rx="3" style="--i:17" /><rect class="cell cell--error" x="484" y="63" width="19" height="19" rx="3" style="--i:18" /><rect class="cell cell--error" x="507" y="63" width="19" height="19" rx="3" style="--i:19" /><rect class="cell cell--error" x="300" y="86" width="19" height="19" rx="3" style="--i:20" /><rect class="cell cell--error" x="323" y="86" width="19" height="19" rx="3" style="--i:21" /><rect class="cell cell--error" x="346" y="86" width="19" height="19" rx="3" style="--i:22" /><rect class="cell cell--error" x="369" y="86" width="19" height="19" rx="3" style="--i:23" /><rect class="cell cell--error" x="392" y="86" width="19" height="19" rx="3" style="--i:24" /><rect class="cell cell--error" x="415" y="86" width="19" height="19" rx="3" style="--i:25" /><rect class="cell cell--error" x="438" y="86" width="19" height="19" rx="3" style="--i:26" /><rect class="cell cell--error" x="461" y="86" width="19" height="19" rx="3" style="--i:27" /><rect class="cell cell--error" x="484" y="86" width="19" height="19" rx="3" style="--i:28" /><rect class="cell cell--error" x="507" y="86" width="19" height="19" rx="3" style="--i:29" /><rect class="cell cell--error" x="300" y="109" width="19" height="19" rx="3" style="--i:30" /><rect class="cell cell--error" x="323" y="109" width="19" height="19" rx="3" style="--i:31" /><rect class="cell cell--error" x="346" y="109" width="19" height="19" rx="3" style="--i:32" /><rect class="cell cell--error" x="369" y="109" width="19" height="19" rx="3" style="--i:33" /><rect class="cell cell--error" x="392" y="109" width="19" height="19" rx="3" style="--i:34" /><rect class="cell cell--error" x="415" y="109" width="19" height="19" rx="3" style="--i:35" /><rect class="cell cell--error" x="438" y="109" width="19" height="19" rx="3" style="--i:36" /><rect class="cell cell--error" x="461" y="109" width="19" height="19" rx="3" style="--i:37" /><rect class="cell cell--error" x="484" y="109" width="19" height="19" rx="3" style="--i:38" /><rect class="cell cell--error" x="507" y="109" width="19" height="19" rx="3" style="--i:39" /><rect class="cell cell--error" x="300" y="132" width="19" height="19" rx="3" style="--i:40" /><rect class="cell cell--error" x="323" y="132" width="19" height="19" rx="3" style="--i:41" /><rect class="cell cell--error" x="346" y="132" width="19" height="19" rx="3" style="--i:42" /><rect class="cell cell--error" x="369" y="132" width="19" height="19" rx="3" style="--i:43" /><rect class="cell cell--error" x="392" y="132" width="19" height="19" rx="3" style="--i:44" /><rect class="cell cell--error" x="415" y="132" width="19" height="19" rx="3" style="--i:45" /><rect class="cell cell--error" x="438" y="132" width="19" height="19" rx="3" style="--i:46" /><rect class="cell cell--error" x="461" y="132" width="19" height="19" rx="3" style="--i:47" /><rect class="cell cell--error" x="484" y="132" width="19" height="19" rx="3" style="--i:48" /><rect class="cell cell--error" x="507" y="132" width="19" height="19" rx="3" style="--i:49" /><rect class="cell cell--error" x="300" y="155" width="19" height="19" rx="3" style="--i:50" /><rect class="cell cell--error" x="323" y="155" width="19" height="19" rx="3" style="--i:51" /><rect class="cell cell--error" x="346" y="155" width="19" height="19" rx="3" style="--i:52" /><rect class="cell cell--error" x="369" y="155" width="19" height="19" rx="3" style="--i:53" /><rect class="cell cell--error" x="392" y="155" width="19" height="19" rx="3" style="--i:54" /><rect class="cell cell--error" x="415" y="155" width="19" height="19" rx="3" style="--i:55" /><rect class="cell cell--error" x="438" y="155" width="19" height="19" rx="3" style="--i:56" /><rect class="cell cell--error" x="461" y="155" width="19" height="19" rx="3" style="--i:57" /><rect class="cell cell--error" x="484" y="155" width="19" height="19" rx="3" style="--i:58" /><rect class="cell cell--error" x="507" y="155" width="19" height="19" rx="3" style="--i:59" /><rect class="cell cell--error" x="300" y="178" width="19" height="19" rx="3" style="--i:60" /><rect class="cell cell--error" x="323" y="178" width="19" height="19" rx="3" style="--i:61" /><rect class="cell cell--error" x="346" y="178" width="19" height="19" rx="3" style="--i:62" /><rect class="cell cell--error" x="369" y="178" width="19" height="19" rx="3" style="--i:63" /><rect class="cell cell--error" x="392" y="178" width="19" height="19" rx="3" style="--i:64" /><rect class="cell cell--error" x="415" y="178" width="19" height="19" rx="3" style="--i:65" /><rect class="cell cell--error" x="438" y="178" width="19" height="19" rx="3" style="--i:66" /><rect class="cell cell--error" x="461" y="178" width="19" height="19" rx="3" style="--i:67" /><rect class="cell cell--error" x="484" y="178" width="19" height="19" rx="3" style="--i:68" /><rect class="cell cell--error" x="507" y="178" width="19" height="19" rx="3" style="--i:69" /><rect class="cell cell--error" x="300" y="201" width="19" height="19" rx="3" style="--i:70" /><rect class="cell cell--error" x="323" y="201" width="19" height="19" rx="3" style="--i:71" /><rect class="cell cell--error" x="346" y="201" width="19" height="19" rx="3" style="--i:72" /><rect class="cell cell--error" x="369" y="201" width="19" height="19" rx="3" style="--i:73" /><rect class="cell cell--error" x="392" y="201" width="19" height="19" rx="3" style="--i:74" /><rect class="cell cell--error" x="415" y="201" width="19" height="19" rx="3" style="--i:75" /><rect class="cell cell--error" x="438" y="201" width="19" height="19" rx="3" style="--i:76" /><rect class="cell cell--error" x="461" y="201" width="19" height="19" rx="3" style="--i:77" /><rect class="cell cell--error" x="484" y="201" width="19" height="19" rx="3" style="--i:78" /><rect class="cell cell--error" x="507" y="201" width="19" height="19" rx="3" style="--i:79" /><rect class="cell cell--error" x="300" y="224" width="19" height="19" rx="3" style="--i:80" /><rect class="cell cell--error" x="323" y="224" width="19" height="19" rx="3" style="--i:81" /><rect class="cell cell--error" x="346" y="224" width="19" height="19" rx="3" style="--i:82" /><rect class="cell cell--error" x="369" y="224" width="19" height="19" rx="3" style="--i:83" /><rect class="cell cell--error" x="392" y="224" width="19" height="19" rx="3" style="--i:84" /><rect class="cell cell--error" x="415" y="224" width="19" height="19" rx="3" style="--i:85" /><rect class="cell cell--error" x="438" y="224" width="19" height="19" rx="3" style="--i:86" /><rect class="cell cell--error" x="461" y="224" width="19" height="19" rx="3" style="--i:87" /><rect class="cell cell--error" x="484" y="224" width="19" height="19" rx="3" style="--i:88" /><rect class="cell cell--error" x="507" y="224" width="19" height="19" rx="3" style="--i:89" /><rect class="cell cell--error" x="300" y="247" width="19" height="19" rx="3" style="--i:90" /><rect class="cell cell--error" x="323" y="247" width="19" height="19" rx="3" style="--i:91" /><rect class="cell cell--error" x="346" y="247" width="19" height="19" rx="3" style="--i:92" /><rect class="cell cell--error" x="369" y="247" width="19" height="19" rx="3" style="--i:93" /><rect class="cell cell--error" x="392" y="247" width="19" height="19" rx="3" style="--i:94" /><rect class="cell cell--error" x="415" y="247" width="19" height="19" rx="3" style="--i:95" /><rect class="cell cell--error" x="438" y="247" width="19" height="19" rx="3" style="--i:96" /><rect class="cell cell--error" x="461" y="247" width="19" height="19" rx="3" style="--i:97" /><rect class="cell cell--error" x="484" y="247" width="19" height="19" rx="3" style="--i:98" /><rect class="cell cell--error" x="507" y="247" width="19" height="19" rx="3" style="--i:99" /></g>
+            <text x="413" y="292" class="t-mid t-center"><tspan class="t-algo">3</tspan> / 100 non-empty</text>
+          </g>
+          <g class="next">
+            <rect class="panel--accent" x="592" y="20" width="288" height="270" rx="16" />
+            <text x="616" y="72" class="t-big" style="font-size: 40px">≈ 16×</text>
+            <text x="616" y="96" class="t-label">lower success rate when the</text>
+            <text x="616" y="115" class="t-label">engine picks the sources</text>
+            <path d="M616 132H856" class="grid" />
+            <text x="616" y="178" class="t-big t-danger" style="font-size: 40px">95%</text>
+            <text x="616" y="202" class="t-label">of algorithmic executions</text>
+            <text x="616" y="221" class="t-label">ended in an explicit error</text>
+            <rect class="panel--example" x="604" y="236" width="264" height="44" rx="10" />
+            <use href="#i-protein" x="613" y="245" width="26" height="26" class="ic-example" />
+            <text x="648" y="255" class="t-small t-strong t-example">Liver query</text>
+            <text x="648" y="272" class="t-small">manual: non-empty · algorithmic: 0 of 21</text>
+          </g>
+        </svg>
+      </figure>
+      <p class="takehome next"><span class="takehome__label">Key message</span><span>Algorithmic federation was far less reliable than manual federation.</span></p>
+      <p class="footnote">
+        <span>All runs, Spring 2025 to Spring 2026: <code>SERVICE</code> 47.3% non-empty / 46.2% explicit errors · <code>no-service</code> 3.0% / 95.1%; rounded to whole squares.</span>
+        <span>In Spring 2026, when both ran: 10 vs. 0 of 67 queries returned a non-empty result set.</span>
+        <span>Source: Crum et al., ISWC 2026.</span>
+      </p>
+    </section>
+
+    <!-- 07 · Why it fails --------------------------------------------------- -->
+    <section id="why-fail" class="slide story" inlist="" rel="schema:hasPart" resource="#why-fail">
+      <p class="eyebrow">07 · Why it fails</p>
+      <h2 property="schema:name">Algorithmic probing exceeds endpoint usage limits.</h2>
+      <p class="ex-badge"><svg aria-hidden="true"><use href="#i-protein" /></svg>Running example · liver transporters</p>
+      <figure class="visual">
+        <svg viewBox="0 0 880 330" role="img" aria-label="Two failure modes: requests are rejected after only 3 to 6 requests, or the engine sends hundreds of thousands of requests for one query. Most of the 1,027 explicit errors were rejected requests.">
+          <g>
+            <rect class="panel" x="0" y="0" width="425" height="214" rx="16" />
+            <text x="22" y="34" class="t-title">Requests rejected early</text>
+            <use href="#i-gear" x="28" y="62" width="58" height="58" class="ic-algo" />
+            <path class="flow flow--thin" d="M98 78H252" />
+            <path class="flow flow--thin" d="M98 91H252" />
+            <path class="flow flow--thin" d="M98 104H252" />
+            <path class="flow flow--thin flow--plain" d="M98 117H170" stroke-dasharray="4 4" />
+            <use href="#i-server" x="262" y="58" width="66" height="66" class="ic-ink" />
+            <rect class="badge" x="318" y="48" width="50" height="26" rx="6" />
+            <text x="343" y="67" class="t-label t-strong t-center t-white">403</text>
+            <text x="22" y="166"><tspan class="t-big t-danger" style="font-size: 40px">3–6</tspan><tspan class="t-mid" dx="10">requests</tspan></text>
+            <text x="22" y="189" class="t-label">before the endpoint replies <tspan class="t-strong">“403 Forbidden”</tspan></text>
+            <use href="#i-protein" x="22" y="194" width="16" height="16" class="ic-example" />
+            <text x="44" y="206" class="t-small t-example">Liver query: HTTP 403 from both Bgee and UniProt</text>
+          </g>
+          <g class="next">
+            <rect class="panel" x="455" y="0" width="425" height="214" rx="16" />
+            <text x="477" y="34" class="t-title">Request explosion</text>
+            <use href="#i-gear" x="483" y="62" width="58" height="58" class="ic-algo" />
+            <path class="flow flow--algo flow--thin flow--plain draw" pathLength="1" d="M553 91L706 60.0" />
+            <path class="flow flow--algo flow--thin flow--plain draw" pathLength="1" d="M553 91L706 67.0" />
+            <path class="flow flow--algo flow--thin flow--plain draw" pathLength="1" d="M553 91L706 74.0" />
+            <path class="flow flow--algo flow--thin flow--plain draw" pathLength="1" d="M553 91L706 81.0" />
+            <path class="flow flow--algo flow--thin flow--plain draw" pathLength="1" d="M553 91L706 88.0" />
+            <path class="flow flow--algo flow--thin flow--plain draw" pathLength="1" d="M553 91L706 95.0" />
+            <path class="flow flow--algo flow--thin flow--plain draw" pathLength="1" d="M553 91L706 102.0" />
+            <path class="flow flow--algo flow--thin flow--plain draw" pathLength="1" d="M553 91L706 109.0" />
+            <path class="flow flow--algo flow--thin flow--plain draw" pathLength="1" d="M553 91L706 116.0" />
+            <path class="flow flow--algo flow--thin flow--plain draw" pathLength="1" d="M553 91L706 123.0" />
+            <path class="flow flow--algo flow--thin flow--plain draw" pathLength="1" d="M553 91L706 130.0" />
+            <path class="flow flow--algo flow--thin flow--plain draw" pathLength="1" d="M553 91L706 137.0" />
+            <path class="flow flow--algo flow--thin flow--plain draw" pathLength="1" d="M553 91L706 144.0" />
+            <use href="#i-server" x="716" y="58" width="66" height="66" class="ic-ink" />
+            <circle cx="790" cy="60" r="15" class="disc--danger" />
+            <use href="#i-bolt" x="778" y="48" width="24" height="24" class="ic-danger" />
+            <text x="477" y="166"><tspan class="t-big t-danger" style="font-size: 40px">924,299</tspan><tspan class="t-mid" dx="10">requests</tspan></text>
+            <text x="477" y="189" class="t-label">for a single query, <tspan class="t-strong">without a result</tspan></text>
+          </g>
+          <g class="next">
+            <text x="0" y="246" class="t-label t-strong">What the 1,027 explicit errors were</text>
+            <rect class="seg--refused" x="0" y="256" width="491" height="40" rx="4" />
+            <rect class="seg--server" x="494" y="256" width="189" height="40" rx="4" />
+            <rect class="seg--other" x="686" y="256" width="194" height="40" rx="4" />
+            <text x="14" y="281" class="t-label t-strong t-white">Client-side HTTP (4xx): request rejected · 577</text>
+            <text x="506" y="281" class="t-label t-strong">Server-side (5xx) · 222</text>
+            <text x="698" y="281" class="t-label t-strong t-white">Other · 228</text>
+            <text x="880" y="318" class="t-small t-end">other = transport-level failures, malformed responses, time-outs</text>
+          </g>
+        </svg>
+      </figure>
+      <p class="takehome next"><span class="takehome__label">Key message</span><span>Algorithmic federation can exceed what shared public endpoints are able to serve.</span></p>
+      <p class="footnote">
+        <span>924,299 HTTP requests were issued by one algorithmic run of <em class="qname">query 6</em> before it failed (<a href="#supp-explosion">S7</a>).</span>
+        <span>Source: Crum et al., ISWC 2026; error groups in <a href="#supp-errors">S6</a>.</span>
+      </p>
+    </section>
+
+    <!-- 08 · Finding 2 ------------------------------------------------------ -->
+    <section id="finding-2" class="slide story" inlist="" rel="schema:hasPart" resource="#finding-2">
+      <p class="eyebrow">08 · Finding 2</p>
+      <h2 property="schema:name">Over one year, the share of answered queries declined.</h2>
+      <p class="ex-badge"><svg aria-hidden="true"><use href="#i-protein" /></svg>Running example · liver transporters</p>
+      <figure class="visual">
+        <svg viewBox="0 0 880 330" role="img" aria-label="Queries answered out of 67. Manual federation fell from about 38 in Spring 2025 to 10 in Spring 2026. Algorithmic federation fell from 5 in Fall 2025 to about 1 in Winter 2026 and 0 in Spring 2026.">
+          <g>
+            <rect class="band" x="215" y="8" width="150" height="272" />
+            <rect class="band" x="515" y="8" width="150" height="272" />
+            <path class="grid" d="M65 200H665M65 120H665M65 40H665" />
+            <path class="grid" d="M65 12H665" stroke-dasharray="4 4" />
+            <text x="660" y="26" class="t-small t-end">all 67 queries</text>
+            <text x="56" y="285" class="t-small t-end">0</text>
+            <text x="56" y="205" class="t-small t-end">20</text>
+            <text x="56" y="125" class="t-small t-end">40</text>
+            <text x="56" y="45" class="t-small t-end">60</text>
+            <text x="16" y="150" class="t-small t-center" transform="rotate(-90 16 150)">queries answered</text>
+            <path class="axis" d="M65 280H665" />
+            <text x="140" y="304" class="t-label t-strong t-center">Spring 2025</text>
+            <text x="290" y="304" class="t-label t-strong t-center">Fall 2025</text>
+            <text x="440" y="304" class="t-label t-strong t-center">Winter 2026</text>
+            <text x="590" y="304" class="t-label t-strong t-center">Spring 2026</text>
+            <circle class="dot-manual dot-run" cx="126" cy="120" r="5" />
+            <circle class="dot-manual dot-run" cx="140" cy="160" r="5" />
+            <circle class="dot-manual dot-run" cx="154" cy="108" r="5" />
+            <circle class="dot-manual dot-avg" cx="140" cy="129.3" r="9" />
+            <circle cx="692" cy="58" r="7" class="dot-manual" />
+            <text x="706" y="63" class="t-label t-strong t-manual">Manual</text>
+          </g>
+          <g class="next">
+            <circle class="dot-algo dot-run" cx="272" cy="264" r="4" />
+            <circle class="dot-algo dot-run" cx="284" cy="260" r="4" />
+            <circle class="dot-algo dot-run" cx="296" cy="256" r="4" />
+            <circle class="dot-algo dot-run" cx="308" cy="260" r="4" />
+            <circle class="dot-algo dot-run" cx="416" cy="256" r="4" />
+            <circle class="dot-algo dot-run" cx="424" cy="272" r="4" />
+            <circle class="dot-algo dot-run" cx="432" cy="280" r="4" />
+            <circle class="dot-algo dot-run" cx="440" cy="280" r="4" />
+            <circle class="dot-algo dot-run" cx="448" cy="276" r="4" />
+            <circle class="dot-algo dot-run" cx="456" cy="280" r="4" />
+            <circle class="dot-algo dot-run" cx="464" cy="280" r="4" />
+            <circle class="dot-algo dot-run" cx="545" cy="280" r="4" />
+            <circle class="dot-algo dot-run" cx="555" cy="280" r="4" />
+            <circle class="dot-algo dot-run" cx="565" cy="280" r="4" />
+            <circle class="dot-algo dot-run" cx="575" cy="280" r="4" />
+            <circle class="dot-algo dot-run" cx="585" cy="280" r="4" />
+            <circle class="dot-algo dot-run" cx="595" cy="280" r="4" />
+            <circle class="dot-algo dot-run" cx="605" cy="280" r="4" />
+            <circle class="dot-algo dot-run" cx="615" cy="280" r="4" />
+            <circle class="dot-algo dot-run" cx="625" cy="280" r="4" />
+            <circle class="dot-algo dot-run" cx="635" cy="280" r="4" />
+            <path class="series-algo draw" pathLength="1" d="M290 260L440 274.9L590 280" />
+            <circle class="dot-algo dot-avg" cx="290" cy="260" r="8" />
+            <circle class="dot-algo dot-avg" cx="440" cy="274.9" r="8" />
+            <circle class="dot-algo dot-avg" cx="590" cy="280" r="8" />
+            <circle cx="692" cy="190" r="7" class="dot-algo" />
+            <text x="706" y="195" class="t-label t-strong t-algo">Algorithmic</text>
+            <text x="692" y="236" class="t-big t-algo" style="font-size: 38px">5 → 0</text>
+            <text x="692" y="258" class="t-small">Fall 2025 → Spring 2026</text>
+            <text x="692" y="275" class="t-small">0 answers in all 10 runs</text>
+          </g>
+          <g class="next">
+            <path class="series-manual" d="M140 129.3L590 240" />
+            <rect class="panel--example" x="300" y="34" width="250" height="68" rx="10" />
+            <use href="#i-protein" x="310" y="44" width="26" height="26" class="ic-example" />
+            <text x="344" y="56" class="t-small t-strong t-example">Liver query, manual federation:</text>
+            <text x="344" y="74" class="t-small">Spring 2025: answered</text>
+            <text x="344" y="91" class="t-small">Spring 2026: “403 Forbidden”</text>
+            <circle class="dot-manual dot-avg" cx="590" cy="240" r="9" />
+            <text x="692" y="104" class="t-big t-manual" style="font-size: 38px">38 → 10</text>
+            <text x="692" y="126" class="t-small">Spring 2025 → Spring 2026</text>
+            <text x="692" y="143" class="t-small">also for manual federation</text>
+          </g>
+        </svg>
+      </figure>
+      <p class="takehome next"><span class="takehome__label">Key message</span><span>Reliability declined over the year, for manual and algorithmic federation alike.</span></p>
+      <p class="footnote">
+        <span>Small dots = individual runs (25); large dots = period average.</span>
+        <span>Manual runs took place in Spring 2025 and Spring 2026; algorithmic runs from Fall 2025 on.</span>
+        <span>Source: Crum et al., ISWC 2026; per-run figure in <a href="#supp-runs">S5</a>.</span>
+      </p>
+    </section>
+
+    <!-- 09 · Changes over time ------------------------------------------ -->
+    <section id="why-worse" class="slide story" inlist="" rel="schema:hasPart" resource="#why-worse">
+      <p class="eyebrow">09 · Changes over time</p>
+      <h2 property="schema:name">Public endpoints evolve as demand grows.</h2>
+      <p class="ex-badge"><svg aria-hidden="true"><use href="#i-protein" /></svg>Running example · liver transporters</p>
+      <figure class="visual">
+        <svg viewBox="0 0 880 330" role="img" aria-label="Three kinds of change: an endpoint migrated, a service was retired, and UniProt updated its usage policies. More than two in three queries returned a different number of results from run to run.">
+          <g>
+            <rect class="panel" x="0" y="0" width="270" height="200" rx="16" />
+            <circle cx="135" cy="52" r="32" class="disc--danger" />
+            <use href="#i-move" x="115" y="32" width="40" height="40" class="ic-danger" />
+            <text x="135" y="118" class="t-title t-center">Endpoint migrated</text>
+            <text x="135" y="146" class="t-small t-center">DBGI/EMI → METRIN-KG</text>
+            <text x="135" y="166" class="t-label t-strong t-center">14 of 67 queries affected</text>
+          </g>
+          <g class="next">
+            <rect class="panel" x="305" y="0" width="270" height="200" rx="16" />
+            <circle cx="440" cy="52" r="32" class="disc--danger" />
+            <use href="#i-power" x="420" y="32" width="40" height="40" class="ic-danger" />
+            <text x="440" y="118" class="t-title t-center">Service retired</text>
+            <text x="440" y="146" class="t-small t-center">a temporary federation server</text>
+            <text x="440" y="166" class="t-label t-strong t-center">retired Sep → Nov 2025</text>
+          </g>
+          <g class="next">
+            <rect class="panel" x="610" y="0" width="270" height="200" rx="16" />
+            <circle cx="745" cy="52" r="32" class="disc--danger" />
+            <use href="#i-shield" x="725" y="32" width="40" height="40" class="ic-danger" />
+            <text x="745" y="118" class="t-title t-center">Usage policies updated</text>
+            <text x="745" y="146" class="t-small t-center">UniProt changed its backend</text>
+            <text x="745" y="166" class="t-label t-strong t-center">in response to rising traffic</text>
+            <text x="745" y="188" class="t-small t-center t-example">liver query: HTTP 403 in 2026</text>
+          </g>
+          <g class="next">
+            <rect class="panel--accent" x="0" y="222" width="880" height="96" rx="16" />
+            <text x="30" y="288" class="t-big t-accent">2 in 3</text>
+            <text x="200" y="262" class="t-label t-strong">queries gave a different number of results from run to run.</text>
+            <text x="200" y="288" class="t-label t-muted">Identical query and configuration, different result counts.</text>
+          </g>
+        </svg>
+      </figure>
+      <p class="takehome next"><span class="takehome__label">Key message</span><span>Endpoints evolve as a matter of course; federated queries must be robust to it.</span></p>
+      <p class="footnote">
+        <span>68.7% of queries showed result-count variation across repeated runs.</span>
+        <span>Source: Crum et al., ISWC 2026; details on each change in <a href="#supp-changes">S9</a>.</span>
+      </p>
+    </section>
+
+    <!-- 10 · Two sides ------------------------------------------------------ -->
+    <section id="two-sides" class="slide story" inlist="" rel="schema:hasPart" resource="#two-sides">
+      <p class="eyebrow">10 · Two sides of one problem</p>
+      <h2 property="schema:name">Users need answers; maintainers need sustainability.</h2>
+      <figure class="visual">
+        <svg viewBox="0 0 880 330" role="img" aria-label="Query users need complex questions answered reliably and reproducibly. Endpoint maintainers have limited hardware and must keep the service fair and up. Between them, a reinforcing cycle: more automated traffic leads to tighter limits, more failed queries, and more retries.">
+          <g>
+            <circle cx="110" cy="62" r="50" class="disc--manual" />
+            <use href="#i-user" x="80" y="32" width="60" height="60" class="ic-manual" />
+            <text x="110" y="146" class="t-title t-center">Query users</text>
+            <rect class="pill" x="14" y="164" width="192" height="32" rx="16" /><text x="110" y="185" class="t-small t-center">complex questions</text>
+            <rect class="pill" x="14" y="204" width="192" height="32" rx="16" /><text x="110" y="225" class="t-small t-center">answers they can rely on</text>
+            <rect class="pill" x="14" y="244" width="192" height="32" rx="16" /><text x="110" y="265" class="t-small t-center">results they can reproduce</text>
+            <circle cx="770" cy="62" r="50" class="disc--accent" />
+            <use href="#i-server" x="740" y="32" width="60" height="60" class="ic-accent" />
+            <text x="770" y="146" class="t-title t-center">Endpoint maintainers</text>
+            <rect class="pill" x="674" y="164" width="192" height="32" rx="16" /><text x="770" y="185" class="t-small t-center">limited hardware &amp; budget</text>
+            <rect class="pill" x="674" y="204" width="192" height="32" rx="16" /><text x="770" y="225" class="t-small t-center">fair use for everyone</text>
+            <rect class="pill" x="674" y="244" width="192" height="32" rx="16" /><text x="770" y="265" class="t-small t-center">keep the service available</text>
+          </g>
+          <g class="next">
+            <rect class="panel" x="362" y="29" width="156" height="46" rx="12" />
+            <text x="440.0" y="57.0" class="t-label t-center">more automated traffic</text>
+            <rect class="panel" x="480" y="139" width="140" height="46" rx="12" />
+            <text x="550.0" y="167.0" class="t-label t-center">tighter limits</text>
+            <rect class="panel" x="362" y="249" width="156" height="46" rx="12" />
+            <text x="440.0" y="277.0" class="t-label t-center">more failed queries</text>
+            <rect class="panel" x="260" y="139" width="140" height="46" rx="12" />
+            <text x="330.0" y="159.0" class="t-label t-center">retries &amp;</text>
+            <text x="330.0" y="176.0" class="t-label t-center">workarounds</text>
+            <path class="flow flow--danger draw" pathLength="1" d="M517.1 83.5A110 110 0 0 1 545.5 130.8" />
+            <path class="flow flow--danger draw" pathLength="1" d="M545.5 193.2A110 110 0 0 1 517.1 240.5" />
+            <path class="flow flow--danger draw" pathLength="1" d="M362.9 240.5A110 110 0 0 1 334.5 193.2" />
+            <path class="flow flow--danger draw" pathLength="1" d="M334.5 130.8A110 110 0 0 1 362.9 83.5" />
+            <text x="440" y="161" class="t-small t-italic t-center">a reinforcing</text>
+            <text x="440" y="177" class="t-small t-italic t-center">cycle</text>
+          </g>
+        </svg>
+      </figure>
+      <p class="takehome next"><span class="takehome__label">Key message</span><span>Both needs are legitimate; what is missing is coordination between them.</span></p>
+      <p class="footnote">
+        <span>Example: UniProt tightened its limits as traffic grew, and clients then saw 403 rejections (<a href="#supp-changes">S9</a>).</span>
+      </p>
+    </section>
+
+    <!-- 11 · What now? ------------------------------------------------------ -->
+    <section id="call" class="slide story" inlist="" rel="schema:hasPart" resource="#call">
+      <p class="eyebrow">11 · Recommendations</p>
+      <h2 property="schema:name">Reliable federation requires shared responsibility.</h2>
+      <figure class="visual">
+        <svg viewBox="0 0 880 330" role="img" aria-label="Researchers should test federation on live endpoints over time. Engine developers should plan with limits in mind. Endpoint maintainers should publish their limits in machine-readable form. Together: shared descriptions of what endpoints allow and what engines will send.">
+          <g>
+            <circle cx="147" cy="56" r="46" class="disc--accent" />
+            <use href="#i-chart" x="122" y="31" width="50" height="50" class="ic-accent" />
+            <text x="147" y="134" class="t-title t-center">Researchers</text>
+            <text x="147" y="164" class="t-label t-strong t-center">Test on live endpoints</text>
+            <text x="147" y="186" class="t-label t-center">repeatedly, over months</text>
+          </g>
+          <g class="next">
+            <circle cx="440" cy="56" r="46" class="disc--algo" />
+            <use href="#i-gear" x="415" y="31" width="50" height="50" class="ic-algo" />
+            <text x="440" y="134" class="t-title t-center">Engine developers</text>
+            <text x="440" y="164" class="t-label t-strong t-center">Plan within the limits</text>
+            <text x="440" y="186" class="t-label t-center">request budgets, back-off, caching</text>
+          </g>
+          <g class="next">
+            <circle cx="733" cy="56" r="46" class="disc--manual" />
+            <use href="#i-server" x="708" y="31" width="50" height="50" class="ic-manual" />
+            <text x="733" y="134" class="t-title t-center">Endpoint maintainers</text>
+            <text x="733" y="164" class="t-label t-strong t-center">Publish the limits</text>
+            <text x="733" y="186" class="t-label t-center">in machine-readable form<tspan class="fn" dy="-6">1</tspan></text>
+          </g>
+          <g class="next">
+            <path class="flow flow--accent draw" pathLength="1" d="M147 206V246" />
+            <path class="flow flow--accent draw" pathLength="1" d="M440 206V246" />
+            <path class="flow flow--accent draw" pathLength="1" d="M733 206V246" />
+            <rect class="panel--accent" x="40" y="252" width="800" height="62" rx="14" />
+            <use href="#i-users" x="62" y="263" width="40" height="40" class="ic-accent" />
+            <text x="472" y="288" class="t-label t-strong t-center">Shared, machine-readable agreements</text>
+            <text x="448" y="306" class="t-small t-end">what each endpoint allows</text>
+            <path d="M458 302H486" class="flow-pair" />
+            <text x="496" y="306" class="t-small">what each engine will send</text>
+          </g>
+        </svg>
+      </figure>
+      <p class="takehome next"><span class="takehome__label">Key message</span><span>Dependable federation needs users, engine builders and maintainers working together.</span></p>
+      <p class="footnote">
+        <span><sup>1</sup> Existing W3C vocabularies are a starting point: VoID (Alexander et al., W3C Interest Group Note 2011) and SPARQL 1.1 Service Description (Williams, W3C Recommendation 2013).</span>
+      </p>
+    </section>
+
+    <!-- 12 · Future work: VoRD ------------------------------------------- -->
+    <section id="vord" class="slide story" inlist="" rel="schema:hasPart" resource="#vord">
+      <p class="eyebrow">12 · Future work</p>
+      <h2 property="schema:name">VoRD: machine-readable descriptions of endpoint limits.</h2>
+      <figure class="visual">
+        <svg viewBox="0 0 880 330" role="img" aria-label="An endpoint maintainer publishes a VoRD description of its limits, for example Wikidata: at most 10 requests per minute for anonymous clients, 200 with a User-Agent, 2,000 for established users, and 3 parallel requests per IP. Federation engines can then plan within the limits, and users know the limits before querying. This interrupts the cycle of uninformed probing, rejections and retries.">
+          <g>
+            <circle cx="96" cy="72" r="44" class="disc--accent" />
+            <use href="#i-server" x="70" y="46" width="52" height="52" class="ic-accent" />
+            <text x="96" y="142" class="t-title t-center">Endpoint</text>
+            <text x="96" y="164" class="t-title t-center">maintainer</text>
+            <text x="96" y="186" class="t-small t-center">describes its limits once,</text>
+            <text x="96" y="202" class="t-small t-center">next to its SPARQL endpoint</text>
+            <path class="flow flow--accent" d="M188 128H226" />
+            <rect class="panel" x="232" y="8" width="356" height="250" rx="14" />
+            <path d="M232 22a14 14 0 0 1 14-14h328a14 14 0 0 1 14 14v22H232z" class="panel--accent" />
+            <text x="248" y="32" class="t-label t-strong">query.wikidata.org/sparql</text>
+            <text x="572" y="32" class="t-small t-end t-accent">VoRD description<tspan class="fn" dy="-6">1</tspan></text>
+            <circle cx="268" cy="68" r="15" class="disc--accent" />
+            <use href="#i-clock" x="256" y="56" width="24" height="24" class="ic-accent" />
+            <text x="294" y="64" class="t-label t-strong">Anonymous clients</text>
+            <text x="294" y="82" class="t-small">≤ 10 requests / min → HTTP 429 + Retry-After</text>
+            <circle cx="268" cy="112" r="15" class="disc--accent" />
+            <use href="#i-users" x="256" y="100" width="24" height="24" class="ic-accent" />
+            <text x="294" y="108" class="t-label t-strong">With a User-Agent</text>
+            <text x="294" y="126" class="t-small">≤ 200 requests / min</text>
+            <circle cx="268" cy="156" r="15" class="disc--accent" />
+            <use href="#i-shield" x="256" y="144" width="24" height="24" class="ic-accent" />
+            <text x="294" y="152" class="t-label t-strong">Established users</text>
+            <text x="294" y="170" class="t-small">≤ 2,000 requests / min</text>
+            <circle cx="268" cy="200" r="15" class="disc--accent" />
+            <use href="#i-bolt" x="256" y="188" width="24" height="24" class="ic-accent" />
+            <text x="294" y="196" class="t-label t-strong">Parallel requests</text>
+            <text x="294" y="214" class="t-small">≤ 3 at once per IP (guidance) → HTTP 503</text>
+            <path d="M248 222H572" class="grid" />
+            <text x="248" y="237" class="t-code" style="fill: #6d797d; font-size: 10.5px">ex:anonymous a vord:RateRestriction ;</text>
+            <text x="248" y="251" class="t-code" style="fill: #6d797d; font-size: 10.5px">  vord:maxValue 10 ; vord:windowDuration "PT1M" .</text>
+          </g>
+          <g class="next">
+            <path class="flow flow--algo draw" pathLength="1" d="M592 96L640 72" />
+            <path class="flow flow--manual draw" pathLength="1" d="M592 170L640 194" />
+            <circle cx="680" cy="64" r="34" class="disc--algo" />
+            <use href="#i-gear" x="660" y="44" width="40" height="40" class="ic-algo" />
+            <text x="726" y="54" class="t-title">Federation</text>
+            <text x="726" y="74" class="t-title">engines</text>
+            <text x="726" y="94" class="t-small">plan requests within the limits</text>
+            <text x="726" y="110" class="t-small">and adapt before reaching them</text>
+            <circle cx="680" cy="196" r="34" class="disc--manual" />
+            <use href="#i-user" x="660" y="176" width="40" height="40" class="ic-manual" />
+            <text x="726" y="190" class="t-title">Users</text>
+            <text x="726" y="210" class="t-small">know the limits before querying,</text>
+            <text x="726" y="226" class="t-small">and why a request was rejected</text>
+          </g>
+          <g class="next">
+            <rect class="panel--accent" x="0" y="276" width="880" height="48" rx="12" />
+            <text x="440" y="306" class="t-label t-center"><tspan class="t-strong">Interrupts the cycle:</tspan> informed planning → fewer rejections → fewer retries</text>
+          </g>
+        </svg>
+      </figure>
+      <p class="takehome next"><span class="takehome__label">Key message</span><span>If endpoints publish their limits, engines and users can stay within them.</span></p>
+      <p class="footnote">
+        <span><sup>1</sup> VoRD, Vocabulary of Restrictive Datasets (v0.2): <a href="https://github.com/ecrum19/vord" target="_blank" rel="noopener noreferrer">github.com/ecrum19/vord</a> · <a href="https://ecrum19.github.io/vord/" target="_blank" rel="noopener noreferrer">ecrum19.github.io/vord</a>. Extends SPARQL 1.1 Service Description; validated with SHACL and ShEx.</span>
+        <span>Card values: VoRD’s Wikidata example, derived from Wikimedia’s public rate-limit documentation (May 2026).</span>
+      </p>
+    </section>
+
+    <!-- 13 · Conclusions ---------------------------------------------------- -->
+    <section id="takeaway" class="slide story" inlist="" rel="schema:hasPart" resource="#takeaway">
+      <p class="eyebrow">13 · Conclusions</p>
+      <h2 property="schema:name">Federation over public endpoints is not yet reliable.</h2>
+      <div class="closing-layout">
+        <ul class="recap">
+          <li><svg aria-hidden="true"><use href="#i-fork" /></svg><span>Manual outperformed algorithmic by ≈ 16×<small>95% of algorithmic executions ended in an explicit error</small></span></li>
+          <li><svg aria-hidden="true"><use href="#i-down" /></svg><span>Both declined within a single year<small>Endpoints migrated, retired services and updated usage policies</small></span></li>
+          <li><svg aria-hidden="true"><use href="#i-users" /></svg><span>Improvement requires a community effort<small>Users, engine builders and maintainers, e.g. through VoRD</small></span></li>
+        </ul>
+        <div class="thanks">
+          <strong>Thank you!<br />Questions?</strong>
+          <p>Explore every query and run:<br /><a href="https://ecrum19.github.io/fed-survey-results/" target="_blank" rel="noopener noreferrer">ecrum19.github.io/fed-survey-results ↗</a></p>
+          <p>Paper:<br /><a href="https://ecrum19.github.io/eliascrum/publications/real-world-federation-iswc-2026/paper" target="_blank" rel="noopener noreferrer">Crum et al., ISWC 2026 ↗</a></p>
+        </div>
+      </div>
+      <p class="takehome"><span class="takehome__label">Key message</span><span>Real-world federation needs real-world evaluation and coordinated community effort.</span></p>
+      <p class="footnote">
+        <span>Supported by FWO · SolidLab Vlaanderen · Swiss National Science Foundation · EU Horizon Europe (MICROBES-4-CLIMATE) · Swiss Government SERI · NIH.</span>
+      </p>
+    </section>
+
+    <!-- Supplementary slides ================================================= -->
+    <section id="supplementary" class="slide supp-divider" inlist="" rel="schema:hasPart" resource="#supplementary">
+      <p class="eyebrow">Supplementary slides</p>
+      <h2 property="schema:name">Details and evidence</h2>
+      <ol class="supp-index">
+        <li><span>S1</span><a href="#supp-success">What counts as an answer</a></li>
+        <li><span>S2</span><a href="#supp-complexity">How complex the queries are</a></li>
+        <li><span>S3</span><a href="#supp-algebra">SERVICE vs. no-service query</a></li>
+        <li><span>S4</span><a href="#supp-heatmap">Every query × every run</a></li>
+        <li><span>S5</span><a href="#supp-runs">Answers per run</a></li>
+        <li><span>S6</span><a href="#supp-errors">Error breakdown</a></li>
+        <li><span>S7</span><a href="#supp-explosion">Request explosions</a></li>
+        <li><span>S8</span><a href="#supp-strategies">Algorithmic strategies</a></li>
+        <li><span>S9</span><a href="#supp-changes">Endpoint changes</a></li>
+        <li><span>S10</span><a href="#supp-limitations">Limitations</a></li>
+        <li><span>S11</span><a href="#supp-example">The running example</a></li>
+        <li><span>S12</span><a href="#supp-references">References</a></li>
       </ol>
     </section>
 
-    <section id="context" class="slide" inlist="" rel="schema:hasPart" resource="#context">
-      <p class="eyebrow">02 / Context</p>
-      <h2 property="schema:name">Make the tension visible.</h2>
-      <div class="split">
-        <div>
-          <p class="lead">What changed, what is difficult, and why does it matter now?</p>
+    <section id="supp-success" class="slide supplemental-slide" inlist="" rel="schema:hasPart" resource="#supp-success">
+      <p class="eyebrow">S1 · Measurement</p>
+      <h2 property="schema:name">What counts as an answer?</h2>
+      <div class="definition-grid">
+        <div class="definition-card definition-card--success"><span class="outcome-dot"></span><strong>Non-empty result</strong><p>Parseable SPARQL Results JSON with <code>result count &gt; 0</code>.</p></div>
+        <div class="definition-card definition-card--empty"><span class="outcome-dot"></span><strong>Empty result</strong><p>Parseable output, but zero bindings returned.</p></div>
+        <div class="definition-card definition-card--error"><span class="outcome-dot"></span><strong>Explicit error</strong><p>No usable output or an exception/error path.</p></div>
+      </div>
+      <p class="source-note">Result-set size agreement is used as a proxy for consistency; the study does not claim semantic binding equality. Direct endpoint execution and the Comunica control were close (65.2% vs. 60.6% non-empty).</p>
+    </section>
+
+    <section id="supp-complexity" class="slide supplemental-slide" inlist="" rel="schema:hasPart" resource="#supp-complexity">
+      <p class="eyebrow">S2 · The workload</p>
+      <h2 property="schema:name">Moderate syntax, non-trivial federation.</h2>
+      <figure class="live-figure">
+        <iframe class="live-frame" data-live="https://ecrum19.github.io/fed-survey-results/assets/Queries_Summary_Figure_interactive.html" title="Interactive query complexity figure: 67 queries by triple patterns and federation members" scrolling="no"></iframe>
+        <img class="live-fallback" src="assets/figures/query-complexity.png" alt="Bar chart showing the 67 queries ordered by number of triple patterns and grouped by two or three federation members." />
+        <figcaption>
+          <a class="live-tag" href="https://ecrum19.github.io/fed-survey-results/#generalStatsInteractiveFigureChart" target="_blank" rel="noopener noreferrer" title="Open this chart in the results explorer"><span class="live-dot" aria-hidden="true"></span>Live ↗</a>
+          <span class="live-key"><i class="key-swatch key-swatch--2"></i>2 federation members</span>
+          <span class="live-key"><i class="key-swatch key-swatch--3"></i>3 federation members</span>
+          <span class="live-key"><b>O</b> OPTIONAL · <b>U</b> UNION</span>
+          <span class="live-actions">Hover a bar for details · <a href="https://ecrum19.github.io/fed-survey-results/assets/Queries_Summary_Figure_interactive.html" target="_blank" rel="noopener noreferrer">Open full screen ↗</a></span>
+        </figcaption>
+      </figure>
+      <p class="source-note">Average: 14.9 triple patterns (2–34) · 2.24 federation members · few <code>OPTIONAL</code>/<code>UNION</code>. Crum et al., ISWC 2026 (Sec. 4.2).</p>
+    </section>
+
+    <section id="supp-algebra" class="slide supplemental-slide" inlist="" rel="schema:hasPart" resource="#supp-algebra">
+      <p class="eyebrow">S3 · From SERVICE to no-service</p>
+      <h2 property="schema:name">The running example, as SPARQL.</h2>
+      <div class="algebra-layout">
+        <figure class="algebra">
+          <figcaption><strong class="alg-title alg-title--manual">SERVICE form (manual)</strong><code>original/109_uniprot_transporter_in_liver.rq</code></figcaption>
+          <pre><code># Datasources: https://sparql.uniprot.org/sparql/
+PREFIX genex: &lt;http://purl.org/genex#&gt;
+PREFIX lscr: &lt;http://purl.org/lscr#&gt;
+PREFIX obo: &lt;http://purl.obolibrary.org/obo/&gt;
+PREFIX orth: &lt;http://purl.org/net/orth#&gt;
+PREFIX rh: &lt;http://rdf.rhea-db.org/&gt;
+PREFIX taxon: &lt;http://purl.uniprot.org/taxonomy/&gt;
+PREFIX uberon: &lt;http://purl.obolibrary.org/obo/uo#&gt;
+PREFIX up: &lt;http://purl.uniprot.org/core/&gt;
+SELECT
+  ?rhea
+  ?protein
+  ?anat
+WHERE
+{
+  GRAPH &lt;https://sparql.rhea-db.org/rhea&gt; {
+    ?rhea rh:isTransport true .
+  }
+  ?protein up:annotation ?ann .
+  ?protein up:organism taxon:9606 .
+  ?ann up:catalyticActivity ?ca .
+  ?ca up:catalyzedReaction ?rhea .
+  BIND(uberon:0002107 AS ?anat)
+<span class="alg-hl alg-hl--manual">  SERVICE &lt;https://www.bgee.org/sparql&gt; {
+    ?seq genex:isExpressedIn ?anat .
+    ?seq lscr:xrefUniprot ?protein .
+    ?seq orth:organism ?organism .
+    ?organism obo:RO_0002162 taxon:9606 .
+  }</span>}</code></pre>
+        </figure>
+        <figure class="algebra">
+          <figcaption><strong class="alg-title alg-title--algo">no-service form (algorithmic)</strong><code>no-service/109_uniprot_transporter_in_liver_ns.rq</code></figcaption>
+          <pre><code># Datasources: https://sparql.uniprot.org/sparql/ https://www.bgee.org/sparql
+PREFIX genex: &lt;http://purl.org/genex#&gt;
+PREFIX lscr: &lt;http://purl.org/lscr#&gt;
+PREFIX obo: &lt;http://purl.obolibrary.org/obo/&gt;
+PREFIX orth: &lt;http://purl.org/net/orth#&gt;
+PREFIX rh: &lt;http://rdf.rhea-db.org/&gt;
+PREFIX taxon: &lt;http://purl.uniprot.org/taxonomy/&gt;
+PREFIX uberon: &lt;http://purl.obolibrary.org/obo/uo#&gt;
+PREFIX up: &lt;http://purl.uniprot.org/core/&gt;
+SELECT
+  ?rhea
+  ?protein
+  ?anat
+WHERE
+{
+  GRAPH &lt;https://sparql.rhea-db.org/rhea&gt; {
+    ?rhea rh:isTransport true .
+  }
+  ?protein up:annotation ?ann .
+  ?protein up:organism taxon:9606 .
+  ?ann up:catalyticActivity ?ca .
+  ?ca up:catalyzedReaction ?rhea .
+  BIND(uberon:0002107 AS ?anat)
+<span class="alg-hl alg-hl--algo">  {
+    ?seq genex:isExpressedIn ?anat .
+    ?seq lscr:xrefUniprot ?protein .
+    ?seq orth:organism ?organism .
+    ?organism obo:RO_0002162 taxon:9606 .
+  }</span>}</code></pre>
+        </figure>
+      </div>
+      <p class="source-note"><strong>One change:</strong> the <code>SERVICE &lt;https://www.bgee.org/sparql&gt;</code> wrapper becomes a plain group and Bgee joins the data sources, so the engine must place every pattern itself. Files verbatim from <a href="https://github.com/ecrum19/fed-survey-results/tree/main/queries" target="_blank" rel="noopener noreferrer">fed-survey-results/queries ↗</a>.</p>
+    </section>
+
+    <section id="supp-heatmap" class="slide supplemental-slide" inlist="" rel="schema:hasPart" resource="#supp-heatmap">
+      <p class="eyebrow">S4 · All outcomes</p>
+      <h2 property="schema:name">Failures were widespread across the query set.</h2>
+      <figure class="live-figure">
+        <iframe class="live-frame" data-live="https://ecrum19.github.io/fed-survey-results/" data-focus="queryResultsByRunOverviewChart" title="Interactive heatmap of query outcomes by experiment run" scrolling="no"></iframe>
+        <img class="live-fallback" src="assets/figures/query-outcomes-heatmap.png" alt="Heatmap of query outcomes across 25 chronological experiment runs: non-empty results, empty results, explicit errors and missing data." />
+        <figcaption>
+          <a class="live-tag" href="https://ecrum19.github.io/fed-survey-results/#queryResultsByRunOverviewChart" target="_blank" rel="noopener noreferrer" title="Open this chart in the results explorer"><span class="live-dot" aria-hidden="true"></span>Live ↗</a>
+          <span class="live-key"><i class="key-swatch" style="background: #0f8f68"></i>non-empty result set</span>
+          <span class="live-key"><i class="key-swatch" style="background: #c85e00"></i>empty result set</span>
+          <span class="live-key"><i class="key-swatch" style="background: #b0182b"></i>explicit error</span>
+          <span class="live-key"><i class="key-swatch" style="background: #8fa1b3"></i>missing</span>
+          <span class="live-key"><b>≠</b> result count varies across runs</span>
+          <span class="live-actions">Hover a cell for details · <a href="https://ecrum19.github.io/fed-survey-results/#queryResultsByRunOverviewChart" target="_blank" rel="noopener noreferrer">Open in explorer ↗</a></span>
+        </figcaption>
+      </figure>
+      <p class="source-note">Rows = experiment runs, columns = queries (dashboard order). Crum et al., ISWC 2026 (Fig. 3); chronological version in the paper.</p>
+    </section>
+
+    <section id="supp-runs" class="slide supplemental-slide" inlist="" rel="schema:hasPart" resource="#supp-runs">
+      <p class="eyebrow">S5 · Answers per run</p>
+      <h2 property="schema:name">Non-empty result sets for each of the 25 runs.</h2>
+      <figure class="live-figure">
+        <iframe class="live-frame" data-live="https://ecrum19.github.io/fed-survey-results/" data-focus="runPositiveResultCountChart" data-chart-height="330" title="Interactive bar chart of queries with non-empty result sets per experiment run" scrolling="no"></iframe>
+        <img class="live-fallback" src="assets/figures/success-trend.png" alt="Bar chart of queries with non-empty result sets per experiment run, chronologically: SERVICE runs answer 30 to 43 queries in Spring 2025; no-SERVICE runs answer at most 6 in Fall 2025 and Winter 2026 and 0 in Spring 2026; one SERVICE run in Spring 2026 answers 10." />
+        <figcaption>
+          <a class="live-tag" href="https://ecrum19.github.io/fed-survey-results/#runPositiveResultCountChart" target="_blank" rel="noopener noreferrer" title="Open this chart in the results explorer"><span class="live-dot" aria-hidden="true"></span>Live ↗</a>
+          <span class="live-key"><i class="key-swatch" style="background: #0072b2"></i>SERVICE (manual)</span>
+          <span class="live-key"><i class="key-swatch" style="background: #009e73"></i>no-service (algorithmic)</span>
+          <span class="live-actions">Hover a bar for details · <a href="https://ecrum19.github.io/fed-survey-results/#runPositiveResultCountChart" target="_blank" rel="noopener noreferrer">Open in explorer ↗</a></span>
+        </figcaption>
+      </figure>
+      <p class="source-note">Queries with result set &gt; 0, per experiment run (dashboard order). Crum et al., ISWC 2026 (Fig. 2); chronological version in the paper.</p>
+    </section>
+
+    <section id="supp-errors" class="slide supplemental-slide" inlist="" rel="schema:hasPart" resource="#supp-errors">
+      <p class="eyebrow">S6 · Errors</p>
+      <h2 property="schema:name">The errors had an operational signature.</h2>
+      <div class="error-layout">
+        <div class="error-bars" aria-label="Error group counts">
+          <div class="error-row"><span>Client-side HTTP (4xx)</span><div class="error-track"><i style="width: 100.0%"></i></div><strong>577</strong></div>
+          <div class="error-row"><span>Server-side HTTP (5xx)</span><div class="error-track"><i style="width: 38.5%"></i></div><strong>222</strong></div>
+          <div class="error-row"><span>Transport-level</span><div class="error-track"><i style="width: 14.7%"></i></div><strong>85</strong></div>
+          <div class="error-row"><span>Other / malformed response</span><div class="error-track"><i style="width: 13.9%"></i></div><strong>80</strong></div>
+          <div class="error-row"><span>Timeout-related</span><div class="error-track"><i style="width: 10.9%"></i></div><strong>63</strong></div>
         </div>
-        <div class="note">
-          <span class="note__label">Framing</span>
-          <p>Use one concrete observation, example, or constraint to ground the audience.</p>
+        <aside class="error-readout">
+          <span class="note__label">What this means</span>
+          <p>Most failures did not stem from faulty queries. They were 4xx rejections, 5xx failures, malformed responses, incomplete transfers, or timeout-like interruptions.</p>
+          <div class="error-pill"><strong>403</strong><span>often after only 3–6 requests</span></div>
+          <a class="live-link" href="https://ecrum19.github.io/fed-survey-results/?mode=query&query=42&queryVariant=original" target="_blank" rel="noopener noreferrer">Inspect a representative query ↗</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="supp-explosion" class="slide supplemental-slide" inlist="" rel="schema:hasPart" resource="#supp-explosion">
+      <p class="eyebrow">S7 · Request explosions</p>
+      <h2 property="schema:name">Some query plans generated extreme request volumes.</h2>
+      <div class="explosion-layout">
+        <div class="explosion-chain" aria-label="Request explosion chain">
+          <div><span>1</span><strong>Probe sources</strong><small>ASK / COUNT requests</small></div>
+          <b aria-hidden="true">→</b>
+          <div><span>2</span><strong>Join remotely</strong><small>intermediate results move</small></div>
+          <b aria-hidden="true">→</b>
+          <div><span>3</span><strong>Materialize locally</strong><small>memory + time accumulate</small></div>
+        </div>
+        <div class="explosion-stat"><strong>924,299</strong><span>HTTP requests from <em class="qname">query 6</em> before failure</span></div>
+      </div>
+      <div class="explosion-foot">
+        <div><strong>742,417</strong><span><em class="qname">query 13</em></span></div>
+        <div><strong>553,202</strong><span><em class="qname">query 16</em></span></div>
+        <div><strong>580 vs. 6</strong><span>median requests: non-empty vs. other algorithmic executions</span></div>
+      </div>
+      <p class="source-note">No-service median runtime 4.47 s; 90th percentile 247.92 s. Crum et al., ISWC 2026.</p>
+    </section>
+
+    <section id="supp-strategies" class="slide supplemental-slide" inlist="" rel="schema:hasPart" resource="#supp-strategies">
+      <p class="eyebrow">S8 · Algorithmic strategies</p>
+      <h2 property="schema:name">All automatic strategies showed low success rates.</h2>
+      <table class="strategy-table">
+        <thead><tr><th>Configuration family</th><th>Planning signal</th><th>Non-empty results</th><th>Rate</th></tr></thead>
+        <tbody>
+          <tr><td><code>NOMETA-ASK</code></td><td>Live <code>ASK</code> probing</td><td>12 / 360</td><td>3.33%</td></tr>
+          <tr><td><code>NOMETA-COUNT</code></td><td>Live <code>COUNT</code> probing</td><td>5 / 240</td><td>2.08%</td></tr>
+          <tr><td><code>VOID-TRIPLE</code></td><td>VoID, triple-pattern granularity</td><td>6 / 180</td><td>3.33%</td></tr>
+          <tr><td><code>VOID-BLOCK</code></td><td>VoID, larger query blocks</td><td>6 / 174</td><td>3.45%</td></tr>
+        </tbody>
+      </table>
+      <div class="strategy-note"><strong>Small differences, same conclusion.</strong><span>VOID-BLOCK had the highest success rate and NOMETA-COUNT the lowest; rate-limit variants did not recover success.</span></div>
+      <p class="source-note">All configurations ran in the same Comunica 4.3.0 client (Taelman et al., ISWC 2018).</p>
+    </section>
+
+    <section id="supp-changes" class="slide supplemental-slide" inlist="" rel="schema:hasPart" resource="#supp-changes">
+      <p class="eyebrow">S9 · Endpoint changes</p>
+      <h2 property="schema:name">A live endpoint is part of the experimental treatment.</h2>
+      <div class="instability-grid">
+        <article class="instability-card">
+          <span class="instability-mark">01</span>
+          <h3>Endpoint migration</h3>
+          <p><strong>14/67</strong> queries touched the former DBGI/EMI endpoint, which moved to METRIN-KG.</p>
+        </article>
+        <article class="instability-card">
+          <span class="instability-mark">02</span>
+          <h3>Service deprecation</h3>
+          <p>A temporary EMI federation server was deprecated in September 2025 and removed in November.</p>
+        </article>
+        <article class="instability-card">
+          <span class="instability-mark">03</span>
+          <h3>Policy updates</h3>
+          <p>UniProt changed backends and updated its usage limits as traffic increased; clients received HTTP 403 responses.</p>
+        </article>
+      </div>
+      <div class="instability-conclusion"><strong>Same query + same configuration ≠ same outcome.</strong><span>68.7% of queries returned varying result counts across runs.</span></div>
+    </section>
+
+    <section id="supp-limitations" class="slide slide--accent supplemental-slide" inlist="" rel="schema:hasPart" resource="#supp-limitations">
+      <p class="eyebrow">S10 · Boundaries</p>
+      <h2 property="schema:name">What this study does, and does not, claim.</h2>
+      <div class="cards cards--three">
+        <article class="card"><span class="card__number">01</span><h3>Domain-specific</h3><p>The workload and endpoints come from biological Linked Data; other domains may behave differently.</p></article>
+        <article class="card"><span class="card__number">02</span><h3>Meaningful, not exhaustive</h3><p>67 queries and a limited endpoint set provide evidence of practice, not a universal benchmark.</p></article>
+        <article class="card"><span class="card__number">03</span><h3>Causality is incomplete</h3><p>We can observe when outcomes changed, but not always the precise administrative or infrastructural cause.</p></article>
+      </div>
+    </section>
+
+    <section id="supp-example" class="slide supplemental-slide" inlist="" rel="schema:hasPart" resource="#supp-example">
+      <p class="eyebrow">S11 · The running example</p>
+      <h2 property="schema:name"><em class="qname">Query 109:</em> transporter proteins in the liver.</h2>
+      <div class="example-layout">
+        <pre><code># sent to sparql.uniprot.org (PREFIXes omitted)
+SELECT ?rhea ?protein ?anat
+WHERE {
+  GRAPH &lt;https://sparql.rhea-db.org/rhea&gt; {
+    ?rhea rh:isTransport true .
+  }
+  ?protein up:annotation ?ann .
+  ?protein up:organism taxon:9606 .
+  ?ann up:catalyticActivity ?ca .
+  ?ca up:catalyzedReaction ?rhea .
+  BIND(uberon:0002107 AS ?anat)
+  SERVICE &lt;https://www.bgee.org/sparql&gt; {
+    ?seq genex:isExpressedIn ?anat .
+    ?seq lscr:xrefUniprot ?protein .
+    ?seq orth:organism ?organism .
+    ?organism obo:RO_0002162 taxon:9606 .
+  }
+}</code></pre>
+        <div class="example-runs">
+          <div class="run-row"><span class="run-label">Spring 2025<small>manual · 2 runs</small></span><span class="run-cells"><i class="run run--ok"></i><i class="run run--ok"></i></span></div>
+          <div class="run-row"><span class="run-label">Fall 2025<small>algorithmic · 4 runs</small></span><span class="run-cells"><i class="run run--err"></i><i class="run run--empty"></i><i class="run run--empty"></i><i class="run run--empty"></i></span></div>
+          <div class="run-row"><span class="run-label">Winter 2026<small>algorithmic · 7 runs</small></span><span class="run-cells"><i class="run run--empty"></i><i class="run run--empty"></i><i class="run run--err"></i><i class="run run--err"></i><i class="run run--err"></i><i class="run run--err"></i><i class="run run--err"></i></span></div>
+          <div class="run-row"><span class="run-label">Spring 2026<small>algorithmic · 10 runs</small></span><span class="run-cells"><i class="run run--err"></i><i class="run run--err"></i><i class="run run--err"></i><i class="run run--err"></i><i class="run run--err"></i><i class="run run--err"></i><i class="run run--err"></i><i class="run run--err"></i><i class="run run--err"></i><i class="run run--err"></i></span></div>
+          <div class="run-row"><span class="run-label">Spring 2026<small>manual · 1 run</small></span><span class="run-cells"><i class="run run--err"></i></span></div>
+          <p class="run-legend"><i class="run run--ok"></i> answered <i class="run run--empty"></i> empty <i class="run run--err"></i> error</p>
+          <p class="run-note">Errors were HTTP <strong>403 Forbidden</strong> from UniProt and Bgee within 2–12 requests. One Fall 2025 run was aborted after 609 requests (69 s).</p>
         </div>
       </div>
+      <p class="source-note">UniProt SPARQL example <code>109_uniprot_transporter_in_liver</code> (federates UniProt + Bgee). Per-run logs: <a href="https://github.com/ecrum19/fed-survey-results" target="_blank" rel="noopener noreferrer">github.com/ecrum19/fed-survey-results ↗</a>. The paper’s Figure 1 shows <em class="qname">query 7</em> (SwissLipids), which returned no non-empty result in any run.</p>
     </section>
 
-    <section id="idea" class="slide" inlist="" rel="schema:hasPart" resource="#idea">
-      <p class="eyebrow">03 / The idea</p>
-      <h2 property="schema:name">One clear idea beats a crowded slide.</h2>
-      <div class="cards">
-        <article class="card">
-          <span class="card__number">01</span>
-          <h3>Signal</h3>
-          <p>What should the audience notice first?</p>
-        </article>
-        <article class="card">
-          <span class="card__number">02</span>
-          <h3>Structure</h3>
-          <p>What is the simplest useful explanation?</p>
-        </article>
-        <article class="card">
-          <span class="card__number">03</span>
-          <h3>Story</h3>
-          <p>What should the audience remember later?</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="takeaways" class="slide slide--accent" inlist="" rel="schema:hasPart" resource="#takeaways">
-      <p class="eyebrow">04 / Takeaways</p>
-      <h2 property="schema:name">Leave room for the last thought.</h2>
-      <ul class="clean-list">
-        <li>Keep the central message easy to repeat.</li>
-        <li>Use evidence to sharpen the story, not to bury it.</li>
-        <li>End with the next useful question.</li>
-      </ul>
-    </section>
-
-    <section id="acknowledgments" class="slide slide--accent" inlist="" rel="schema:hasPart" resource="#acknowledgments">
-      <p class="eyebrow">05 / Acknowledgments</p>
-      <h2 property="schema:name">With thanks.</h2>
-      <div class="acknowledgments">
-        <p><strong>Research support</strong><br />Add funders, projects, or institutional support here.</p>
-        <p><strong>Contributors</strong><br />Add collaborators, mentors, reviewers, and everyone who helped shape the work.</p>
-      </div>
-    </section>
-
-    <section id="references" class="slide" inlist="" rel="schema:hasPart" resource="#references">
-      <p class="eyebrow">06 / References</p>
-      <h2 property="schema:name">Keep the evidence easy to revisit.</h2>
-      <ol class="references">
-        <li><cite>Author, A.</cite> (Year). Title of the referenced work. <span class="reference__meta">Publisher, journal, or DOI</span></li>
-        <li><cite>Author, B.</cite> (Year). Title of the referenced work. <span class="reference__meta">Publisher, journal, or DOI</span></li>
-        <li><cite>Organization.</cite> (Year). Title of the referenced resource. <span class="reference__meta">URL or report identifier</span></li>
+    <section id="supp-references" class="slide supplemental-slide" inlist="" rel="schema:hasPart" resource="#supp-references">
+      <p class="eyebrow">S12 · References</p>
+      <h2 property="schema:name">Sources cited in this talk.</h2>
+      <ol class="references references--compact">
+        <li><cite>Crum, E., Tam, B.-E., Hanski, J., Sima, A.-C., Mendes de Farias, T., Bolleman, J., Taelman, R.</cite> Does SPARQL federation work in the real world? A case study over large biological SPARQL endpoints. ISWC 2026. Data: <a href="https://ecrum19.github.io/fed-survey-results/" target="_blank" rel="noopener noreferrer">ecrum19.github.io/fed-survey-results ↗</a></li>
+        <li><cite>W3C.</cite> SPARQL 1.1 Federated Query. W3C Recommendation, 2013.</li>
+        <li><cite>Bolleman, J., et al.</cite> A large collection of bioinformatics question–query pairs over federated knowledge graphs: methodology and applications. GigaScience 14, giaf045, 2025.</li>
+        <li><cite>The UniProt Consortium.</cite> UniProt: the Universal Protein Knowledgebase in 2023. Nucleic Acids Research 51(D1), 2023.</li>
+        <li><cite>Bastian, F. B., et al.</cite> The Bgee suite: integrated curated expression atlas and comparative transcriptomics in animals in 2021. Nucleic Acids Research 49(D1), 2021.</li>
+        <li><cite>Schmidt, M., et al.</cite> FedBench: A benchmark suite for federated semantic data query processing. ISWC 2011.</li>
+        <li><cite>Saleem, M., Hasnain, A., Ngonga Ngomo, A.-C.</cite> LargeRDFBench: A billion triples benchmark for SPARQL endpoint federation. Journal of Web Semantics 48, 2018.</li>
+        <li><cite>Dang, M.-H., et al.</cite> FedShop: A benchmark for testing the scalability of SPARQL federation engines. ISWC 2023.</li>
+        <li><cite>Saleem, M., Khan, Y., Hasnain, A., Ermilov, I., Ngonga Ngomo, A.-C.</cite> A fine-grained evaluation of SPARQL endpoint federation systems. Semantic Web 7(5), 2016.</li>
+        <li><cite>Hernández, D., Hogan, A., Riveros, C., Rojas, C., Zerega, E.</cite> Querying Wikidata: Comparing SPARQL, relational and graph databases. ISWC 2016.</li>
+        <li><cite>Taelman, R., Van Herwegen, J., Vander Sande, M., Verborgh, R.</cite> Comunica: a modular SPARQL query engine for the Web. ISWC 2018. <a href="https://comunica.dev/" target="_blank" rel="noopener noreferrer">comunica.dev ↗</a></li>
+        <li><cite>Alexander, K., Cyganiak, R., Hausenblas, M., Zhao, J.</cite> Describing Linked Datasets with the VoID Vocabulary. W3C Interest Group Note, 2011.</li>
+        <li><cite>Williams, G. T.</cite> SPARQL 1.1 Service Description. W3C Recommendation, 2013.</li>
+        <li><cite>Crum, E.</cite> VoRD: Vocabulary of Restrictive Datasets, v0.2. <a href="https://github.com/ecrum19/vord" {L}>github.com/ecrum19/vord ↗</a></li>
       </ol>
-    </section>
-
-    <section id="supplemental" class="slide slide--dark" inlist="" rel="schema:hasPart" resource="#supplemental">
-      <p class="eyebrow">07 / Supplemental slides</p>
-      <h2 property="schema:name">Keep useful detail close at hand.</h2>
-      <div class="supplemental-grid">
-        <article class="supplemental-card">
-          <span class="note__label">Method</span>
-          <p>Add derivations, extra experiments, or implementation detail here.</p>
-        </article>
-        <article class="supplemental-card">
-          <span class="note__label">Discussion</span>
-          <p>Use these slides when a question needs more depth than the main story.</p>
-        </article>
-      </div>
     </section>
 
     <footer class="site-footer">
       <nav class="footer__links" aria-label="Presentation resources">
-        <a href="https://github.com/ecrum19/slides-generator.sh">Generator source</a>
+        <a href="https://ecrum19.github.io/fed-survey-results/">Companion data</a>
+        <a href="https://github.com/ecrum19/fed-survey-results">Experiment repo</a>
+        <a href="https://ecrum19.github.io/eliascrum/publications/real-world-federation-iswc-2026/paper">Paper</a>
         <a href="https://github.com/ecrum19/iswc-2026-slides">Deck source</a>
-        <a href="https://github.com/ecrum19">GitHub profile</a>
-        <a href="https://ecrum19.github.io/eliascrum/">Personal site</a>
-        <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" property="schema:license">Creative Commons Attribution 4.0</a>
+        <a rel="license" href="https://creativecommons.org/licenses/by/4.0/" property="schema:license">CC BY 4.0</a>
       </nav>
     </footer>
 
+    <script>
+      // Live figures: fetch the page from the results site and refit it to the
+      // slide. data-focus picks one chart out of the dashboard; without it the
+      // page is the standalone complexity figure. The frame then follows the
+      // chart's height. Offline, the static PNG next to the frame is shown.
+      const liveFit = (focus, chartHeight) => focus ? `
+          html, body { margin: 0 !important; padding: 0 !important; background: #fff !important; overflow: hidden !important; }
+          .page-shell { margin: 0 !important; padding: 0 !important; max-width: none !important; width: 100% !important; }
+          .page-shell > :not(#overviewPanel) { display: none !important; }
+          #overviewPanel { border: 0 !important; box-shadow: none !important; padding: 0 !important; margin: 0 !important; background: #fff !important; }
+          #overviewPanel > :not(.chart-grid) { display: none !important; }
+          .chart-grid { display: block !important; margin: 0 !important; padding: 0 !important; }
+          .chart-card:not(:has(#${focus})) { display: none !important; }
+          .chart-card { border: 0 !important; box-shadow: none !important; padding: 0 !important; margin: 0 !important; background: #fff !important; }
+          .chart-card > :not(#${focus}):not(:has(#${focus})) { display: none !important; }
+          .chart-frame > :not(#${focus}):not(:has(#${focus})) { display: none !important; }
+          .chart-card [class*="expand"]:not(.expandable-surface), .chart-card [aria-label*="xpand"], .chart-info-btn { display: none !important; }
+          .expandable-surface::before, .expandable-surface::after, .chart-frame::before, .chart-frame::after { display: none !important; }
+          .expandable-surface { cursor: default !important; }
+          /* Heatmap: legend lives in the slide caption; shorter rows so 25 runs fit. */
+          .outcome-heatmap-legend { display: none !important; }
+          .outcome-heatmap-table .heat-cell, .outcome-heatmap-table tbody th { height: 9px !important; padding-top: 0 !important; padding-bottom: 0 !important; line-height: 9px !important; font-size: 8px !important; }
+          .outcome-heatmap-table .variance-icon { transform: scale(.7); }
+          #${focus} { margin: 0 !important; ${chartHeight ? `height: ${chartHeight}px !important;` : ''} }
+        ` : `
+          html, body { margin: 0; padding: 0; background: #fff; overflow: hidden; }
+          .panel { border: 0; border-radius: 0; box-shadow: none; padding: 0; }
+          .title, .legend-row, .foot, .x-label { display: none; }
+          .plot-wrap { border: 0; border-radius: 0; overflow: hidden; }
+          svg { width: 100% !important; height: auto !important; min-height: 0 !important; }
+          .tooltip { min-width: 0; max-width: 360px; padding: 5px 8px; font-size: 9.5px; line-height: 1.3;
+                     column-count: 2; column-gap: 12px; }
+          .tooltip .head, .tooltip > div:last-child { column-span: all; }
+          .tooltip .head { margin-bottom: 3px; }
+        `;
+      // Runs inside the frame: trim the standalone figure, then keep the frame
+      // as tall as its content (the dashboard renders after loading its data).
+      const liveScript = (focus) => `
+          // The dashboard syncs its filters into the URL; inside a srcdoc frame
+          // that can throw, so make it a no-op on failure.
+          const replaceState = history.replaceState.bind(history);
+          history.replaceState = (...args) => { try { replaceState(...args); } catch (error) {} };
+          // Clicking a chart would open the dashboard's fullscreen dialog inside the frame.
+          document.addEventListener('click', (event) => { if (event.target.closest('.expandable-surface')) event.stopPropagation(); }, true);
+          addEventListener('load', () => {
+            if (!${JSON.stringify(Boolean(focus))}) {
+              const svg = document.querySelector('svg');
+              svg.querySelectorAll('text').forEach((t) => { if (t.textContent.trim() === 'Query Name') t.style.display = 'none'; });
+              const box = svg.getBBox();
+              svg.setAttribute('viewBox', (box.x - 6) + ' ' + (box.y - 6) + ' ' + (box.width + 12) + ' ' + (box.height + 12));
+              svg.setAttribute('width', box.width + 12);
+              svg.setAttribute('height', box.height + 12);
+            }
+            const fitFrame = () => { frameElement.style.height = Math.ceil(document.body.getBoundingClientRect().height) + 'px'; };
+            new ResizeObserver(fitFrame).observe(document.body);
+            fitFrame();
+          });
+        `;
+      document.querySelectorAll('iframe.live-frame').forEach(async (frame) => {
+        const url = frame.dataset.live;
+        const focus = frame.dataset.focus || '';
+        // <base> goes first so the page's own (script-added) stylesheet resolves;
+        // the refit rules go last so they win over the page's styles.
+        const base = `<base href="${url}">`;
+        const inject = `<style>${liveFit(focus, frame.dataset.chartHeight)}</style><script>${liveScript(focus)}<\/script>`;
+        try {
+          const response = await fetch(url, { cache: 'no-cache' });
+          if (!response.ok) throw new Error(response.status);
+          const page = await response.text();
+          frame.srcdoc = page
+            .replace(/<head[^>]*>/i, (head) => head + base)
+            .replace(/<\/head>/i, (end) => inject + end);
+        } catch (error) {
+          frame.closest('figure').classList.add('is-offline');
+        }
+      });
+    </script>
     <script src="node_modules/@shower/core/dist/index.js"></script>
   </body>
 </html>
