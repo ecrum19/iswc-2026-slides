@@ -6,3 +6,6 @@ bundled/
 .vscode/
 *.log
 coverage/
+
+# Local Claude Code settings
+.claude/
