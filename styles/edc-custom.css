@@ -278,7 +278,7 @@ h6 {
     border-bottom: 0;
 }
 
-.slide.title a:not(.title-logo):hover {
+.slide.title a:not(.title-logo):not(.title-qr):hover {
     border-bottom: 1px solid currentColor;
 }
 
@@ -2428,8 +2428,38 @@ a.live-tag:hover,
 }
 
 .slide.title .title-details {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 1.6em;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+/* QR code to the live deck, beside the author block. The SVG carries its own
+ * white tile and quiet zone, so it stays scannable on the paper background. */
+.slide.title .title-qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .35em;
+    border-bottom: 0 !important;
+}
+
+.slide.title .title-qr img {
+    display: block;
+    width: 128px;
+    height: 128px;
+}
+
+.title-qr__label {
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: .48em;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
 /* Reserve the footer row on the layout itself, so the auto margins above
