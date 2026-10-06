@@ -114,6 +114,51 @@ h6 {
     border-bottom: 1px solid currentColor;
 }
 
+/* "Present" button in the overview header: starts the deck in full screen. */
+.caption .title {
+    position: relative;
+}
+
+.present-button {
+    position: absolute;
+    top: 50%;
+    right: 1.25em;
+    display: inline-flex;
+    align-items: center;
+    gap: .55em;
+    border: 0;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #fff;
+    padding: .55em 1.1em;
+    font-family: var(--font-display);
+    font-size: .62em;
+    font-weight: 700;
+    letter-spacing: .04em;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: background .2s ease;
+}
+
+.present-button:hover,
+.present-button:focus-visible {
+    background: var(--ink);
+}
+
+.present-button kbd {
+    border: 1px solid rgba(255, 255, 255, .55);
+    border-radius: 4px;
+    padding: 0 .4em;
+    font-family: inherit;
+    font-size: .85em;
+    line-height: 1.4;
+}
+
+.caption .caption-subtitle,
+.caption h1 {
+    padding-right: 9em;
+}
+
 .site-footer {
     box-sizing: border-box;
     display: flex;

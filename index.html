@@ -34,6 +34,7 @@
           <span aria-hidden="true"> · </span>
           <time rel="schema:datePublished" datetime="2026-10-25">25 October 2026</time>
         </p>
+        <button class="present-button" type="button" title="Start from slide 1 in full screen (press F at any time)">▶ Present<kbd>F</kbd></button>
       </div>
     </header>
 
@@ -1293,5 +1294,45 @@ WHERE {
       });
     </script>
     <script src="shower/index.js"></script>
+    <script>
+      // Full-screen presenting: F toggles the browser's full screen (switching
+      // to the presentation view if needed); "Present" starts from slide 1.
+      // Shower has its own F shortcut; this runs first (capture phase) and
+      // marks the event handled, so each press toggles exactly once.
+      (() => {
+        const root = document.documentElement;
+        const isFullscreen = () => document.fullscreenElement || document.webkitFullscreenElement;
+        const enterFullscreen = () => {
+          const request = root.requestFullscreen || root.webkitRequestFullscreen;
+          if (request) Promise.resolve(request.call(root)).catch(() => {});
+        };
+        const exitFullscreen = () => {
+          const exit = document.exitFullscreen || document.webkitExitFullscreen;
+          if (exit) Promise.resolve(exit.call(document)).catch(() => {});
+        };
+        const toggleFullscreen = () => {
+          if (isFullscreen()) {
+            exitFullscreen();
+            return;
+          }
+          if (!shower.isFullMode) shower.enterFullMode();
+          enterFullscreen();
+        };
+
+        document.addEventListener('keydown', (event) => {
+          if (event.key.toLowerCase() !== 'f' || event.ctrlKey || event.metaKey || event.altKey) return;
+          if (event.repeat) return;
+          if (event.target instanceof Element && event.target.closest('input, textarea, select, [contenteditable]')) return;
+          event.preventDefault();
+          toggleFullscreen();
+        }, true);
+
+        document.querySelector('.present-button')?.addEventListener('click', () => {
+          shower.first();
+          shower.enterFullMode();
+          enterFullscreen();
+        });
+      })();
+    </script>
   </body>
 </html>
