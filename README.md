@@ -16,7 +16,8 @@ Federated SPARQL lets one query combine data from many independent endpoints wit
 
 ## Viewing the slides
 
-- **Overview:** the page opens on a grid of all slides. Click a slide to present from there.
+- **Overview:** the page opens on a grid of all slides. Click a slide to present from there, or click **▶ Present** to start from slide 1 in full screen.
+- **Full screen:** press **F** at any time to toggle full screen (press **F** or Esc to leave it).
 - **Navigate:** → / ← (or Space, Page Down / Page Up) step through slides and their animations; Home / End jump to the first or last slide.
 - **Exit:** press Esc to return to the overview.
 - **Supplementary slides** (S1–S12) follow the conclusions and hold the detailed evidence. Slides S2, S4 and S5 embed live charts from the results explorer; click **LIVE ↗** to open the full chart. These need an internet connection; offline, a static figure is shown instead.
