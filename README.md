@@ -10,7 +10,7 @@ In-Use Paper Presentation at the [International Semantic Web Conference (ISWC) 2
 
 Federated SPARQL lets one query combine data from many independent endpoints without copying it centrally, but it is mostly evaluated on controlled benchmarks. We followed 67 real federated queries, written by domain experts against 20+ large public biological endpoints, across four time points from Spring 2025 to Spring 2026, comparing manual (`SERVICE`) and algorithmic federation.
 
-- Algorithmic federation returned non-empty results far less often than manual federation (3.0% vs. 47.3% execution success rate).
+- Algorithmic federation returned non-empty results far less often than manual federation (2.3% vs. 47.3% execution success rate).
 - Success declined over the year for both approaches as endpoints evolved under growing demand.
 - Reliable federation needs coordination between users, engine developers and endpoint maintainers, for example by publishing endpoint limits with [VoRD](https://github.com/ecrum19/vord).
 
@@ -20,7 +20,7 @@ Federated SPARQL lets one query combine data from many independent endpoints wit
 - **Full screen:** press **F** at any time to toggle full screen (press **F** or Esc to leave it).
 - **Navigate:** → / ← (or Space, Page Down / Page Up) step through slides and their animations; Home / End jump to the first or last slide.
 - **Exit:** press Esc to return to the overview.
-- **Supplementary slides** (S1–S12) follow the conclusions and hold the detailed evidence. Slides S2, S4 and S5 embed live charts from the results explorer; click **LIVE ↗** to open the full chart. These need an internet connection; offline, a static figure is shown instead.
+- **Supplementary slides** (S1–S13) follow the conclusions and hold the detailed evidence. Slides S2, S4 and S5 embed live charts from the results explorer; click **LIVE ↗** to open the full chart. These need an internet connection; offline, a static figure is shown instead.
 
 ## Paper, data and tools
 
@@ -36,6 +36,20 @@ Federated SPARQL lets one query combine data from many independent endpoints wit
 1. [IDLab](https://idlab.ugent.be/), [Ghent University](https://www.ugent.be/en) – [imec](https://www.imec-int.com/en), Belgium
 2. [SIB Swiss Institute of Bioinformatics](https://www.sib.swiss/), Lausanne, Switzerland
 3. [Swiss-Prot group](https://www.expasy.org/resources/uniprotkb-swiss-prot), SIB Swiss Institute of Bioinformatics, Geneva, Switzerland
+
+## How these slides were made
+
+The deck is a single HTML page ([`index.html`](index.html)) with a custom stylesheet ([`styles/edc-custom.css`](styles/edc-custom.css)). It uses no slide-authoring application.
+
+- **Slide engine:** [Shower](https://shwr.me/) ([`@shower/core`](https://github.com/shower/core)) with the [Material theme](https://github.com/shower/material), restyled for this talk. The [Shower CLI](https://github.com/shower/cli) bundles the deck for publishing.
+- **Diagrams and icons:** hand-written inline SVG, animated with CSS transitions as each build step appears.
+- **Live charts:** slides S2, S4 and S5 load figures from the [results explorer](https://ecrum19.github.io/fed-survey-results/) at view time, with static images as an offline fallback.
+- **Typography:** [KoHo](https://fonts.google.com/specimen/KoHo) from Google Fonts.
+- **Logos:** endpoint and institution logos belong to their respective owners and are used to identify those resources.
+- **Hosting:** a [GitHub Actions workflow](.github/workflows/deploy-gh-pages.yml) builds the deck on every push to `main` (`npm run bundle`) and publishes it to [GitHub Pages](https://pages.github.com/).
+- **Authoring assistance:** the slide content and design were developed with the help of [Claude Code](https://claude.com/claude-code) (Anthropic) and reviewed by the authors.
+
+To run the slides locally, install [Node.js](https://nodejs.org/) 22.12 or later and run `npm install`, then `npm run serve`.
 
 ## License
 

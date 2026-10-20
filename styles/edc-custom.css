@@ -10,7 +10,7 @@
     --muted: #6d797d;
     --paper: #f5f6f2;
     --surface: #ffffff;
-    --accent: #4f8e8a;
+    --accent: #3f7a76;
     --accent-soft: #dcece7;
     --line: #d6dfdc;
     --font-display: "KoHo", "Yu Gothic", "YuGothic", Geneva, sans-serif;
@@ -125,38 +125,40 @@ h6 {
     right: 1.25em;
     display: inline-flex;
     align-items: center;
-    gap: .55em;
-    border: 0;
+    gap: .45em;
+    border: 1px solid var(--accent);
     border-radius: 999px;
-    background: var(--accent);
-    color: #fff;
-    padding: .55em 1.1em;
+    background: transparent;
+    color: var(--accent);
+    padding: .3em .75em;
     font-family: var(--font-display);
-    font-size: .62em;
+    font-size: .44em;
     font-weight: 700;
-    letter-spacing: .04em;
+    letter-spacing: .06em;
     cursor: pointer;
     transform: translateY(-50%);
-    transition: background .2s ease;
+    transition: background .2s ease, color .2s ease;
 }
 
 .present-button:hover,
 .present-button:focus-visible {
-    background: var(--ink);
+    background: var(--accent);
+    color: #fff;
 }
 
 .present-button kbd {
-    border: 1px solid rgba(255, 255, 255, .55);
-    border-radius: 4px;
-    padding: 0 .4em;
+    border: 1px solid currentColor;
+    border-radius: 3px;
+    padding: 0 .35em;
     font-family: inherit;
     font-size: .85em;
-    line-height: 1.4;
+    line-height: 1.35;
+    opacity: .8;
 }
 
 .caption .caption-subtitle,
 .caption h1 {
-    padding-right: 9em;
+    padding-right: 6em;
 }
 
 .site-footer {
@@ -1173,6 +1175,8 @@ iframe {
     padding: 1em 1.15em;
 }
 
+.definition-card--success { border-color: var(--success); }
+
 .definition-card--empty { border-color: var(--warning); }
 
 .definition-card--error { border-color: var(--danger); }
@@ -1270,7 +1274,7 @@ iframe {
 
 .references--compact {
     max-width: 58em;
-    margin-top: 1.6em;
+    margin-top: 1em;
 }
 
 .references--compact {
@@ -1279,8 +1283,8 @@ iframe {
 }
 
 .references--compact li {
-    margin-bottom: .45em;
-    font-size: .56em;
+    margin-bottom: .35em;
+    font-size: .54em;
     break-inside: avoid;
 }
 
@@ -1467,6 +1471,12 @@ iframe {
     stroke-width: 1.5;
 }
 
+/* Pill labels: the text drawn right after each pill. */
+.visual .pill + text {
+    fill: var(--ink);
+    font-weight: 600;
+}
+
 .pill--danger {
     fill: var(--danger-soft);
     stroke: none;
@@ -1495,6 +1505,10 @@ iframe {
 .flow--danger { stroke: #b3477b; marker-end: url(#arrow-danger); }
 
 .flow--thin { stroke-width: 1.4; }
+.timeline-line { stroke-width: 3.2; }
+.flow--dashed { stroke-dasharray: 5 4; }
+.flow--back { marker-start: url(#arrow-ink); marker-end: none; }
+.flow--back-accent { stroke: var(--accent); marker-start: url(#arrow-accent); marker-end: none; }
 
 .flow--probe {
     stroke: var(--algo);
@@ -1504,6 +1518,34 @@ iframe {
 }
 
 .flow--plain { marker-end: none; }
+
+/* Slide 03: the UniProt part of the query travels on slate arrows, the
+ * SERVICE part on blue ones; algorithmic probes are request and reply. */
+.flow--part-uniprot { stroke: #5f6f7a; marker-end: url(#arrow-slate); }
+.flow--both { marker-start: url(#arrow-manual); marker-end: url(#arrow-manual); }
+.flow--dashed-ret { stroke-dasharray: 6 5; }
+.code-bracket { fill: none; stroke: #5f6f7a; stroke-width: 2; stroke-linejoin: round; }
+/* Dotted leader from the SERVICE block to the request that carries it. */
+.service-leader { fill: none; stroke: #ee2e24; stroke-width: 1.4; stroke-dasharray: 2 4; stroke-linecap: round; }
+/* Slide 03a: the routes in each endpoint's logo colour (UniProt blue, Bgee red). */
+.logo-uniprot { fill: #006f9d; }
+.logo-bgee { fill: #ee2e24; }
+.code-bracket--uniprot { stroke: #006f9d; }
+.flow--uniprot { stroke: #006f9d; marker-end: url(#arrow-uniprot); }
+.flow--bgee { stroke: #ee2e24; marker-end: url(#arrow-bgee); }
+.dot-accent { fill: var(--accent); }
+.flow--bgee-both { stroke: #ee2e24; stroke-width: 1.6; marker-start: url(#arrow-bgee); marker-end: url(#arrow-bgee); }
+/* Slide 03c: probe replies, and the join in the engine's plan. */
+.visual .verdict--yes { fill: var(--accent); }
+.visual .verdict--no { fill: #b3477b; }
+.verdict-ring.verdict--yes { fill: #fff; stroke: var(--accent); stroke-width: 1.4; }
+.verdict-ring.verdict--no { fill: #fff; stroke: #b3477b; stroke-width: 1.4; }
+.probe-badge { stroke: var(--algo); stroke-width: 1.2; }
+.engine-badge { stroke: var(--algo); stroke-width: 1.2; }
+.stage-arrow { stroke-width: 2.2; }
+.plan-join { stroke: var(--algo); stroke-width: 1.6; }
+.plan-edge { fill: none; stroke: var(--algo); stroke-width: 1.6; stroke-linecap: round; }
+.flow--probe-both { marker-start: url(#arrow-algo); marker-end: url(#arrow-algo); }
 
 .axis {
     stroke: var(--ink);
@@ -1552,7 +1594,8 @@ iframe {
 
 .seg--other { fill: #9aa6a9; }
 
-.badge { fill: #b3477b; }
+/* The theme hides ".badge"; SVG status badges (e.g. "403") use their own class. */
+.status-badge { display: inline; fill: #b3477b; }
 
 /* Running example: one real query (liver transporters) followed through the talk */
 .shower {
@@ -1560,31 +1603,13 @@ iframe {
     --example-soft: #ebe8f6;
 }
 
-.ex-badge {
-    position: absolute;
-    top: 36px;
-    right: 72px;
-    display: flex;
-    align-items: center;
-    gap: .45em;
-    margin: 0;
-    border-radius: 999px;
-    background: var(--example-soft);
-    color: var(--example);
-    padding: .25em .8em .25em .55em;
-    font-family: var(--font-display);
-    font-size: .5em;
-    font-weight: 700;
-    letter-spacing: .04em;
-    line-height: 1.2 !important;
-}
-
-.ex-badge svg {
-    width: 1.5em;
-    height: 1.5em;
-}
-
 .visual .t-example { fill: var(--example); }
+
+/* Citation links inside diagrams */
+.visual .svg-link { cursor: pointer; }
+.visual .svg-link:hover text { fill: var(--accent); text-decoration: underline; }
+.visual text .svg-link tspan { fill: var(--accent); }
+.visual text .svg-link:hover tspan { text-decoration: underline; }
 .ic-example { color: var(--example); }
 .panel--example { fill: var(--example-soft); stroke: none; }
 
@@ -1683,15 +1708,34 @@ iframe {
 .wild-peak--far { fill: #b3c4c1; }
 .wild-snow { fill: #fff; }
 .wild-ground { fill: #cfe0d0; }
-.wild-post { fill: #8a6a3c; }
-.wild-sign { fill: #fbf6ec; stroke: #8a6a3c; stroke-width: 1.2; }
+/* "In the lab" scene: sterile, tiled, everything under glass. */
+.lab-wall { fill: #f4f8f7; }
+.lab-tile-line { fill: none; stroke: #e2eae8; stroke-width: 1; }
+.lab-wire { fill: none; stroke: #b9c7c4; stroke-width: 1.2; }
+.lab-lamp { fill: #fff; stroke: #b9c7c4; stroke-width: 1.2; }
+.lab-plaque { fill: #fff; stroke: #b9c7c4; stroke-width: 1; }
+.visual .lab-plaque-text { fill: var(--muted); font-family: var(--font-display); font-size: 8.5px; font-weight: 700; letter-spacing: .12em; }
+.lab-plate { fill: #fff; stroke: #9fb6b2; stroke-width: 1; }
+.visual .lab-plate-text { fill: var(--ink); font-family: var(--font-display); font-size: 8px; font-weight: 600; }
+.lab-mini-db { fill: #fff; stroke: var(--ink); stroke-width: 1.4; }
+.lab-net-link { fill: none; stroke: var(--ink); stroke-width: 1.4; stroke-linecap: round; }
+.lab-jar { fill: rgba(220, 236, 231, .35); stroke: #9fb6b2; stroke-width: 1.4; }
+.lab-glint { fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; opacity: .9; }
+.lab-jar-base { fill: #dfe7e5; stroke: #9fb6b2; stroke-width: 1; }
+.lab-bench { fill: #dfe7e5; stroke: #b9c7c4; stroke-width: 1; }
+.lab-cabinet { fill: #eaf0ef; }
+
+.wild-post { fill: #8a6a3c; stroke: #5e4423; stroke-width: .8; }
+.wild-sign { fill: #dcb67f; stroke: #6e4f28; stroke-width: 1.4; stroke-linejoin: round; }
+.wild-sign-grain { fill: none; stroke: #b48a52; stroke-width: 1; stroke-linecap: round; }
+.wild-sign-nail { fill: #5e4423; }
 
 .visual .wild-sign-text {
-    fill: #6b4f24;
+    fill: #4a3119;
     font-family: var(--font-display);
-    font-size: 10.5px;
+    font-size: 10px;
     font-weight: 700;
-    letter-spacing: .12em;
+    letter-spacing: .08em;
 }
 
 .visual .wild-sticker-text {
@@ -1703,21 +1747,26 @@ iframe {
 
 .wild-db {
     fill: #fff;
-    stroke: var(--manual);
+    stroke: var(--ink);
     stroke-width: 2;
 }
 
 .wild-db-top {
-    fill: #e6f0f5;
-    stroke: var(--manual);
+    fill: #eceeed;
+    stroke: var(--ink);
     stroke-width: 2;
 }
 
 .wild-db-ring {
     fill: none;
-    stroke: var(--manual);
+    stroke: var(--ink);
     stroke-width: 1.4;
 }
+
+/* Generic, unnamed database: same cylinder, greyed out. */
+.db-muted .wild-db { fill: #eef1f0; stroke: var(--muted); }
+.db-muted .wild-db-top { fill: #dde3e1; stroke: var(--muted); }
+.db-muted .wild-db-ring { stroke: var(--muted); }
 
 .wild-grass {
     fill: none;
@@ -1734,6 +1783,11 @@ iframe {
     marker-start: url(#arrow-light);
     marker-end: url(#arrow-light);
 }
+
+/* Databases in the slide 02 landscape link to their SPARQL interfaces. */
+.db-link { cursor: pointer; }
+.db-link:hover .wild-db,
+.db-link:hover .wild-db-top { stroke: var(--accent); stroke-width: 2.6; }
 
 .wild-bird {
     fill: none;
@@ -1757,29 +1811,69 @@ iframe {
     animation: wild-flash 4s ease-in-out infinite;
 }
 
+/* Running footer: author · title · venue, quiet and out of the content area */
+.slide:not(.title) {
+    padding-bottom: 34px;
+}
+
+.slide-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 22px;
+    margin: 0;
+    background: var(--accent);
+    padding: 0 72px;
+    color: #f5f1e6;
+    font-family: var(--font-body);
+    font-size: 10.5px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: .03em;
+}
+
+.slide .slide-footer a {
+    color: inherit;
+    border-bottom: 1px solid transparent;
+}
+
+.slide .slide-footer a:hover {
+    color: #fff;
+    border-bottom-color: currentColor;
+}
+
 /* Key-message bar and source notes */
 .takehome {
     display: flex;
     flex: 0 0 auto;
     align-items: baseline;
+    justify-content: flex-start;
     gap: .9em;
-    margin: 20px 0 16px;
-    border: 1px solid var(--line);
-    border-left: 3px solid var(--accent);
-    border-radius: 10px;
+    margin: 20px 0;
+    border: 1.5px solid var(--line);
+    border-radius: 14px;
     background: var(--surface);
     color: var(--ink);
-    padding: .5em .9em;
+    padding: .55em 1.2em;
     font-family: var(--font-display);
     font-size: .76em;
     font-weight: 500;
     line-height: 1.3 !important;
 }
 
+/* Outrank the theme's ".slide p { margin }" so the equal 20px gaps apply. */
+.slide p.takehome {
+    margin: 20px 0;
+}
+
 .takehome__label {
     flex: 0 0 auto;
     color: var(--accent);
-    font-size: .64em;
+    font-size: .74em;
     font-weight: 700;
     letter-spacing: .14em;
     text-transform: uppercase;
@@ -1798,6 +1892,37 @@ iframe {
 
 .footnote > span {
     display: block;
+    width: fit-content;
+    margin-left: -.35em;
+    border-radius: 4px;
+    padding: 0 .35em;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+/* Marker and footnote light up together on hover (see the script in index.html). */
+.fn-marker {
+    cursor: help;
+}
+
+.footnote > span.fn-hover {
+    background: var(--accent-soft);
+    box-shadow: 0 0 0 1.5px var(--accent);
+    color: var(--ink);
+}
+
+/* SVG text has no background, so a thick soft stroke painted under the digit
+ * gives the marker the same highlight. */
+.visual .fn.fn-hover {
+    fill: var(--ink);
+    paint-order: stroke;
+    stroke: var(--accent-soft);
+    stroke-width: 7px;
+    stroke-linejoin: round;
+}
+
+.footnote sup.fn-hover,
+sup.fn-hover {
+    color: var(--ink);
 }
 
 /* Invisible marker so continuation lines align with the numbered line above. */
@@ -1828,6 +1953,13 @@ iframe {
     color: var(--dark-muted);
 }
 
+/* "Manual" / "Algorithmic" as named terms in running text (key messages, footnotes). */
+.term-manual { color: var(--manual); font-weight: 700; }
+.term-algo { color: var(--algo-dark); font-weight: 700; }
+
+.footnote .fn-manual { color: var(--manual); }
+.footnote .fn-algo { color: var(--algo-dark); }
+
 .footnote a {
     color: var(--accent);
     border-bottom: 1px solid currentColor;
@@ -1837,7 +1969,7 @@ iframe {
 .closing-layout {
     display: grid;
     flex: 1 1 auto;
-    grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+    grid-template-columns: minmax(0, 1fr) 9.5em auto;
     align-items: center;
     gap: 2.2em;
     min-height: 0;
@@ -1856,7 +1988,7 @@ iframe {
     margin: 0 0 .9em;
     color: var(--ink);
     font-family: var(--font-display);
-    font-size: .88em;
+    font-size: .8em;
     line-height: 1.2;
 }
 
@@ -1891,7 +2023,7 @@ iframe {
     display: block;
     color: var(--ink);
     font-family: var(--font-display);
-    font-size: 1.7em;
+    font-size: 1.35em;
     font-weight: 600;
     line-height: 1.05;
 }
@@ -2215,7 +2347,7 @@ a.live-tag:hover,
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1em;
-    margin-top: .3em;
+    margin-top: 0;
 }
 
 .algebra {
@@ -2227,7 +2359,7 @@ a.live-tag:hover,
     flex-direction: column;
     gap: .1em;
     margin-bottom: .35em;
-    font-size: .56em;
+    font-size: .54em;
     line-height: 1.25;
 }
 
@@ -2246,7 +2378,7 @@ a.live-tag:hover,
 .slide .algebra pre {
     margin: 0;
     border-radius: 8px;
-    padding: .7em .9em;
+    padding: .5em .9em;
     font-size: .36em;
 }
 
@@ -2271,7 +2403,7 @@ a.live-tag:hover,
 }
 
 .slide .algebra pre code {
-    line-height: 1.28;
+    line-height: 1.24;
     white-space: pre-wrap;
     overflow-wrap: anywhere;
 }
@@ -2331,13 +2463,14 @@ a.live-tag:hover,
 }
 
 /* Shapes that must sit behind earlier steps are drawn first in the SVG and
- * revealed together with the step marked .reveal-behind. */
+ * revealed together with the step marked .reveal-behind. The slide classes
+ * (behind-shown, lead-shown, fn-shown) are set by a script in index.html. */
 .shower.full .slide .behind {
     opacity: 0;
     transition: opacity .5s ease;
 }
 
-.shower.full .slide svg:has(.reveal-behind:is(.active, .visited)) .behind {
+.shower.full .slide.behind-shown .behind {
     opacity: 1;
 }
 
@@ -2347,9 +2480,142 @@ a.live-tag:hover,
     transition: stroke-dashoffset .9s ease .15s;
 }
 
-.shower.full .slide svg:has(.reveal-behind:is(.active, .visited)) .behind .draw {
+.shower.full .slide.behind-shown .behind .draw {
     stroke-dashoffset: 0;
 }
+
+/* Elements marked .with-step appear together with the slide's .step-lead step
+ * instead of adding a step of their own. */
+.shower.full .slide .with-step {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity .5s ease, transform .5s ease;
+}
+
+.shower.full .slide.lead-shown .with-step {
+    opacity: 1;
+    transform: none;
+}
+
+/* A numbered footnote appears with the build step (.fn-step) that holds its
+ * marker. */
+.shower.full .slide .fn-note {
+    opacity: 0;
+    transition: opacity .5s ease;
+}
+
+.shower.full .slide.fn-shown .fn-note {
+    opacity: 1;
+}
+
+/* No fades while the view mode switches (see the script in index.html). */
+.shower.no-build-anim .slide .next,
+.shower.no-build-anim .slide .next .draw,
+.shower.no-build-anim .slide .behind,
+.shower.no-build-anim .slide .behind .draw,
+.shower.no-build-anim .slide .with-step,
+.shower.no-build-anim .slide .fn-note,
+.shower.no-build-anim .slide .late {
+    transition: none !important;
+}
+
+.shower.no-build-anim .slide .join-pop {
+    animation: none !important;
+}
+
+/* Slide 03: the panel that morphs between an overview row and its detail
+ * slide (see the script in index.html). */
+.zoom-overlay {
+    position: absolute;
+    z-index: 5;
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.zoom-overlay--manual { background: var(--manual-soft); }
+.zoom-overlay--algo { background: var(--algo-soft); }
+
+/* Keeps the overview the same size as its recap, which adds the key message. */
+.takehome--placeholder {
+    visibility: hidden;
+}
+
+/* The two parts of the running-example query, used on the slide 03 details. */
+.code-band--uniprot { fill: #e6f1f6; stroke: none; }
+.code-band--bgee { fill: #fdebea; stroke: none; }
+.code-edge--uniprot { fill: #006f9d; }
+.code-edge--bgee { fill: #ee2e24; }
+.dot-part--uniprot { fill: #5f6f7a; }
+.dot-part--bgee { fill: var(--manual); }
+
+/* Larger, semi-bold small print for the slide 03 detail figures. */
+/* The running-example question in speech bubbles (slides 01 and 03a). */
+.visual .t-question {
+    fill: var(--ink);
+    font-weight: 600;
+}
+
+.visual .t-caption {
+    fill: #3c4a50;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* "federation engine" in titles: styled like SERVICE, in the algorithmic orange. */
+.slide code.code-engine {
+    color: var(--algo-dark);
+    font-size: .9em;
+    font-weight: 700;
+}
+
+/* The SERVICE keyword in running text and titles, as in the figures. */
+.slide code.code-service {
+    color: var(--manual);
+    font-size: .9em;
+    font-weight: 700;
+}
+
+.code-line { fill: none; stroke: #9aa8b0; stroke-width: 2.4; stroke-linecap: round; }
+
+/* Parts of a build step that follow its main element: they fade in shortly
+ * after it (slide 03b: the reply after the request, the answer after the join). */
+.shower.full .slide .next .late {
+    opacity: 0;
+    transition: opacity .4s ease;
+}
+
+.shower.full .slide .next:is(.active, .visited) .late {
+    opacity: 1;
+    transition: opacity .45s ease .75s;
+}
+
+/* Slide 03b: UniProt's join badge pops in before the answer leaves. */
+@keyframes join-pop {
+    0% { opacity: 0; transform: scale(.2); }
+    70% { opacity: 1; transform: scale(1.15); }
+    100% { opacity: 1; transform: none; }
+}
+
+.shower.full .slide .next .join-pop {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.shower.full .slide .next.active .join-pop {
+    animation: join-pop .5s ease both;
+}
+
+/* Slide 03b: names for the two parts of the query. */
+.part-tag { fill: #fff; stroke-width: 1.4; }
+.part-bracket { fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.part-bracket--uniprot { stroke: #006f9d; }
+.part-bracket--bgee { stroke: #ee2e24; }
+.part-tag--uniprot { stroke: #006f9d; }
+.part-tag--bgee { stroke: #ee2e24; }
+.visual .part-tag-text--uniprot { fill: #006f9d; }
+.visual .part-tag-text--bgee { fill: #ee2e24; }
+
+.join-badge { stroke: var(--accent); stroke-width: 1.8; }
 
 @keyframes cell-in {
     from {
@@ -2373,13 +2639,17 @@ a.live-tag:hover,
 
 @media (prefers-reduced-motion: reduce) {
     .shower.full .slide .next,
+    .shower.full .slide .next .late,
+    .shower.full .slide .with-step,
+    .shower.full .slide .fn-note,
     .shower.full .slide .next .draw {
         transform: none !important;
         transition: none !important;
     }
 
     .shower.full .slide .cell,
-    .shower.full .slide .wild-bolt {
+    .shower.full .slide .wild-bolt,
+    .shower.full .slide .join-pop {
         animation: none !important;
     }
 }
@@ -2397,7 +2667,9 @@ a.live-tag:hover,
         opacity: 1 !important;
     }
 
-    .shower .next {
+    .shower .next,
+    .shower .with-step,
+    .shower .fn-note {
         visibility: visible !important;
         opacity: 1 !important;
         transform: none !important;
@@ -2492,9 +2764,27 @@ a.live-tag:hover,
 }
 
 .slide.title .title-qr img {
+    width: 152px;
+    height: 152px;
+}
+
+/* The QR image sits directly on the light slide background, which also
+ * serves as its quiet zone. */
+.qr-code {
     display: block;
-    width: 128px;
-    height: 128px;
+}
+
+.closing-qr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .35em;
+    border-bottom: 0 !important;
+}
+
+.closing-qr .qr-code {
+    width: 152px;
+    height: 152px;
 }
 
 .title-qr__label {
@@ -2564,4 +2854,235 @@ a.live-tag:hover,
     .slide.title .title-logos {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+}
+
+/* Talk outline and section tracker ---------------------------------------- */
+
+/* Progress bar on the eyebrow row: one segment per section, sized by its
+ * number of slides; it fills slide by slide, and the current section's name
+ * sits above its segment. */
+.section-track {
+    position: absolute;
+    top: 58px;
+    right: 72px;
+    display: flex;
+    gap: 2px;
+    width: 170px;
+    margin: 0;
+}
+
+.slide .section-track a {
+    position: relative;
+    flex: var(--n) 1 0;
+    height: 3px;
+    border: 0;
+    border-radius: 2px;
+    background: var(--line);
+    text-decoration: none;
+}
+
+.section-track i {
+    display: block;
+    width: calc(var(--fill) * 100%);
+    height: 100%;
+    border-radius: 2px;
+    background: var(--accent);
+}
+
+.section-track__label {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: 4px;
+    transform: translateX(-50%);
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: 8.5px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* On the outline slide the bar is still empty: a short teal tick marks the
+ * starting position, with the label left-aligned above it. */
+.section-track__label--whole {
+    left: -5px;
+    transform: none;
+}
+
+.section-track--start::before {
+    position: absolute;
+    top: -3px;
+    left: -5px;
+    width: 2px;
+    height: 9px;
+    border-radius: 1px;
+    background: var(--accent);
+    content: "";
+}
+
+.slide .section-track a:hover {
+    background: var(--accent-soft);
+}
+
+.outline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 20px;
+    /* Centre the steps in the space below the title. */
+    margin: auto 0;
+    padding: 0 0 24px;
+    list-style: none;
+}
+
+
+/* Outrank the theme's list margins so the steps centre vertically. */
+.slide ol.outline {
+    margin: auto 0;
+}
+
+.slide .outline li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+/* Each step points to the next: an accent arrow between neighbouring icons,
+ * so the sections read as one line of argument. */
+.slide .outline li:not(:last-child)::after {
+    position: absolute;
+    top: 46px;
+    left: calc(50% + 47px + 8px);
+    width: calc(100% + 20px - 94px - 16px);
+    height: 2px;
+    background: var(--accent);
+    content: "";
+}
+
+.slide .outline li::before {
+    display: none;
+}
+
+.slide .outline li:not(:last-child)::before {
+    position: absolute;
+    top: 42px;
+    left: calc(150% + 20px - 47px - 8px - 9px);
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid var(--accent);
+    border-right: 2px solid var(--accent);
+    background: none;
+    content: "";
+    transform: rotate(45deg);
+}
+
+.slide .outline a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    border: 0;
+    color: var(--ink);
+    text-align: center;
+    text-decoration: none;
+}
+
+.outline__icon {
+    display: grid;
+    place-items: center;
+    width: 94px;
+    height: 94px;
+    margin-bottom: 10px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    background: var(--surface);
+}
+
+/* Icons deepen in tone step by step, from the question to the answers. */
+.outline li:nth-child(2) .outline__icon { background: color-mix(in srgb, var(--accent-soft) 25%, var(--surface)); }
+.outline li:nth-child(3) .outline__icon { background: color-mix(in srgb, var(--accent-soft) 50%, var(--surface)); }
+.outline li:nth-child(4) .outline__icon { background: color-mix(in srgb, var(--accent-soft) 75%, var(--surface)); }
+.outline li:nth-child(5) .outline__icon { background: var(--accent-soft); }
+
+.outline__icon svg {
+    width: 50px;
+    height: 50px;
+    color: var(--accent);
+}
+
+.slide .outline a:hover .outline__icon {
+    background: var(--accent-soft);
+}
+
+.outline strong {
+    font-family: var(--font-display);
+    font-size: .92em;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.outline small {
+    max-width: 12.5em;
+    color: var(--muted);
+    font-size: .64em;
+    line-height: 1.35;
+}
+
+.outline em {
+    color: var(--accent);
+    font-family: var(--font-display);
+    margin-top: 4px;
+    font-size: .54em;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: .12em;
+}
+
+/* Slide 05: one inviting link to the results explorer, in place of footnotes:
+ * a scannable QR code for the room, plus the clickable address. */
+.slide .explore-cta {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: .9em;
+    margin: 0;
+    border: 1.5px solid var(--accent);
+    border-radius: 12px;
+    background: var(--accent-soft);
+    padding: .3em 1.1em .3em .35em;
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: .68em;
+    line-height: 1.3;
+    text-decoration: none;
+}
+
+.slide .explore-cta:hover {
+    background: var(--surface);
+}
+
+.explore-cta__qr {
+    flex: 0 0 auto;
+    width: 3.6em;
+    height: 3.6em;
+    border-radius: 6px;
+    background: #fff;
+}
+
+.explore-cta__text {
+    flex: 1 1 auto;
+}
+
+.explore-cta__text {
+    white-space: nowrap;
+}
+
+.explore-cta__url {
+    margin-left: .7em;
+    color: var(--accent);
+    font-weight: 700;
 }
