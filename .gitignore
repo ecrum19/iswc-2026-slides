@@ -7,5 +7,10 @@ bundled/
 *.log
 coverage/
 
+# PDF exports: keep only the merged slides.pdf (npm run pdf:builds). Its
+# per-page PDFs are built in a temporary folder outside the repository.
+*.pdf
+!slides.pdf
+
 # Local Claude Code settings
 .claude/

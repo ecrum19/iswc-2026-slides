@@ -20,7 +20,7 @@ Federated SPARQL lets one query combine data from many independent endpoints wit
 - **Full screen:** press **F** at any time to toggle full screen (press **F** or Esc to leave it).
 - **Navigate:** → / ← (or Space, Page Down / Page Up) step through slides and their animations; Home / End jump to the first or last slide.
 - **Exit:** press Esc to return to the overview.
-- **Supplementary slides** (S1–S13) follow the conclusions and hold the detailed evidence. Slides S2, S4 and S5 embed live charts from the results explorer; click **LIVE ↗** to open the full chart. These need an internet connection; offline, a static figure is shown instead.
+- **Supplementary slides** (S1–S15) follow the conclusions, in three groups: terms and definitions (S1–S3), details behind the main slides in the order the talk refers to them (S4–S11), and further material (S12–S15). Slides S5, S8 and S12 embed live charts from the results explorer; click **LIVE ↗** to open the full chart. These need an internet connection; offline, a static figure is shown instead.
 
 ## Paper, data and tools
 
@@ -43,13 +43,15 @@ The deck is a single HTML page ([`index.html`](index.html)) with a custom styles
 
 - **Slide engine:** [Shower](https://shwr.me/) ([`@shower/core`](https://github.com/shower/core)) with the [Material theme](https://github.com/shower/material), restyled for this talk. The [Shower CLI](https://github.com/shower/cli) bundles the deck for publishing.
 - **Diagrams and icons:** hand-written inline SVG, animated with CSS transitions as each build step appears.
-- **Live charts:** slides S2, S4 and S5 load figures from the [results explorer](https://ecrum19.github.io/fed-survey-results/) at view time, with static images as an offline fallback.
+- **Live charts:** slides S5, S8 and S12 load figures from the [results explorer](https://ecrum19.github.io/fed-survey-results/) at view time, with static images as an offline fallback.
 - **Typography:** [KoHo](https://fonts.google.com/specimen/KoHo) from Google Fonts.
-- **Logos:** endpoint and institution logos belong to their respective owners and are used to identify those resources.
+- **Logos:** endpoint and institution logos belong to their respective owners and are used to identify those resources. The [RDF logo](https://www.w3.org/RDF/) (W3C) marks every SPARQL endpoint icon.
 - **Hosting:** a [GitHub Actions workflow](.github/workflows/deploy-gh-pages.yml) builds the deck on every push to `main` (`npm run bundle`) and publishes it to [GitHub Pages](https://pages.github.com/).
 - **Authoring assistance:** the slide content and design were developed with the help of [Claude Code](https://claude.com/claude-code) (Anthropic) and reviewed by the authors.
 
 To run the slides locally, install [Node.js](https://nodejs.org/) 22.12 or later and run `npm install`, then `npm run serve`.
+
+To export a PDF, run `npm run pdf:builds` for one page per build step, so paging through the PDF replays the slides' reveals. It writes `slides.pdf` ([`scripts/pdf-builds.mjs`](scripts/pdf-builds.mjs); needs Google Chrome, [Ghostscript](https://www.ghostscript.com/) and an internet connection for the fonts). For one page per slide with every build step shown, run `npm run pdf`, which writes `slides-final-state.pdf`.
 
 ## License
 

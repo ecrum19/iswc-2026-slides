@@ -16,7 +16,8 @@
   "scripts": {
     "serve": "shower serve",
     "bundle": "shower bundle --output prepared",
-    "pdf": "shower pdf",
+    "pdf": "shower pdf --output slides-final-state.pdf",
+    "pdf:builds": "node scripts/pdf-builds.mjs",
     "archive": "shower archive",
     "pages": "shower pages"
   },
