@@ -43,6 +43,14 @@ a:hover,
     border-color: var(--accent);
 }
 
+/* Links that should not look like links: each SERVICE keyword points to its
+ * definition in the SPARQL 1.1 Federated Query spec. */
+.slide a.plain-link,
+.slide a.plain-link:hover {
+    color: inherit;
+    border-bottom: 0;
+}
+
 h1,
 h2,
 h3,
@@ -757,7 +765,7 @@ iframe {
 
 .slide.title .affiliation {
     margin: 0;
-    color: var(--muted);
+    color: var(--ink);
     font-size: .62em;
     line-height: 1.35;
 }
@@ -908,246 +916,6 @@ iframe {
     font-weight: 700;
 }
 
-.error-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(210px, .75fr);
-    align-items: center;
-    gap: 3em;
-    margin-top: 2em;
-}
-
-.error-row {
-    display: grid;
-    grid-template-columns: 11.5em minmax(0, 1fr) 3em;
-    align-items: center;
-    gap: .8em;
-    margin-bottom: 1em;
-}
-
-.error-row > span,
-.error-row > strong {
-    font-size: .65em;
-}
-
-.error-row > strong {
-    color: var(--danger);
-    font-family: var(--font-display);
-    font-size: .9em;
-    text-align: right;
-}
-
-.error-track {
-    height: 1.35em;
-    background: var(--danger-soft);
-}
-
-.error-track i {
-    display: block;
-    height: 100%;
-    background: var(--danger);
-}
-
-.error-readout {
-    border-left: 3px solid var(--danger);
-    padding-left: 1.35em;
-}
-
-.error-readout p {
-    margin: 0 0 1em;
-    color: var(--muted);
-    font-size: .72em;
-    line-height: 1.45;
-}
-
-.error-pill {
-    display: flex;
-    align-items: baseline;
-    gap: .6em;
-    margin-bottom: .9em;
-}
-
-.error-pill strong {
-    color: var(--danger);
-    font-family: var(--font-display);
-    font-size: 1.85em;
-    font-weight: 600;
-}
-
-.error-pill span {
-    color: var(--muted);
-    font-size: .57em;
-}
-
-.explosion-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(235px, .8fr);
-    align-items: center;
-    gap: 2.5em;
-    margin-top: 2.2em;
-}
-
-.explosion-chain {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr auto 1fr;
-    align-items: center;
-    gap: .65em;
-}
-
-.explosion-chain > div {
-    min-height: 6.2em;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    background: var(--surface);
-    padding: .85em;
-}
-
-.explosion-chain > div > span {
-    display: block;
-    color: var(--accent);
-    font-family: var(--font-display);
-    font-size: .65em;
-    font-weight: 700;
-}
-
-.explosion-chain strong,
-.explosion-chain small {
-    display: block;
-}
-
-.explosion-chain strong {
-    margin-top: .7em;
-    color: var(--ink);
-    font-family: var(--font-display);
-    font-size: .76em;
-    font-weight: 600;
-}
-
-.explosion-chain small {
-    margin-top: .25em;
-    color: var(--muted);
-    font-size: .53em;
-    line-height: 1.3;
-}
-
-.explosion-chain > b {
-    color: var(--danger);
-    font-size: 1.25em;
-    font-weight: 300;
-}
-
-.explosion-stat {
-    border-left: 3px solid var(--danger);
-    padding-left: 1.35em;
-}
-
-.explosion-stat strong,
-.explosion-stat span {
-    display: block;
-}
-
-.explosion-stat strong {
-    color: #b3477b;
-    font-family: var(--font-display);
-    font-size: 2.45em;
-    font-weight: 500;
-    letter-spacing: -.055em;
-    line-height: 1;
-}
-
-.explosion-stat span {
-    max-width: 11em;
-    margin-top: .5em;
-    color: var(--muted);
-    font-size: .66em;
-    line-height: 1.35;
-}
-
-.explosion-foot {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.2em;
-    margin-top: 2.2em;
-}
-
-.explosion-foot div {
-    border-top: 1px solid var(--line);
-    padding-top: .6em;
-}
-
-.explosion-foot strong,
-.explosion-foot span {
-    display: block;
-}
-
-.explosion-foot strong {
-    color: var(--accent);
-    font-family: var(--font-display);
-    font-size: 1.15em;
-    font-weight: 600;
-}
-
-.explosion-foot span {
-    margin-top: .2em;
-    color: var(--muted);
-    font-size: .55em;
-}
-
-.instability-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.2em;
-    margin-top: 1.7em;
-}
-
-.instability-card {
-    min-height: 10.5em;
-    border-top: 3px solid var(--danger);
-    background: var(--surface);
-    padding: 1em 1.15em;
-}
-
-.instability-mark {
-    color: var(--danger);
-    font-family: var(--font-display);
-    font-size: .65em;
-    font-weight: 700;
-    letter-spacing: .12em;
-}
-
-.instability-card h3 {
-    margin: .65em 0 .45em;
-    font-size: .98em;
-}
-
-.instability-card p {
-    margin: 0;
-    color: var(--muted);
-    font-size: .68em;
-    line-height: 1.45;
-}
-
-.instability-conclusion {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 2em;
-    margin-top: 1.7em;
-    border-top: 1px solid var(--line);
-    padding-top: .75em;
-}
-
-.instability-conclusion strong {
-    color: var(--ink);
-    font-family: var(--font-display);
-    font-size: 1em;
-    font-weight: 600;
-}
-
-.instability-conclusion span {
-    color: var(--muted);
-    font-size: .62em;
-}
-
 .acknowledgments--wide {
     max-width: 60em;
     margin-top: 1.9em;
@@ -1206,70 +974,6 @@ iframe {
     color: var(--muted);
     font-size: .65em;
     line-height: 1.4;
-}
-
-.cards--three {
-    max-width: none;
-    margin-top: 1.8em;
-}
-
-.cards--three .card {
-    min-height: 10.1em;
-}
-
-.cards--three .card p {
-    font-size: .68em;
-    line-height: 1.4;
-}
-
-.strategy-table {
-    width: 100%;
-    max-width: 58em;
-    margin-top: 1.65em;
-    border-collapse: collapse;
-    font-size: .7em;
-}
-
-.strategy-table th,
-.strategy-table td {
-    border-bottom: 1px solid var(--line);
-    padding: .7em .9em;
-    text-align: left;
-    vertical-align: middle;
-}
-
-.strategy-table th {
-    color: var(--muted);
-    font-family: var(--font-display);
-    font-size: .75em;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-}
-
-.strategy-table td:first-child,
-.strategy-table td:last-child {
-    color: var(--accent);
-    font-weight: 700;
-}
-
-.strategy-note {
-    display: flex;
-    align-items: baseline;
-    gap: 1.2em;
-    margin-top: 1.35em;
-    border-left: 3px solid var(--accent);
-    padding-left: 1em;
-}
-
-.strategy-note strong {
-    color: var(--ink);
-    font-family: var(--font-display);
-    font-size: .82em;
-}
-
-.strategy-note span {
-    color: var(--muted);
-    font-size: .62em;
 }
 
 .references--compact {
@@ -1379,6 +1083,12 @@ iframe {
     font-size: 12.5px;
 }
 
+/* Slide 01 has room for larger, darker supporting text. */
+#promise .visual .t-small {
+    fill: var(--ink);
+    font-size: 14px;
+}
+
 .visual .t-italic {
     font-style: italic;
 }
@@ -1424,7 +1134,8 @@ iframe {
 
 .visual .t-accent { fill: var(--accent); }
 
-.visual .t-danger { fill: #b3477b; }
+.visual .t-danger,
+.visual text .svg-link .t-danger { fill: #b3477b; }
 
 /* SVG shapes */
 .ic-ink { color: var(--ink); }
@@ -1503,6 +1214,8 @@ iframe {
 .flow--algo { stroke: var(--algo); marker-end: url(#arrow-algo); }
 
 .flow--danger { stroke: #b3477b; marker-end: url(#arrow-danger); }
+.deny-mark circle { fill: #b3477b; stroke: #fff; stroke-width: 2; }
+.deny-mark path { fill: none; stroke: #fff; stroke-width: 2.6; stroke-linecap: round; }
 
 .flow--thin { stroke-width: 1.4; }
 .timeline-line { stroke-width: 3.2; }
@@ -1535,16 +1248,10 @@ iframe {
 .flow--bgee { stroke: #ee2e24; marker-end: url(#arrow-bgee); }
 .dot-accent { fill: var(--accent); }
 .flow--bgee-both { stroke: #ee2e24; stroke-width: 1.6; marker-start: url(#arrow-bgee); marker-end: url(#arrow-bgee); }
-/* Slide 03c: probe replies, and the join in the engine's plan. */
-.visual .verdict--yes { fill: var(--accent); }
-.visual .verdict--no { fill: #b3477b; }
-.verdict-ring.verdict--yes { fill: #fff; stroke: var(--accent); stroke-width: 1.4; }
-.verdict-ring.verdict--no { fill: #fff; stroke: #b3477b; stroke-width: 1.4; }
+.flow--uniprot-both { stroke: #006f9d; stroke-width: 1.6; marker-start: url(#arrow-uniprot); marker-end: url(#arrow-uniprot); }
+/* Algorithmic probes (request and reply), and the engine on slide 03b. */
 .probe-badge { stroke: var(--algo); stroke-width: 1.2; }
-.engine-badge { stroke: var(--algo); stroke-width: 1.2; }
-.stage-arrow { stroke-width: 2.2; }
 .plan-join { stroke: var(--algo); stroke-width: 1.6; }
-.plan-edge { fill: none; stroke: var(--algo); stroke-width: 1.6; stroke-linecap: round; }
 .flow--probe-both { marker-start: url(#arrow-algo); marker-end: url(#arrow-algo); }
 
 .axis {
@@ -1634,7 +1341,7 @@ iframe {
     grid-template-columns: 6.2em minmax(0, 1fr);
     align-items: center;
     gap: .6em;
-    margin-bottom: .45em;
+    margin-bottom: .3em;
 }
 
 .run-label {
@@ -1667,14 +1374,14 @@ iframe {
 }
 
 .run--ok { background: var(--manual); }
-.run--empty { background: var(--warning); }
+.run--empty { background: var(--empty-cell); }
 .run--err { background: var(--error-cell); }
 
 .run-legend {
     display: flex;
     align-items: center;
     gap: .45em;
-    margin: .8em 0 0;
+    margin: .6em 0 0;
     color: var(--muted);
     font-size: .5em;
 }
@@ -1689,13 +1396,30 @@ iframe {
     margin-left: 0;
 }
 
-.run-note {
-    margin: .7em 0 0;
+.slide .run-notes {
+    margin: .6em 0 0;
+    padding: 0 0 0 .8em;
     border-left: 3px solid var(--example);
-    padding-left: .8em;
-    color: var(--muted);
-    font-size: .55em;
-    line-height: 1.4 !important;
+    list-style: none;
+    font-size: .5em;
+    line-height: 1.35 !important;
+}
+
+.slide .run-notes > li {
+    margin: 0;
+    padding: 0;
+}
+
+.slide .run-notes > li::before {
+    content: none;
+}
+
+.slide .run-notes > li + li {
+    margin-top: .35em;
+}
+
+.run-notes strong {
+    color: var(--ink);
 }
 
 /* Slide 02 wilderness scene */
@@ -1767,6 +1491,9 @@ iframe {
 .db-muted .wild-db { fill: #eef1f0; stroke: var(--muted); }
 .db-muted .wild-db-top { fill: #dde3e1; stroke: var(--muted); }
 .db-muted .wild-db-ring { stroke: var(--muted); }
+/* Fades the badge toward white about as much as 55% opacity would, but keeps
+ * its white disc solid, so the database outline does not show through it. */
+.rdf-badge--muted { filter: contrast(.5) brightness(1.5); }
 
 .wild-grass {
     fill: none;
@@ -1938,6 +1665,11 @@ sup.fn-hover {
     line-height: 1.35 !important;
 }
 
+/* Slide 09: its last two notes share a line, so the figure keeps its size. */
+#why-worse .footnote > span:nth-last-child(-n + 2) {
+    display: inline-block;
+}
+
 .footnote sup,
 .visual .fn {
     color: var(--accent);
@@ -1969,9 +1701,9 @@ sup.fn-hover {
 .closing-layout {
     display: grid;
     flex: 1 1 auto;
-    grid-template-columns: minmax(0, 1fr) 9.5em auto;
+    grid-template-columns: minmax(0, 1fr) 11.4em auto;
     align-items: center;
-    gap: 2.2em;
+    gap: 1.6em;
     min-height: 0;
 }
 
@@ -2011,7 +1743,7 @@ sup.fn-hover {
     margin-top: .2em;
     color: var(--muted);
     font-family: var(--font-body);
-    font-size: .62em;
+    font-size: .66em;
 }
 
 .thanks {
@@ -2028,18 +1760,56 @@ sup.fn-hover {
     line-height: 1.05;
 }
 
-.thanks p {
-    margin: .7em 0 0;
-    color: var(--muted);
-    font-size: .6em;
-    line-height: 1.4;
+.slide .thanks .thanks-label {
+    margin: 0;
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: .5em;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
 }
 
-.thanks a {
+.slide .thanks-links {
+    margin: .6em 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide .thanks-links > li {
+    display: flex;
+    align-items: center;
+    gap: .6em;
+    margin: 0 0 1em;
+}
+
+.slide .thanks-links > li::before {
+    content: none;
+}
+
+.thanks-links svg {
+    flex: 0 0 auto;
+    width: 1.6em;
+    height: 1.6em;
+    color: var(--accent);
+}
+
+.thanks-links span {
+    color: var(--muted);
+    font-size: .62em;
+    line-height: 1.3;
+}
+
+.thanks-links a {
+    display: block;
     color: var(--accent) !important;
-    border-bottom: 1px solid currentColor !important;
+    border-bottom: 0 !important;
     font-family: var(--font-display);
+    font-size: 1.04em;
     font-weight: 700;
+    white-space: nowrap;
+    text-decoration: underline;
+    text-underline-offset: .15em;
 }
 
 /* Supplementary section */
@@ -2049,14 +1819,40 @@ sup.fn-hover {
     justify-content: center;
 }
 
+/* Read down the left column, then down the right; group headings flow with their items. */
 .supp-index {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: .2em 2.4em;
-    max-width: 44em;
-    margin: 1em 0 0;
+    columns: 2;
+    column-gap: 3em;
+    max-width: 48em;
+    margin: .8em 0 0;
     padding: 0;
     list-style: none;
+}
+
+.slide .supp-index li {
+    break-inside: avoid;
+}
+
+.slide .supp-index .supp-index__group {
+    margin: .9em 0 .15em;
+    color: var(--accent);
+    font-family: var(--font-display);
+    font-size: .5em;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    break-after: avoid;
+}
+
+.slide .supp-index .supp-index__group:first-child {
+    margin-top: 0;
+}
+
+.supp-index small {
+    margin-left: .6em;
+    color: var(--muted);
+    font-size: .72em;
+    font-weight: 600;
 }
 
 .slide .supp-index li {
@@ -2138,68 +1934,12 @@ sup.fn-hover {
     margin-top: .35em;
 }
 
-.error-layout {
-    margin-top: 1.25em;
-}
-
-.error-row {
-    margin-bottom: .65em;
-}
-
-.explosion-layout {
-    margin-top: 1.25em;
-}
-
-.explosion-foot {
-    margin-top: 1.3em;
-}
-
-.explosion-foot strong {
-    font-size: 1em;
-}
-
-.instability-grid {
-    margin-top: 1.1em;
-}
-
-.instability-card {
-    min-height: 8.7em;
-    padding: .8em 1em;
-}
-
-.instability-conclusion {
-    margin-top: 1em;
-    padding-top: .55em;
-    line-height: 1.2;
-}
-
-.instability-conclusion strong,
-.instability-conclusion span {
-    line-height: 1.15;
-}
-
 .definition-grid {
     margin-top: 1.35em;
 }
 
 .definition-card {
     min-height: 7em;
-}
-
-.cards--three {
-    margin-top: 1.1em;
-}
-
-.cards--three .card {
-    min-height: 8.4em;
-}
-
-.strategy-table {
-    margin-top: 1em;
-}
-
-.strategy-note {
-    margin-top: .85em;
 }
 
 /* S2: live figure embedded from the results website */
@@ -2497,6 +2237,23 @@ a.live-tag:hover,
     transform: none;
 }
 
+/* Elements marked .drop-out fade away when the slide's .step-drop step shows
+ * (slide 03b: the query with SERVICE makes way for the one without). Outside
+ * full screen they show that final state. */
+.drop-out {
+    transition: opacity .5s ease;
+}
+
+.shower:not(.full) .drop-out,
+.shower.full .slide.drop-shown .drop-out {
+    opacity: 0;
+}
+
+/* Slide 03b: the parts colour in after the engine has asked the endpoints. */
+.shower.full #approaches-algo.behind-shown .behind {
+    transition: opacity .45s ease .75s;
+}
+
 /* A numbered footnote appears with the build step (.fn-step) that holds its
  * marker. */
 .shower.full .slide .fn-note {
@@ -2515,7 +2272,8 @@ a.live-tag:hover,
 .shower.no-build-anim .slide .behind .draw,
 .shower.no-build-anim .slide .with-step,
 .shower.no-build-anim .slide .fn-note,
-.shower.no-build-anim .slide .late {
+.shower.no-build-anim .slide .late,
+.shower.no-build-anim .slide .drop-out {
     transition: none !important;
 }
 
@@ -2540,6 +2298,11 @@ a.live-tag:hover,
     visibility: hidden;
 }
 
+/* Keeps 03a's figure the same size as 03b's, which has a footnote. */
+.footnote--placeholder {
+    visibility: hidden;
+}
+
 /* The two parts of the running-example query, used on the slide 03 details. */
 .code-band--uniprot { fill: #e6f1f6; stroke: none; }
 .code-band--bgee { fill: #fdebea; stroke: none; }
@@ -2554,6 +2317,8 @@ a.live-tag:hover,
     fill: var(--ink);
     font-weight: 600;
 }
+
+.visual .run-def { fill: var(--ink); }
 
 .visual .t-caption {
     fill: #3c4a50;
@@ -2647,6 +2412,10 @@ a.live-tag:hover,
         transition: none !important;
     }
 
+    .shower .drop-out {
+        transition: none !important;
+    }
+
     .shower.full .slide .cell,
     .shower.full .slide .wild-bolt,
     .shower.full .slide .join-pop {
@@ -2679,6 +2448,10 @@ a.live-tag:hover,
         stroke-dashoffset: 0 !important;
     }
 
+    .shower .drop-out {
+        opacity: 0 !important;
+    }
+
     .live-panel {
         display: none;
     }
@@ -2703,19 +2476,16 @@ a.live-tag:hover,
 
 @media (max-width: 800px) {
     .interactive-shell,
-    .error-layout,
-    .explosion-layout,
     .closing-layout {
         grid-template-columns: 1fr;
     }
 
-    .instability-grid,
     .definition-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .supp-index {
-        grid-template-columns: 1fr;
+        columns: 1;
     }
 }
 
@@ -2759,13 +2529,13 @@ a.live-tag:hover,
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .35em;
+    gap: 0;
     border-bottom: 0 !important;
 }
 
 .slide.title .title-qr img {
-    width: 152px;
-    height: 152px;
+    width: 176px;
+    height: 176px;
 }
 
 /* The QR image sits directly on the light slide background, which also
@@ -2778,20 +2548,23 @@ a.live-tag:hover,
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: .35em;
+    gap: 0;
     border-bottom: 0 !important;
+    border-left: 1px solid var(--line) !important;
+    padding-left: 1em;
 }
 
 .closing-qr .qr-code {
-    width: 152px;
-    height: 152px;
+    width: 176px;
+    height: 176px;
 }
 
 .title-qr__label {
-    color: var(--accent);
+    color: var(--ink);
     font-family: var(--font-display);
-    font-size: .48em;
+    font-size: .58em;
     font-weight: 700;
+    line-height: 1;
     letter-spacing: .12em;
     text-transform: uppercase;
     white-space: nowrap;
@@ -2991,6 +2764,48 @@ a.live-tag:hover,
     text-decoration: none;
 }
 
+/* The tongue-in-cheek advisories: a viewer advisory under the outline's
+ * journey, and its callback, the promised remedies, on the conclusions slide.
+ * A quiet, compact note: icon, title, then the text behind a thin rule. */
+.slide .disclaimer {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: .7em;
+    width: fit-content;
+    margin: 0 auto 2.2em;
+    border: 1px solid color-mix(in srgb, var(--algo) 55%, var(--line));
+    border-radius: 14px;
+    background: var(--surface);
+    padding: .4em 1.2em .4em .9em;
+    color: var(--ink);
+    font-size: .64em;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.disclaimer__icon {
+    flex: 0 0 auto;
+    width: 1.85em;
+    height: 1.85em;
+    color: var(--algo);
+}
+
+.slide .disclaimer .disclaimer__title {
+    flex: 0 0 auto;
+    font-family: var(--font-display);
+    font-size: 1.1em;
+    font-weight: 600;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.disclaimer > span {
+    border-left: 1px solid color-mix(in srgb, var(--algo) 40%, transparent);
+    padding-left: .8em;
+    text-wrap: balance;
+}
+
 .outline__icon {
     display: grid;
     place-items: center;
@@ -3084,5 +2899,190 @@ a.live-tag:hover,
 .explore-cta__url {
     margin-left: .7em;
     color: var(--accent);
+    font-weight: 700;
+}
+
+/* Slide 13: keep the key message close to the recap; the funding line stays at the bottom. */
+/* Slides 07, 09 and 12: a smaller margin above the key message lets the
+ * figure centre in its space, so the gaps down the slide come out even. */
+#why-fail .takehome {
+    margin: 12px 0 14px;
+}
+
+#next .takehome {
+    margin: 10px 0 16px;
+}
+
+#why-worse .takehome {
+    margin: 6px 0 16px;
+}
+
+/* Tighter column gaps make room for a QR code as large as the title slide's. */
+#takeaway .closing-layout {
+    flex: 0 1 auto;
+    gap: 1em;
+    margin: .5em 0 0;
+}
+
+#takeaway .recap li:last-child {
+    margin-bottom: 0;
+}
+
+/* The key message sits centred between the recap and the remedies box. A
+ * little less padding keeps it on one line; if it ever wraps, the two lines
+ * come out even rather than leaving one word behind. */
+#takeaway .takehome {
+    gap: .6em;
+    margin: auto 0;
+    padding-inline: .85em;
+}
+
+#takeaway .takehome > span:last-child {
+    text-wrap: balance;
+}
+
+/* The funding line sits lower than on other slides, and the key message,
+ * remedies and funding line share the space above it evenly. */
+#takeaway {
+    padding-bottom: 22px;
+}
+
+#takeaway .disclaimer {
+    margin: 0 auto auto;
+}
+
+#takeaway .footnote {
+    margin-top: 0;
+}
+
+/* Acknowledgements ------------------------------------------------------- */
+.ack-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .6em;
+    margin-top: .75em;
+}
+
+.ack-card {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+    padding: .45em .8em;
+}
+
+/* The tools note sits low, close to the footer bar as on the conclusions
+ * slide, with clear space between it and the cards. */
+#acknowledgements .footnote {
+    margin-top: 1.45em;
+}
+
+.slide .ack-card h3 {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    margin: 0 0 .4em;
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: .68em;
+    font-weight: 700;
+}
+
+.ack-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+.ack-icon svg {
+    width: 1em;
+    height: 1em;
+}
+
+.ack-card p {
+    margin: 0 0 .45em;
+    color: var(--ink);
+    font-size: .54em;
+    line-height: 1.38;
+}
+
+.slide .ack-people {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3em .35em;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Pills grow to fill each row, so the rows read as justified. */
+.slide .ack-people > li {
+    display: inline-flex;
+    flex: 1 1 auto;
+    align-items: baseline;
+    justify-content: center;
+    gap: .4em;
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--paper);
+    padding: .14em .65em;
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: .56em;
+    font-weight: 600;
+}
+
+.slide .ack-people > li::before {
+    content: none;
+}
+
+.ack-people small {
+    color: var(--muted);
+    font-size: .82em;
+    font-weight: 700;
+    letter-spacing: .04em;
+}
+
+/* A glyph, not a drawn circle: text snaps to pixels, so dots match on the scaled slide. */
+.ack-people small::before {
+    content: "•";
+    content: "•" / "";
+    margin-right: .4em;
+    color: var(--muted);
+}
+
+.ack-card a {
+    color: var(--accent);
+    border-bottom: 0;
+}
+
+.ack-logos {
+    display: flex;
+    align-items: center;
+    gap: .8em;
+    margin: 0 0 .4em;
+}
+
+.ack-logo {
+    border-bottom: 0 !important;
+}
+
+.ack-logo img {
+    display: block;
+    width: auto;
+}
+
+.ack-logo--fwo img { height: 1.15em; }
+.ack-logo--sib img { height: 1.45em; }
+.ack-logo--ugent img { height: 2.6em; margin: -.45em 0; }
+.ack-logo--vito img { height: 1.2em; }
+
+.ack-arrow {
+    color: var(--accent);
+    font-size: .75em;
     font-weight: 700;
 }
