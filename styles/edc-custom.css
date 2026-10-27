@@ -2913,6 +2913,11 @@ a.live-tag:hover,
     margin: 10px 0 16px;
 }
 
+/* Slide 13: a slightly smaller key message keeps the closing question on one line. */
+#commons .takehome {
+    font-size: .72em;
+}
+
 #why-worse .takehome {
     margin: 6px 0 16px;
 }
@@ -3085,4 +3090,136 @@ a.live-tag:hover,
     color: var(--accent);
     font-size: .75em;
     font-weight: 700;
+}
+
+/* Slide 13: headlines from public services pile up diagonally, one after
+ * another, as the slide opens; the key message follows on the next step. */
+.headline-stack {
+    --count: 9;
+    --card-w: 370px;
+    position: relative;
+    display: block;
+}
+
+/* Outranks the theme's figure margin reset. */
+.slide.story figure.headline-stack {
+    margin-top: 36px;
+}
+
+.slide a.headline-card {
+    position: absolute;
+    top: calc(var(--i) * (100% - 120px) / (var(--count) - 1));
+    left: calc(var(--i) * (100% - var(--card-w)) / (var(--count) - 1));
+    width: var(--card-w);
+    border: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 8px 22px rgba(37, 51, 59, .18);
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.headline-card img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Date tab on the card's top edge, still visible once the next card covers the rest. */
+.headline-card time {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    transform: translateY(-68%);
+    border: 1px solid #b9c4c1;
+    border-radius: 2px;
+    background: #fff;
+    padding: 0 6px;
+    color: var(--ink);
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Our own observation, set in the deck's style among the external headlines. */
+.slide a.headline-card--ours {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    border: 2px solid var(--accent);
+    background: var(--accent-soft);
+    padding: 14px 18px;
+}
+
+.slide .headline-card--ours img.headline-card__logo {
+    flex: 0 0 auto;
+    width: 74px;
+    border-radius: 0;
+}
+
+.headline-card--ours time {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.headline-card__ours {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.headline-card__ours strong {
+    color: var(--accent);
+}
+
+@keyframes headline-drop {
+    from { opacity: 0; transform: translate(-18px, -14px) scale(1.04); }
+    to { opacity: 1; transform: none; }
+}
+
+@keyframes takehome-rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+}
+
+.shower.full .slide .headline-card,
+.shower.full .slide .headline-takehome {
+    opacity: 0;
+}
+
+.shower.full .slide.active .headline-card {
+    animation: headline-drop .45s ease-out both;
+    animation-delay: calc(.3s + var(--i) * .6s);
+}
+
+/* The key message arrives with the last headline (its --i matches that card). */
+.shower.full .slide.active .headline-takehome {
+    animation: takehome-rise .45s ease-out both;
+    animation-delay: calc(.3s + var(--i) * .6s);
+}
+
+.shower.no-build-anim .slide .headline-card,
+.shower.no-build-anim .slide .headline-takehome {
+    opacity: 1;
+    animation: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .shower.full .slide .headline-card,
+    .shower.full .slide .headline-takehome {
+        opacity: 1;
+        animation: none !important;
+    }
+}
+
+@media print {
+    .shower .slide .headline-card,
+    .shower .slide .headline-takehome {
+        opacity: 1 !important;
+        animation: none !important;
+    }
 }

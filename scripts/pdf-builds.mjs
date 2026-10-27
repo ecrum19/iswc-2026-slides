@@ -118,6 +118,11 @@ try {
 	});
 	const settle = async () => {
 		await new Promise((resolve) => setTimeout(resolve, SETTLE_MS));
+		// Animations that outlast the wait (slide 13's headline pile) jump to their end;
+		// looping ones are left alone.
+		await page.evaluate(() => document.getAnimations()
+			.filter((animation) => Number.isFinite(animation.effect?.getComputedTiming().endTime))
+			.forEach((animation) => animation.finish()));
 		await page.waitForFunction(() => [...document.querySelectorAll('.slide.active img')].every((img) => img.complete));
 	};
 
